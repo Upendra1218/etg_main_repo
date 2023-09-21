@@ -11,7 +11,7 @@ import com.providio.pageObjects.miniCartPage;
 import com.providio.pageObjects.navigationPage;
 import com.providio.pageObjects.productListingPage;
 import com.providio.pageObjects.viewCartPage;
-import com.providio.paymentProccess.tc__CheckOutProcess;
+import com.providio.paymentProccess.tc__MinicartViewCartProcess;
 import com.providio.paymentProccess.tc__CreditCardPaymentProcess;
 import com.providio.payments.size;
 import com.providio.testcases.baseClass;
@@ -104,7 +104,7 @@ public class CheckoutPage2_Validation extends baseClass {
 	 			        logger.info(continueasAGuest.size());
 	 			        if(continueasAGuest.size()>0) {
 	 			        	
-	 			        	tc__CheckOutProcess cop = new tc__CheckOutProcess();
+	 			        	tc__MinicartViewCartProcess cop = new tc__MinicartViewCartProcess();
 	 			        	cop.clickContinueAsGuest();
 	 			        	
 	 			        	toVerifyTheDisplayOfAllElements();
@@ -141,7 +141,7 @@ public class CheckoutPage2_Validation extends baseClass {
 				checkOutPage cp = new checkOutPage(driver);
 		         //selecting shipping address
 	            
-	            tc__CheckOutProcess cop = new tc__CheckOutProcess();         
+	            tc__MinicartViewCartProcess cop = new tc__MinicartViewCartProcess();         
 	            cop.selectPaymentMethod(cp);
 	            
 	            WebElement firstNameError = driver.findElement(By.xpath("//div[contains(text(),'Please enter a First name')]"));
@@ -178,7 +178,7 @@ public class CheckoutPage2_Validation extends baseClass {
 			cop.setPhone(phonenumber);
 			
 			checkOutPage cp = new checkOutPage(driver);
-			tc__CheckOutProcess cop1 = new tc__CheckOutProcess();         
+			tc__MinicartViewCartProcess cop1 = new tc__MinicartViewCartProcess();         
 	        cop1.selectPaymentMethod(cp);
 			WebElement invalidCodeError= driver.findElement(By.xpath("//div[contains(text(),'Please enter a valid code')]"));
 			
@@ -195,8 +195,8 @@ public class CheckoutPage2_Validation extends baseClass {
 			
 			test.info("Verifying the pagination when valid address is given");
 			checkOutPage cp = new checkOutPage(driver);
-			tc__CheckOutProcess cop1 = new tc__CheckOutProcess();       
-			cop1.selectShippingAddress(cp);
+			tc__MinicartViewCartProcess cop1 = new tc__MinicartViewCartProcess();       
+			//cop1.selectShippingAddress(cp);
 	        cop1.selectPaymentMethod(cp);
 	        
 	        WebElement paginationOfGuestUser = driver.findElement(By.xpath("//span[contains(@class,'customer-labe')]"));

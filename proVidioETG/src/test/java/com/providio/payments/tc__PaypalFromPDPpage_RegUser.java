@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 import com.providio.pageObjects.navigationPage;
 import com.providio.pageObjects.productListingPage;
-import com.providio.paymentProccess.tc__CheckOutProcessByPayPal;
+import com.providio.paymentProccess.tc__MinicartViewCartProcessByPayPal;
 import com.providio.testcases.baseClass;
 
 public class tc__PaypalFromPDPpage_RegUser extends baseClass{
@@ -51,7 +51,7 @@ public class tc__PaypalFromPDPpage_RegUser extends baseClass{
 	    				s.paypalBuyNowFromPDP(driver);
 	    				
 	    				//paypal checkout procces
-	    				tc__CheckOutProcessByPayPal paypal= new tc__CheckOutProcessByPayPal();
+	    				tc__MinicartViewCartProcessByPayPal paypal= new tc__MinicartViewCartProcessByPayPal();
 	    		        Thread.sleep(5000);
 	    		        paypal.paypalCheckoutFromPDP();
 	    		        logger.info("clicked on PDP  paypal BUY NOW button");

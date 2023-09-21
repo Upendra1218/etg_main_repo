@@ -155,7 +155,7 @@ public class tc__MiniCartChekoutButton extends baseClass {
             logger.info("Entered lname");
             WebElement Address1 = driver.findElement(By.xpath("//input[@id='shippingAddressOnedefault']"));
             Random random = new Random();
-            int randomNumber = random.nextInt(900) + 100; // Generates a random number between 100 and 999
+            int randomNumber =123; // Generates a random number between 100 and 999
             address = String.valueOf(randomNumber);
             Address1.sendKeys(address);
             WebElement Address11 = driver.switchTo().activeElement();

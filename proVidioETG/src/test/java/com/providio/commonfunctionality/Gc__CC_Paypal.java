@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import com.providio.paymentProccess.tc__CheckOutProcessByPayPal;
+import com.providio.paymentProccess.tc__MinicartViewCartProcessByPayPal;
 import com.providio.paymentProccess.tc__CreditCardPaymentProcess;
 import com.providio.paymentProccess.tc__PaymentProccessByGC;
 import com.providio.paymentProccess.tc__PaymentProccessByGC_CC_Paypal;
@@ -119,7 +119,7 @@ public class Gc__CC_Paypal extends baseClass{
 				 if(gcText.size()>0) {
 					 	test.info("GC  is redemeed");
 					 	logger.info("Entered into paypal");
-						tc__CheckOutProcessByPayPal cpp = new tc__CheckOutProcessByPayPal();
+						tc__MinicartViewCartProcessByPayPal cpp = new tc__MinicartViewCartProcessByPayPal();
 						cpp.checkoutprocessFromCheckout();
 				 }else {
 						 test.info("No GC code is redemeed");

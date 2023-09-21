@@ -1,8 +1,9 @@
 
 
-package com.providio.testcases;
+package com.providio.login;
 
 import com.providio.pageObjects.loginPage;
+import com.providio.testcases.baseClass;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -41,14 +42,13 @@ public class tc__Login extends baseClass {
         
         if (actualTitle.equals(expectedTitle)) {
         	test.pass("User logged in successfully");
-            //test.pass( "Successfully clicked on the NewArrival of  " + actualTitle + " ");
             logger.info("User logged in successfully");
             isLoggedIn = true;
         } else {
         	test.fail("The page Title does not match expected " + expectedTitle + " but found " + actualTitle);
             //test.log(LogStatus.FAIL, "The page Title does not match expected " + expectedTitle + " " + "  but found" + " " + actualTitle + " ");
             logger.info("Click failed");
-            isLoggedIn = true;
+            //isLoggedIn = true;
         }
         
       

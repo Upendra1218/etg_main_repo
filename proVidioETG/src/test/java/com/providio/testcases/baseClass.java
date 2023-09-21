@@ -138,9 +138,12 @@ public class baseClass {
 		//Taking screen short when error occurs
 	    if (result.getStatus() == ITestResult.FAILURE) {
 
+	    	//to get the error name
 	    	test.fail(result.getThrowable().getClass().getSimpleName());
+	    	//to get the full error with code lines
 	    	test.fail(result.getThrowable());
 
+	    	//Taking screenshot with the method name and storing in a file
 	        TakesScreenshot ts = (TakesScreenshot) driver;
 	        File source = ts.getScreenshotAs(OutputType.FILE);
 	        String fileName = result.getMethod().getMethodName() + "_" + ".png";
@@ -151,10 +154,10 @@ public class baseClass {
 	            	File destination = new File("./Screenshots/" + fileName);
 	                FileUtils.copyFile(source, destination);
 	                
+	                //image location
 	                String screenshotPath = destination.getAbsolutePath();
-	                //test.addScreenCaptureFromPath(destination.getAbsolutePath()); // Add the screenshot to the test case report
-	                //test.fail("Screenshot: " + test.addScreenCaptureFromPath(destination.getAbsolutePath()));
-	                
+
+	                //error page screen shot
 	                test.fail("Screenshot",
 	                        MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build());
 
@@ -164,6 +167,7 @@ public class baseClass {
 	        }
 	    }
 	   
+	    //when test case is failed return back to home page
 	       if(result.getStatus() == ITestResult.FAILURE) {
 	    	  homePage hp =new homePage(driver);
               hp.clickOnLogo();
@@ -171,15 +175,7 @@ public class baseClass {
               Thread.sleep(3000);
 	    }
 	}
-	
-//	@AfterClass
-//	public void afterClass() {
-//		//report.removeTest(test);
-//	   // report.endTest(test);
-//	   
-//	  
-//	}
-	
+
 	
 	   @AfterSuite
 	    public void tearDown() throws IOException, EmailException, InterruptedException {

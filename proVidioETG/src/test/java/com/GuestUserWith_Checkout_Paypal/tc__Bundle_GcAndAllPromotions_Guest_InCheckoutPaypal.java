@@ -10,8 +10,8 @@ import com.providio.Validations.preValidationCheck;
 import com.providio.pageObjects.BundleProductFromEXcel;
 import com.providio.pageObjects.GiftCertificate;
 import com.providio.pageObjects.SimpleProductFromExcel;
-import com.providio.paymentProccess.tc__CheckOutProcess;
-import com.providio.paymentProccess.tc__CheckOutProcessByPayPal;
+import com.providio.paymentProccess.tc__MinicartViewCartProcess;
+import com.providio.paymentProccess.tc__MinicartViewCartProcessByPayPal;
 import com.providio.paymentProccess.tc__MiniCartChekoutButton;
 import com.providio.testcases.baseClass;
 
@@ -83,11 +83,11 @@ public class tc__Bundle_GcAndAllPromotions_Guest_InCheckoutPaypal extends baseCl
 		 
 	        tc__MiniCartChekoutButton cp = new tc__MiniCartChekoutButton();         
 			cp.checkoutprocess();
-//	     tc__CheckOutProcess cp = new tc__CheckOutProcess();				     
+//	     tc__MinicartViewCartProcess cp = new tc__MinicartViewCartProcess();				     
 //	     cp.checkoutprocess();
 	     
 	    //paypal process from checkout page
-		 tc__CheckOutProcessByPayPal cpp = new tc__CheckOutProcessByPayPal();
+		 tc__MinicartViewCartProcessByPayPal cpp = new tc__MinicartViewCartProcessByPayPal();
 		 cpp.checkoutprocessFromCheckout();
 	
 		 

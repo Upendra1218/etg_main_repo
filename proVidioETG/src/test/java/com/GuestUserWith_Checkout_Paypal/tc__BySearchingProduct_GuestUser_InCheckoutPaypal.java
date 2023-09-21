@@ -4,8 +4,8 @@ package com.GuestUserWith_Checkout_Paypal;
 
 import com.providio.pageObjects.homePage;
 import com.providio.pageObjects.productDescriptionPage;
-import com.providio.paymentProccess.tc__CheckOutProcess;
-import com.providio.paymentProccess.tc__CheckOutProcessByPayPal;
+import com.providio.paymentProccess.tc__MinicartViewCartProcess;
+import com.providio.paymentProccess.tc__MinicartViewCartProcessByPayPal;
 import com.providio.paymentProccess.tc__CreditCardPaymentProcess;
 import com.providio.payments.size;
 import com.providio.testcases.baseClass;
@@ -73,11 +73,11 @@ public class tc__BySearchingProduct_GuestUser_InCheckoutPaypal extends baseClass
 		        }
 		        
 	       //checkoutProcess	        
-            tc__CheckOutProcess cp = new tc__CheckOutProcess();            
+            tc__MinicartViewCartProcess cp = new tc__MinicartViewCartProcess();            
             cp.checkoutprocess();
                         
     		//paypal process from checkout page
-			 tc__CheckOutProcessByPayPal cpp = new tc__CheckOutProcessByPayPal();
+			 tc__MinicartViewCartProcessByPayPal cpp = new tc__MinicartViewCartProcessByPayPal();
 			 cpp.checkoutprocessFromCheckout();
     }
 }

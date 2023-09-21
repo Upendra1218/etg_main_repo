@@ -3,32 +3,34 @@
 // (powered by FernFlower decompiler)
 //
 
-package com.providio.paymentProccess;
+package com.providio.testcases;
 
 import com.providio.commonfunctionality.attributesSelection;
 import com.providio.pageObjects.navigationPage;
 import com.providio.pageObjects.productDescriptionPage;
 import com.providio.pageObjects.productListingPage;
-import com.providio.testcases.baseClass;
-
-import java.util.Iterator;
-import java.util.Set;
+import com.providio.paymentProccess.tc__CreditCardPaymentProcess;
+import com.providio.paymentProccess.tc__MinicartViewCartProcess;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-public class tc__PlpPageToPdpAndATC extends baseClass {
+public class tc__PlpPageToPdpAndGuestuserATC extends baseClass {
 
 	SoftAssert softAssert = new SoftAssert();
-//tc__LoginSc.verifySuccessfulLogin, tc__Login.loginTest
-	@Test(dependsOnMethods = {"com.providio.testcases.tc__LoginSc.verifySuccessfulLogin"}, alwaysRun = true)
+
+	@Test
 	public void PDPpage() throws InterruptedException {
+		
+		test.info("Open browser");
+        // Test Case 0: Open browser
+        driver.get(baseURL);
+        logger.info("Opened browser");
 	    // Validate if the user is logged in or not
-	    if (isLoggedIn) {
-	    	 // Step 1: Navigate to Women's New Arrivals
+        driver.manage().deleteAllCookies();
+	        // Step 1: Navigate to Women's New Arrivals
 	        navigateToWomensNewArrivals();
 	        Thread.sleep(2000);
 	        //validationofwomesNewarrivals
@@ -47,8 +49,10 @@ public class tc__PlpPageToPdpAndATC extends baseClass {
 	        addProductToCart();
 	        Thread.sleep(2000);
 	        // Step 6: Proceed to Checkout
+	        
 	        tc__MinicartViewCartProcess cp = new tc__MinicartViewCartProcess();
 	        cp.checkoutprocess();
+	        
             //payment process
 	        Thread.sleep(2000);
             tc__CreditCardPaymentProcess cc = new tc__CreditCardPaymentProcess();
@@ -57,9 +61,6 @@ public class tc__PlpPageToPdpAndATC extends baseClass {
 
 	    // Assert all the soft assertions
 	    softAssert.assertAll();
-	   }else {
-	        Assert.fail("User is not logged in");
-	    }
 	}
 
 	// Step 1: Navigate to Women's New Arrivals
@@ -202,6 +203,5 @@ public class tc__PlpPageToPdpAndATC extends baseClass {
 
 		
 	}
-
 
 }

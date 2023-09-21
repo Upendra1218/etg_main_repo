@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 import com.providio.pageObjects.BundleProductFromEXcel;
 import com.providio.pageObjects.GiftCertificate;
 import com.providio.pageObjects.SimpleProductFromExcel;
-import com.providio.paymentProccess.tc__CheckOutProcess;
+import com.providio.paymentProccess.tc__MinicartViewCartProcess;
 import com.providio.paymentProccess.tc__CreditCardPaymentProcess;
 import com.providio.testcases.baseClass;
 
@@ -45,10 +45,7 @@ public class tc__SimpleProductsAndBundle_Gc_InCC extends baseClass {
 			 gc.clickOnGiftCard(driver);
 			 test.info("Gift card added to cart");
 		 }		
-		 //searching the bundle product from excel sheet
-		 BundleProductFromEXcel bundleProduct = new  BundleProductFromEXcel();
-		 bundleProduct.performRandomOperations(driver);
-		 logger.info("Searched a bundle  product");
+
 		
 		 
 		// minicart count after adding products
@@ -72,7 +69,7 @@ public class tc__SimpleProductsAndBundle_Gc_InCC extends baseClass {
 		 }
 		
 		 //checkoutProcess				        
-	     tc__CheckOutProcess cp = new tc__CheckOutProcess();				     
+	     tc__MinicartViewCartProcess cp = new tc__MinicartViewCartProcess();				     
 	     cp.checkoutprocess();
 	     
 	     //credit card

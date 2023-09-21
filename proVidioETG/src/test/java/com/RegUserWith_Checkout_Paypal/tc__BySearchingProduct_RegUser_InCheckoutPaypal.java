@@ -4,8 +4,8 @@ package com.RegUserWith_Checkout_Paypal;
 
 import com.providio.pageObjects.homePage;
 import com.providio.pageObjects.productDescriptionPage;
-import com.providio.paymentProccess.tc__CheckOutProcess;
-import com.providio.paymentProccess.tc__CheckOutProcessByPayPal;
+import com.providio.paymentProccess.tc__MinicartViewCartProcess;
+import com.providio.paymentProccess.tc__MinicartViewCartProcessByPayPal;
 import com.providio.paymentProccess.tc__CreditCardPaymentProcess;
 import com.providio.payments.size;
 import com.providio.testcases.baseClass;
@@ -73,7 +73,7 @@ public class tc__BySearchingProduct_RegUser_InCheckoutPaypal extends baseClass {
 		        }
 		  
     		//paypal process from checkout page
-			 tc__CheckOutProcessByPayPal cpp = new tc__CheckOutProcessByPayPal();
+			 tc__MinicartViewCartProcessByPayPal cpp = new tc__MinicartViewCartProcessByPayPal();
 			 cpp.checkoutprocessFromCheckout();
 		 }else {
 		   	 Assert.fail("User not logged in");

@@ -8,8 +8,8 @@ import org.testng.annotations.Test;
 import com.providio.pageObjects.AddToBag_FromPlp;
 import com.providio.pageObjects.navigateAllTheMenusWithValidation;
 import com.providio.pageObjects.navigationPage;
-import com.providio.paymentProccess.tc__CheckOutProcess;
 import com.providio.paymentProccess.tc__CreditCardPaymentProcess;
+import com.providio.paymentProccess.tc__MinicartViewCartProcess;
 
 public class Tc_OrderFromPlp_AddToBag extends baseClass{
 @Test
@@ -23,12 +23,7 @@ public class Tc_OrderFromPlp_AddToBag extends baseClass{
 		navigationPage navPage =new navigationPage(driver);
 		navPage.selectRandomMenu(driver);
 		logger.info("Entered into plp page");
-		
-   //validate the landed plp page
-//		navigateAllTheMenusWithValidation navValidation = new navigateAllTheMenusWithValidation(driver);
-//		navValidation.goingThroughAlltheMenus(driver);
-//		
-		
+				
 	//The cart value before adding the product to cart
 		Thread.sleep(2000);
         WebElement minicartcount = driver.findElement(By.xpath("//span[@class ='minicart-quantity ml-1']"));
@@ -72,7 +67,7 @@ public class Tc_OrderFromPlp_AddToBag extends baseClass{
 	          logger.info("Product is not added to cart");
 	      }
 	      
-	      tc__CheckOutProcess checkout = new  tc__CheckOutProcess();
+	      tc__MinicartViewCartProcess checkout = new  tc__MinicartViewCartProcess();
 	      checkout.checkoutprocess();
 	      
 	      tc__CreditCardPaymentProcess cc = new tc__CreditCardPaymentProcess();

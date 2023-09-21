@@ -1,6 +1,7 @@
-package com.providio.testcases;
+package com.providio.login;
 
 import com.providio.pageObjects.loginPage;
+import com.providio.testcases.baseClass;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;

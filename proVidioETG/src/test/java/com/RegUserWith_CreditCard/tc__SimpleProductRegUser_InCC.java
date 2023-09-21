@@ -11,15 +11,16 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 import com.providio.pageObjects.SimpleProductFromExcel;
-import com.providio.paymentProccess.tc__CheckOutProcess;
+import com.providio.paymentProccess.tc__MinicartViewCartProcess;
 import com.providio.paymentProccess.tc__CreditCardPaymentProcess;
+import com.providio.paymentProccess.tc__MiniCartChekoutButton;
 import com.providio.testcases.baseClass;
 
 
 public class tc__SimpleProductRegUser_InCC extends baseClass{
 	SoftAssert softAssert = new SoftAssert();
 
-	 @Test(dependsOnMethods = {"com.providio.testcases.tc__LoginSc.verifySuccessfulLogin"}, alwaysRun = true)
+	 @Test(dependsOnMethods = {"com.providio.login.tc__Login.loginTest"}, alwaysRun = true)
 	public void simpleProduct() throws InterruptedException {
 		 
 		 
@@ -55,7 +56,7 @@ public class tc__SimpleProductRegUser_InCC extends baseClass{
         
         //checkoutProcess
         
-        tc__CheckOutProcess cp = new tc__CheckOutProcess();        
+		tc__MiniCartChekoutButton cp = new tc__MiniCartChekoutButton();        
         cp.checkoutprocess();
 
         

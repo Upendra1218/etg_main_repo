@@ -108,6 +108,7 @@ public void clickOnProduct1() throws InterruptedException{
 			List<WebElement> writeAReviewAtTop;
 			public void clickOnWriteAReviewAtTop(WebDriver driver) throws InterruptedException {
 				if(writeAReviewAtTop.size()>0) {
+					Thread.sleep(2000);
 					WebElement writeAReview= driver.findElement(By.xpath("(//a[@class='pr-snippet-write-review-link pr-underline'])[1]"));
 					writeAReview.click();
 					Thread.sleep(3000);

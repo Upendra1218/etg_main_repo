@@ -5,7 +5,7 @@ package com.RegUserWith_GcAndCC;
 import com.providio.commonfunctionality.Gc__CC_Paypal;
 import com.providio.pageObjects.homePage;
 import com.providio.pageObjects.productDescriptionPage;
-import com.providio.paymentProccess.tc__CheckOutProcess;
+import com.providio.paymentProccess.tc__MinicartViewCartProcess;
 import com.providio.paymentProccess.tc__CreditCardPaymentProcess;
 import com.providio.payments.size;
 import com.providio.testcases.baseClass;
@@ -72,7 +72,7 @@ public class tc__BySearchingProduct_RegUser_InGcAndCc extends baseClass {
 		        }
 		        
 	       //checkoutProcess	        
-            tc__CheckOutProcess cp = new tc__CheckOutProcess();            
+            tc__MinicartViewCartProcess cp = new tc__MinicartViewCartProcess();            
             cp.checkoutprocess();
             
           //semi gc and cc 

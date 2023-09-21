@@ -1,4 +1,4 @@
-package com.Logout;
+package com.providio.logout;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -14,7 +14,7 @@ public class tc__LogOut extends baseClass {
 
     SoftAssert softAssert = new SoftAssert();
 
-    @Test(dependsOnMethods = {"com.providio.testcases.tc__LoginSc.verifySuccessfulLogin"}, alwaysRun = true)
+    @Test(dependsOnMethods = {"com.providio.login.tc__Login.loginTest"}, alwaysRun = true)
     public void Logout() throws InterruptedException {
         if (isLoggedIn) {
             profilePage pp1 = new profilePage(driver);

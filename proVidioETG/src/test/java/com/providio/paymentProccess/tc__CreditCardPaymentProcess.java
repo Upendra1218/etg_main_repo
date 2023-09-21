@@ -8,7 +8,6 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 
 import com.providio.Validations.Checkout_Validation;
-import com.providio.Validations.ShippingAndBilling_PaymentDetails;
 import com.providio.pageObjects.paymentpPage;
 import com.providio.pageObjects.reviewOrderPage;
 import com.providio.testcases.baseClass;

@@ -12,7 +12,7 @@ import com.providio.pageObjects.miniCartPage;
 import com.providio.pageObjects.navigationPage;
 import com.providio.pageObjects.productListingPage;
 import com.providio.pageObjects.viewCartPage;
-import com.providio.paymentProccess.tc__CheckOutProcessByPayPal;
+import com.providio.paymentProccess.tc__MinicartViewCartProcessByPayPal;
 import com.providio.payments.size;
 import com.providio.testcases.baseClass;
 
@@ -115,7 +115,7 @@ public class tc__PaypalFromLoginPageGuestUser extends baseClass {
 		 		
 		 		            //paypalcheckout from login page
 		 		            
-		 		           tc__CheckOutProcessByPayPal cop = new tc__CheckOutProcessByPayPal(); 
+		 		           tc__MinicartViewCartProcessByPayPal cop = new tc__MinicartViewCartProcessByPayPal(); 
 		 		           cop.paypalFromLoginPage();
 		 		        }
 		 	       }

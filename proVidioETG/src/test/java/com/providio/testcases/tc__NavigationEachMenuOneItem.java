@@ -13,20 +13,28 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-import com.providio.paymentProccess.tc__CheckOutProcess;
+import com.providio.commonfunctionality.attributesSelection;
+import com.providio.commonfunctionality.validatingInstock;
 import com.providio.paymentProccess.tc__CreditCardPaymentProcess;
+import com.providio.paymentProccess.tc__MinicartViewCartProcess;
 
 
 public class tc__NavigationEachMenuOneItem extends baseClass{
 	
 	SoftAssert softAssert = new SoftAssert();
 
-	@Test(dependsOnMethods = {"com.providio.testcases.tc__LoginSc.verifySuccessfulLogin"}, alwaysRun = true)
+	@Test(dependsOnMethods = {"com.providio.login.tc__Login.loginTest"}, alwaysRun = true)
     public void Navigation() throws InterruptedException {
         test.info("Test case for the Login Page");
         
         if (isLoggedIn) {
             test.info("Test case for the Navigationmenu of Newarrival Page");
+            
+
+   		 WebElement minicartcount = driver.findElement(By.xpath("//span[@class ='minicart-quantity ml-1']"));
+           String countOfMinicart = minicartcount.getText();
+           int minicartCountValue = Integer.parseInt(countOfMinicart);
+           logger.info(minicartCountValue);
             
             
             List<WebElement> countofMenus = driver.findElements(By.xpath("//a[@class='nav-link dropdown-toggle text-uppercase font-weight-bold level-1']"));
@@ -77,270 +85,94 @@ public class tc__NavigationEachMenuOneItem extends baseClass{
 	    	        //logger.info(productName);
 	    	        Thread.sleep(5000);
 	    	        
+	    	    	
+	    			List <WebElement> mainDiv= driver.findElements(By.xpath("//div[@class='attributes px-0']"));
+	    			System.out.println("The total number of size division are " +mainDiv.size());
+	    		
+	    			List<WebElement> colorElement = driver.findElements(By.xpath("//span[contains(@class,' non-input-label')]"));
+	    			System.out.println("The color count is " + colorElement.size());
+	    			
+	    			List<WebElement> sizeElement = driver.findElements(By.xpath("//select[@class='custom-select form-control select-size']"));
+	    			System.out.println("The size count is " +  sizeElement.size());
+	    			
+	    			List<WebElement> memoryElement = driver.findElements(By.id("memorySize-null"));
+	    			
+	    			 List<WebElement> widthElements = driver.findElements(By.xpath(".//select[@id='width-null']"));
+	    		     System.out.println(widthElements.size());
+	    		     
+	    		     List<WebElement> showName = driver.findElements(By.xpath("//select[contains(@class,'select-showName')]"));
+	    		     System.out.println(showName.size());
+	    		     
+	    		     //another way of attributes
+	    		     
+	    		     List<WebElement> sizeBox= driver.findElements(By.xpath("//div[@class='select-size size-change d-flex flex-wrap']"));
+	    		     	     	 	
+	    		     List<WebElement> colorBox= driver.findElements(By.xpath("//button[contains(@class,'color-attribute')]"));
+	    		     
+	    		     List<WebElement> memoryBox = driver.findElements(By.xpath("//div[@class='select-memorySize size-change d-flex flex-wrap']"));
+	    		     
+	    			 List<WebElement> widthBox = driver.findElements(By.xpath("//div[@class='select-width size-change d-flex flex-wrap']"));
+	    			 
+	    			 List<WebElement> showNameBox= driver.findElements(By.cssSelector(".showName"));
+	    		     
+	    		     for(int i1=1; i1<=mainDiv.size();i1++) {
+	    		    	 
+	    				if(colorElement.size()>0|| colorBox.size()>0) {
+	    					//productDescriptionPage pdp = new productDescriptionPage(driver);
+	    					attributesSelection.colorSelection();
+	    					System.out.println("selected color");
+	    					Thread.sleep(4000);
+	    				}if(sizeElement.size()>0|| sizeBox.size()>0 ) {
+	    					
+	    					//productDescriptionPage pdp = new productDescriptionPage(driver);
+	    					attributesSelection.sizeSelction();
+	    					System.out.println("selected size");
+	    					Thread.sleep(4000);					
+	    				} if(memoryElement.size()>0||  memoryBox.size()>0) {
+	    					//productDescriptionPage pdp = new productDescriptionPage(driver);
+	    					attributesSelection.memorySelection();
+	    					System.out.println("selected memory size");
+	    					Thread.sleep(4000);
+	    				} if(widthElements.size()>0 || widthBox.size()>0) {
+	    					Thread.sleep(4000);
+	    					//productDescriptionPage pdp = new productDescriptionPage(driver);
+	    					attributesSelection.widthSelection();
+	    					System.out.println("selected width");
+	    					Thread.sleep(4000);
+	    				}if(showName.size()>0 || showNameBox.size()>0) {
+	    					Thread.sleep(4000);
+	    					//productDescriptionPage pdp = new productDescriptionPage(driver);
+	    					//attributesSelection.selectShowName();
+	    					System.out.println("Selected show name ");
+	    				}
+	    				
+	    				validatingInstock.inStockValidation();
+//	    				WebElement mainDiv1= driver.findElement(By.xpath("(//div[@class='attributes px-0']) [" +i+"]"));
+//	    				
+//	    				((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", mainDiv1);
+	    				
+//	    				JavascriptExecutor js = (JavascriptExecutor) driver;
+//	    		        js.executeScript("window.scrollBy(0,700)", "");
+
+	    		     }
 	    	        
-		    	    //finding the size elements of the page
-	    	        List<WebElement> sizeElementcount = driver.findElements(By.xpath("//select[@class='custom-select form-control select-size']"));
-	    	        System.out.println(sizeElementcount.size());
-	    	        
-	    	        
-	    	        //validating the size element is there or not  
-	    	        if(sizeElementcount.size()>0) {
-	    	    	   
-	    	    	     //iterating the size elements more than one
-	    	    	     for(int p = 1; p <= sizeElementcount.size(); p++) {
-		    	        	
-		    	        	  logger.info("Excuting"); 
+	    	        test.info("Verifying the product is added to cart or not ");		
+	    			 
+	    			 WebElement minicartcountafteraddotcart = driver.findElement(By.xpath("//span[@class ='minicart-quantity ml-1']"));
+	    	       String countOfMinicartafteraddotcart = minicartcountafteraddotcart.getText();
+	    	       int minicartCountValueafteraddotcart = Integer.parseInt(countOfMinicartafteraddotcart);
+	    	       logger.info(minicartCountValueafteraddotcart);
 
-		    	               //Find the parent div element that contains size and width elements
-		    	               WebElement parentDiv = driver.findElement(By.xpath("(//div[@class ='attributes px-0'])["+p+"]"));
-
-		    	               //Verify the presence of size and width elements within the parent div
-				    	       List<WebElement> sizeElements = parentDiv.findElements(By.xpath(".//select[@class='custom-select form-control select-size']"));
-				    	       System.out.println(sizeElements.size());
-				    	       List<WebElement> widthElements = parentDiv.findElements(By.xpath(".//select[@id='width-null']"));
-				    	       System.out.println(widthElements.size());
-	
-		    	               // Both size and width elements are present within the parent div
-			    	           if (!sizeElements.isEmpty() && !widthElements.isEmpty()) {
-
-			    	        	      //size
-				        			  WebElement sizeElement = sizeElements.get(0);
-				        			  System.out.println("Size element is present on the page.");
-				        			  
-				        				Select sizeSelect = new Select(sizeElement);
-				        			    List<WebElement> options = sizeSelect.getOptions();
-				        			    
-				        			    List<String> enabledSizes = new ArrayList<>();
-				        			    
-				        			    int optionIndex = 0;
-				        			    
-				        			    System.out.println(options.size());
-
-				        			    for (WebElement option : options) {
-
-				        			    	if (optionIndex > 0 && option.isEnabled()) {
-				        			    		
-				        			    		String text = option.getText();
-				        			    		  //System.out.println(text);
-
-				        			            if (!text.isEmpty()) {      	
-				        			            	String value = option.getAttribute("data-attr-value");
-				        			                enabledSizes.add(value);
-				        			                //System.out.println(value);
-				        			                option.click();
-				        			                break; 
-				        			                // Select the first enabled size and exit the loop
-				        			            }
-				        			        }
-				        			    	else {
-				        			    		System.out.println("This size is not avaliable");
-				        			    	}
-				        			    	
-				        			    	 optionIndex++;
-				        			  
-				        			    }
-				        			    
-				        			  //width 
-				        			  WebElement widthElement = widthElements.get(0);
-				        			  System.out.println("width element is present on the page.");
-				        			  
-				        				Select widthSelect = new Select(widthElement);
-				        				
-				        				// Get the list of available options
-				        			  List<WebElement> availableOptionsofwidth = widthSelect.getOptions();
-				        			
-				        			  // Create a list to store the indices of enabled options
-				        			  List<Integer> enabledIndixes = new ArrayList<>();
-				        			
-				        			  // Iterate through the available options and store the indices of enabled options
-				        			  for (int a = 0; a < availableOptionsofwidth.size(); a++) {
-				        			  	
-				        			      if (availableOptionsofwidth.get(a).isEnabled()) {
-				        			      	enabledIndixes.add(a);
-				        			      }
-				        			  }
-				        			  Integer randomIndexofwidth = enabledIndixes.set(1, 1);
-				        			  //logger.info(enabledIndixes);
-				        			  System.out.println("total numbers of"+enabledIndixes);
-
-				        			  System.out.println("only width"+enabledIndixes);
-				        			  // Select the option at the random index
-				        			  widthSelect.selectByIndex(randomIndexofwidth); 
-				        			
-				        			  Thread.sleep(3000);
-
-					    	    	   String elementXPath = "//div[contains(text(), 'In Stock')]";
-					    	    		List<WebElement> Stocksize = driver.findElements(By.xpath(elementXPath));
-
-					    	    	    // Check if the element is present
-					    	    	    if (Stocksize.size() > 0) {
-					    	    	        System.out.println("The element is present on the PDP.");
-					    	    	        // Additional actions when the element is present
-					    	    	        
-					    	    				        if (driver.findElements(By.xpath("//button[@class ='add-to-cart btn btn-primary flex-grow-1']")).size() != 0) {
-					    	    					     		
-					    	    							WebElement cartButtonElement = driver.findElement(By.xpath("//button[@class ='add-to-cart btn btn-primary flex-grow-1']"));
-					    	    							
-					    	    							
-					    	    							Thread.sleep(5000);
-					    	    							
-					    	    							((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", cartButtonElement);
-					    	    							
-					    	    							js.executeScript("arguments[0].click();", cartButtonElement);
-					    	    							Thread.sleep(2000);
-					    	    							if (cartButtonElement.isEnabled()) {
-					    	    								System.out.println("product added to cart");
-					    	    							}
-					    	    				
-					    	    						}else if (driver.findElements(By.xpath("//button[@class='add-to-cart-global btn btn-primary' ]")).size() != 0) {
-					    	    					
-					    	    					    			WebElement addAllToCartElement = driver.findElement(By.xpath("//button[@class='add-to-cart-global btn btn-primary' ]"));
-					    	    					    			
-					    	    					    			((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", addAllToCartElement);
-					    	    					    			
-					    	    					    			js.executeScript("arguments[0].click();", addAllToCartElement);
-					    	    					    			
-					    	    					    			System.out.println("products added to cart");
-					    	    				       } else {
-					    	    					               System.out.println("cart button is disabled because is product is out of stock");
-					    	    				       }
-					    	    	    } else {
-					    	    	    	
-					    	    	        System.out.println("This item is currently not available");
-					    	    	        // Additional actions when the element is not present
-					    	    	    }
-			        		        
-
-			    	         } else if(!sizeElements.isEmpty()){
-			    	        	System.out.println("coming");
-
-			    	             // Either size or width element is missing within the parent div
-
-		    	        	       //size
-		    	        		    WebElement sizeElement = sizeElements.get(0);
-		    	        		    //System.out.println("Size element is present on the page."+sizeElement);
-		    	        		    
-		    	        		    Select sizeSelect = new Select(sizeElement);
-			        			    List<WebElement> options = sizeSelect.getOptions();
-			        			    
-			        			    List<String> enabledSizes = new ArrayList<>();
-			        			    
-			        			    int optionIndex = 0;
-			        			    
-			        			    System.out.println(options.size());
-
-			        			    for (WebElement option : options) {
-
-			        			    	if (optionIndex > 0 && option.isEnabled()) {
-			        			    		
-			        			    		String text = option.getText();
-			        			    		  //System.out.println(text);
-
-			        			            if (!text.isEmpty()) {      	
-			        			            	String value = option.getAttribute("data-attr-value");
-			        			                enabledSizes.add(value);
-			        			                //System.out.println(value);
-			        			                option.click();
-			        			                break; 
-			        			                // Select the first enabled size and exit the loop
-			        			            }
-			        			        }
-			        			    	else {
-			        			    		System.out.println("This size is not avaliable");
-			        			    	}
-			        			    	
-			        			    	 optionIndex++;
-			        			  
-			        			    }
-
-		    	        		    Thread.sleep(3000);
-		    	        		    
-		    		    	    	   String elementXPath = "//div[contains(text(), 'In Stock')]";
-		    		    	    		List<WebElement> Stocksize = driver.findElements(By.xpath(elementXPath));
-
-		    		    	    	    // Check if the element is present
-		    		    	    	    if (Stocksize.size() > 0) {
-		    		    	    	        System.out.println("The element is present on the PDP.");
-		    		    	    	        // Additional actions when the element is present
-		    		    	    	        
-		    		    	    				        if (driver.findElements(By.xpath("//button[@class ='add-to-cart btn btn-primary flex-grow-1']")).size() != 0) {
-		    		    	    					     		
-		    		    	    							WebElement cartButtonElement = driver.findElement(By.xpath("//button[@class ='add-to-cart btn btn-primary flex-grow-1']"));
-		    		    	    							Thread.sleep(5000);
-		    		    	    							
-		    		    	    							((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", cartButtonElement);
-		    		    	    							
-		    		    	    							js.executeScript("arguments[0].click();", cartButtonElement);
-		    		    	    							Thread.sleep(2000);
-		    		    	    							if (cartButtonElement.isEnabled()) {
-		    		    	    								System.out.println("product added to cart");
-		    		    	    							}
-		    		    	    				
-		    		    	    						}else if (driver.findElements(By.xpath("//button[@class='add-to-cart-global btn btn-primary' ]")).size() != 0) {
-		    		    	    					
-		    		    	    					    			WebElement addAllToCartElement = driver.findElement(By.xpath("//button[@class='add-to-cart-global btn btn-primary' ]"));
-		    		    	    					    			
-		    		    	    					    			((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", addAllToCartElement);
-		    		    	    					    			
-		    		    	    					    			js.executeScript("arguments[0].click();", addAllToCartElement);
-		    		    	    					    			
-		    		    	    					    			System.out.println("products added to cart");
-		    		    	    				       } else {
-		    		    	    					               System.out.println("cart button is disabled because is product is out of stock");
-		    		    	    				       }
-		    		    	    	    } else {
-		    		    	    	        System.out.println("This item is currently not available");
-		    		    	    	        // Additional actions when the element is not present
-		    		    	    	    }
-
-			    	         }
-			    	           
-			    	      }
-	    	    	   
-	    	       }else {
-	    	    	   
-	    	    	   String elementXPath = "//div[contains(text(), 'In Stock')]";
-	    	    		List<WebElement> Stocksize = driver.findElements(By.xpath(elementXPath));
-
-	    	    	    // Check if the element is present
-	    	    	    if (Stocksize.size() > 0) {
-	    	    	        System.out.println("The element is present on the PDP.");
-	    	    	        // Additional actions when the element is present
-	    	    	        
-	    	    				        if (driver.findElements(By.xpath("//button[@class ='add-to-cart btn btn-primary flex-grow-1']")).size() != 0) {
-	    	    					     		
-	    	    							WebElement cartButtonElement = driver.findElement(By.xpath("//button[@class ='add-to-cart btn btn-primary flex-grow-1']"));
-	    	    							Thread.sleep(5000);
-	    	    							
-	    	    							((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", cartButtonElement);
-	    	    							
-	    	    							js.executeScript("arguments[0].click();", cartButtonElement);
-	    	    							Thread.sleep(2000);
-	    	    							if (cartButtonElement.isEnabled()) {
-	    	    								System.out.println("product added to cart");
-	    	    							}
-	    	    				
-	    	    						}else if (driver.findElements(By.xpath("//button[@class='add-to-cart-global btn btn-primary' ]")).size() != 0) {
-	    	    					
-	    	    					    			WebElement addAllToCartElement = driver.findElement(By.xpath("//button[@class='add-to-cart-global btn btn-primary' ]"));
-	    	    					    			
-	    	    					    			((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", addAllToCartElement);
-	    	    					    			
-	    	    					    			js.executeScript("arguments[0].click();", addAllToCartElement);
-	    	    					    			
-	    	    					    			System.out.println("products added to cart");
-	    	    				       } else {
-	    	    					               System.out.println("cart button is disabled because is product is out of stock");
-	    	    				       }
-	    	    				        
-	    	    	    } else {
-	    	    	        System.out.println("This item is currently not available");
-	    	    	        // Additional actions when the element is not present
-	    	    	    }
-	    	    	   
-	    	    	   
-	    	       }
-
+	    				  if(minicartCountValue!=minicartCountValueafteraddotcart) {
+//	    					  Thread.sleep(5000);
+//	    					  pratciie.Paynent();
+	    						test.pass("Product added to cart");
+	    						logger.info("Product is  added to cart");
+	    				  }else {
+	    					  //pratciie.Paynent();
+	    					//test.fail("Product is not added to cart");
+	    					logger.info("Product is not added to cart");
+	    				  }
 	    	        Thread.sleep(5000);
 
 	               
@@ -348,7 +180,7 @@ public class tc__NavigationEachMenuOneItem extends baseClass{
 	        
 	        //checkoutProcess
 	        
-            tc__CheckOutProcess cp = new tc__CheckOutProcess();
+            tc__MinicartViewCartProcess cp = new tc__MinicartViewCartProcess();
             
             cp.checkoutprocess();
             

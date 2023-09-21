@@ -10,8 +10,8 @@ import com.providio.pageObjects.homePage;
 import com.providio.pageObjects.navigationPage;
 import com.providio.pageObjects.productDescriptionPage;
 import com.providio.pageObjects.productListingPage;
-import com.providio.paymentProccess.tc__CheckOutProcess;
 import com.providio.paymentProccess.tc__CreditCardPaymentProcess;
+import com.providio.paymentProccess.tc__MinicartViewCartProcess;
 import com.providio.payments.size;
 
 public class tc__By_BuyNow_Button extends baseClass{
@@ -38,19 +38,11 @@ public class tc__By_BuyNow_Button extends baseClass{
     	if(buyNowButton.size()>0) {
     		size s =new size();
     	    s.clickOnBuyNow(driver);
-    	
-    	 //buy now validation
-//	    	 test.info("Verifying buy now button");
-//	    	 WebElement buyNowEnabled =driver.findElement(By.xpath("//button[contains(@class,'buy-now')]"));
-//		    	 if(buyNowEnabled.isEnabled()&& buyNowEnabled.isDisplayed()) {
-//		    		 test.pass("Selected size and Clicked on buy now button");
-//		    	 }else {
-//		    		 test.fail("Not Clicked on buy now button");
-//		    	 }
+
 
      //checkoutProcess       
-        tc__CheckOutProcess cp = new tc__CheckOutProcess();            
-        cp.checkoutprocess();
+    	    tc__MinicartViewCartProcess cp = new tc__MinicartViewCartProcess();            
+    	    cp.checkoutprocess();
         
      //payment process
         tc__CreditCardPaymentProcess tc = new tc__CreditCardPaymentProcess();			              

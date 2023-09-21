@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 import com.providio.pageObjects.BundleProductFromEXcel;
-import com.providio.paymentProccess.tc__CheckOutProcess;
+import com.providio.paymentProccess.tc__MinicartViewCartProcess;
 import com.providio.paymentProccess.tc__CreditCardPaymentProcess;
 import com.providio.testcases.baseClass;
 
@@ -57,7 +57,7 @@ public class tc__BundleProductRegUser_InCC extends baseClass{
 			        }	        
     		 }	
 		 	 //common checkout process
-             tc__CheckOutProcess cp = new tc__CheckOutProcess();        
+             tc__MinicartViewCartProcess cp = new tc__MinicartViewCartProcess();        
              cp.checkoutprocess();
              
              //payment process             

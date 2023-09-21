@@ -68,9 +68,7 @@ public class attributesSelection extends baseClass{
 	                // Select the first enabled size and exit the loop
 	            }
 	        }
-	    	else {
-	    		//System.out.println("This size is not avaliable");
-	    	}
+
 	    	
 	    	 optionIndex1++;
 	    }
@@ -135,11 +133,7 @@ public class attributesSelection extends baseClass{
 	                break; 
 	                // Select the first enabled size and exit the loop
 	            }
-	        }
-	    	else {
-	    		//System.out.println("This size is not avaliable");
-	    	}
-	    	
+	        }	    	
 	    	 optionIndex1++;
 	    }
 	}

@@ -13,8 +13,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
-import com.Logout.tc__LogOut;
 import com.github.javafaker.Faker;
+import com.providio.logout.tc__LogOut;
 import com.providio.pageObjects.CreateAccount;
 import com.providio.pageObjects.guestUserLoginPage;
 import com.providio.pageObjects.loginPage;

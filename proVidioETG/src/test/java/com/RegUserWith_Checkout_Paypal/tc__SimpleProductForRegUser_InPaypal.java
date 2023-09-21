@@ -10,15 +10,15 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 import com.providio.pageObjects.SimpleProductFromExcel;
-import com.providio.paymentProccess.tc__CheckOutProcess;
-import com.providio.paymentProccess.tc__CheckOutProcessByPayPal;
+import com.providio.paymentProccess.tc__MinicartViewCartProcess;
+import com.providio.paymentProccess.tc__MinicartViewCartProcessByPayPal;
 import com.providio.testcases.baseClass;
 
 
 public class tc__SimpleProductForRegUser_InPaypal extends baseClass{
 	SoftAssert softAssert = new SoftAssert();
 	int minicartCountValue;
-	 @Test(dependsOnMethods = {"com.providio.testcases.tc__LoginSc.verifySuccessfulLogin"}, alwaysRun = true)
+	 @Test(dependsOnMethods = {"com.providio.login.tc__LoginSc.verifySuccessfulLogin"}, alwaysRun = true)
 	public void simpleProduct() throws InterruptedException {
 		 
 
@@ -61,12 +61,12 @@ public class tc__SimpleProductForRegUser_InPaypal extends baseClass{
 	    		 }
 					
 	        //checkoutProcess	        
-	        tc__CheckOutProcess cp = new tc__CheckOutProcess();	        
+	        tc__MinicartViewCartProcess cp = new tc__MinicartViewCartProcess();	        
 	        cp.checkoutprocess();
            
 	        
 		   //paypal process from checkout page
-			 tc__CheckOutProcessByPayPal cpp = new tc__CheckOutProcessByPayPal();
+			 tc__MinicartViewCartProcessByPayPal cpp = new tc__MinicartViewCartProcessByPayPal();
 			 cpp.checkoutprocessFromCheckout();
 
 			 }else {

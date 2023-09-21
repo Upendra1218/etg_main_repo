@@ -10,7 +10,7 @@ import com.providio.pageObjects.BundleProductFromEXcel;
 import com.providio.pageObjects.GiftCertificate;
 import com.providio.pageObjects.SimpleProductFromExcel;
 import com.providio.pageObjects.checkOutPage;
-import com.providio.paymentProccess.tc__CheckOutProcess;
+import com.providio.paymentProccess.tc__MinicartViewCartProcess;
 import com.providio.paymentProccess.tc__CreditCardPaymentProcess;
 import com.providio.testcases.baseClass;
 
@@ -68,7 +68,7 @@ public class tc__ShippingAndBillingAddressDiffer_Guest_InCc extends baseClass{
 	      }	        
 		 }
 		   //checkoutProcess	        
-         tc__CheckOutProcess cp1 = new tc__CheckOutProcess();            
+         tc__MinicartViewCartProcess cp1 = new tc__MinicartViewCartProcess();            
          cp1.checkoutprocess();
          
          //changing the billing address
@@ -76,10 +76,10 @@ public class tc__ShippingAndBillingAddressDiffer_Guest_InCc extends baseClass{
 	     if(billingAddress.size()>0) {
 	    	 WebElement addNewAddress = driver.findElement(By.xpath("(//button[contains(@class,'btn-add-new')])[3]"));
 	    	 addNewAddress.click();
-	    	  tc__CheckOutProcess checkoutProcess = new tc__CheckOutProcess();
+	    	  tc__MinicartViewCartProcess checkoutProcess = new tc__MinicartViewCartProcess();
 	    	  checkOutPage cp = new checkOutPage(driver);
 	          // Assuming 'cp' is an instance of the 'checkOutPage' class
-	          checkoutProcess.selectBillingAddress(cp);
+	          //checkoutProcess.selectBillingAddress(cp);
 	     }
        
 	     //Payment process		     

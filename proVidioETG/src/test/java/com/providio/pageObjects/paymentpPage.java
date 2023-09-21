@@ -612,11 +612,11 @@ WebDriver lDriver;
                 	WebElement reviewOrder=driver.findElement(By.id("payment-submit-btn"));
                 	reviewOrder.click();
                 	Thread.sleep(7000);
-                	if(reviewOrder.isDisplayed()) {
+                	/*if(reviewOrder.isDisplayed()) {
                 	      JavascriptExecutor js = (JavascriptExecutor) driver;                       
                           js.executeScript("arguments[0].click();", reviewOrder);
                          
-                	}
+                	}*/
                 	
                 	
                 	//reviewOrder.click();

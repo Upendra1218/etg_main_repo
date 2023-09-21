@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 import com.providio.commonfunctionality.navigationProccess;
 import com.providio.pageObjects.navigationPage;
 import com.providio.pageObjects.productListingPage;
-import com.providio.paymentProccess.tc__CheckOutProcessByPayPal;
+import com.providio.paymentProccess.tc__MinicartViewCartProcessByPayPal;
 import com.providio.testcases.baseClass;
 
 public class tc__PaypalFromViewCartPage_RegUser extends baseClass {
@@ -26,7 +26,7 @@ public class tc__PaypalFromViewCartPage_RegUser extends baseClass {
 	          navProccess.commonNavigationProccess();
 	          
 		 //paypal checkout form view cart page
-	        tc__CheckOutProcessByPayPal paypal= new tc__CheckOutProcessByPayPal();	        
+	        tc__MinicartViewCartProcessByPayPal paypal= new tc__MinicartViewCartProcessByPayPal();	        
 	        paypal.checkoutprocessFromViewCart();
 	        logger.info("clicked on viewcart paypal button");	
 	        

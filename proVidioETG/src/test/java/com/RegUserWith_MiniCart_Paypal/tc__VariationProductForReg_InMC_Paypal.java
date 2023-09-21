@@ -9,8 +9,8 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 import com.providio.pageObjects.VariationProductFromExcel;
-import com.providio.paymentProccess.tc__CheckOutProcess;
-import com.providio.paymentProccess.tc__CheckOutProcessByPayPal;
+import com.providio.paymentProccess.tc__MinicartViewCartProcess;
+import com.providio.paymentProccess.tc__MinicartViewCartProcessByPayPal;
 import com.providio.paymentProccess.tc__CreditCardPaymentProcess;
 import com.providio.testcases.baseClass;
 
@@ -18,7 +18,7 @@ import com.providio.testcases.baseClass;
 public class tc__VariationProductForReg_InMC_Paypal extends baseClass{
 	SoftAssert softAssert = new SoftAssert();
 	int minicartCountValue;
-	 @Test(dependsOnMethods = {"com.providio.testcases.tc__LoginSc.verifySuccessfulLogin"}, alwaysRun = true)
+	 @Test(dependsOnMethods = {"com.providio.login.tc__Login.loginTest"}, alwaysRun = true)
 	public void variationProduct() throws InterruptedException {
 			if(isLoggedIn) {      
  
@@ -62,7 +62,7 @@ public class tc__VariationProductForReg_InMC_Paypal extends baseClass{
 	    		 }
 			
 			  //checkout from mini cart by paypal	        
-		        tc__CheckOutProcessByPayPal checkOutProcessByPayPal= new tc__CheckOutProcessByPayPal();
+		        tc__MinicartViewCartProcessByPayPal checkOutProcessByPayPal= new tc__MinicartViewCartProcessByPayPal();
 		        checkOutProcessByPayPal. checkoutprocessFromMiniCart();
 			 }else {
 			   	 Assert.fail("User not logged in");

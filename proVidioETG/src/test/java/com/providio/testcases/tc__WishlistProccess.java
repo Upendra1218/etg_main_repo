@@ -8,6 +8,7 @@ import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import com.providio.commonfunctionality.allAttributesinOneFile;
 import com.providio.pageObjects.SizeSelectionInQuickShop;
 import com.providio.pageObjects.homePage;
 import com.providio.pageObjects.navigationPage;
@@ -87,10 +88,12 @@ public class tc__WishlistProccess extends baseClass {
 			  System.out.println("Clicked on Select attributes");
 			  Thread.sleep(5000);
 			  
+			  
+			  allAttributesinOneFile.allAttributes();
 			  //size selection
-			  SizeSelectionInQuickShop sizeSelection = new SizeSelectionInQuickShop();
-			  sizeSelection.sizeSelectionInQuickShop(driver);
-			  logger.info("Selected size");
+//			  SizeSelectionInQuickShop sizeSelection = new SizeSelectionInQuickShop();
+//			  sizeSelection.sizeSelectionInQuickShop(driver);
+//			  logger.info("Selected size");
 			
 
 			  //update

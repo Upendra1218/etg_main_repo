@@ -1,4 +1,4 @@
-package com.providio.paymentProccess;
+package com.providio.testcases;
 
 import java.util.List;
 
@@ -12,7 +12,8 @@ import com.providio.commonfunctionality.allAttributesinOneFile;
 import com.providio.pageObjects.navigationPage;
 import com.providio.pageObjects.productListingPage;
 import com.providio.pageObjects.quickShopPage;
-import com.providio.testcases.baseClass;
+import com.providio.paymentProccess.tc__CreditCardPaymentProcess;
+import com.providio.paymentProccess.tc__MinicartViewCartProcess;
 
 
 public class tc__PlpPageofQuickShopATC extends baseClass{

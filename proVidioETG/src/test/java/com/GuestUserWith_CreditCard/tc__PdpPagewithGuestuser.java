@@ -8,7 +8,7 @@ package com.GuestUserWith_CreditCard;
 import com.providio.pageObjects.navigationPage;
 import com.providio.pageObjects.productDescriptionPage;
 import com.providio.pageObjects.productListingPage;
-import com.providio.paymentProccess.tc__CheckOutProcess;
+import com.providio.paymentProccess.tc__MinicartViewCartProcess;
 import com.providio.paymentProccess.tc__CreditCardPaymentProcess;
 import com.providio.payments.size;
 import com.providio.testcases.baseClass;
@@ -49,7 +49,7 @@ public class tc__PdpPagewithGuestuser extends baseClass {
 	        addProductToCart();
 
 	        // Step 6: Proceed to Checkout
-	        tc__CheckOutProcess cp = new tc__CheckOutProcess();
+	        tc__MinicartViewCartProcess cp = new tc__MinicartViewCartProcess();
 	        cp.checkoutprocess();
             //payment process
             

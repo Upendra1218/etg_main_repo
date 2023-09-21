@@ -9,8 +9,8 @@ import org.testng.asserts.SoftAssert;
 
 import com.providio.commonfunctionality.Gc__CC_Paypal;
 import com.providio.pageObjects.VariationProductFromExcel;
-import com.providio.paymentProccess.tc__CheckOutProcess;
-import com.providio.paymentProccess.tc__CheckOutProcessByPayPal;
+import com.providio.paymentProccess.tc__MinicartViewCartProcess;
+import com.providio.paymentProccess.tc__MinicartViewCartProcessByPayPal;
 import com.providio.testcases.baseClass;
 
 
@@ -67,7 +67,7 @@ public class tc__VariationProductForGuestUser_InVC_Paypal extends baseClass{
 			
  
 		      //paypal checkout form view cart page
-		 	    tc__CheckOutProcessByPayPal paypal= new tc__CheckOutProcessByPayPal();	         
+		 	    tc__MinicartViewCartProcessByPayPal paypal= new tc__MinicartViewCartProcessByPayPal();	         
 		 	    paypal.checkoutprocessFromViewCart();
 	 }
 }

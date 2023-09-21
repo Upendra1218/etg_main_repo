@@ -12,7 +12,7 @@ import com.providio.commonfunctionality.Gc__CC_Paypal;
 import com.providio.commonfunctionality.Mens_Pants_PickUpInStore;
 import com.providio.commonfunctionality.navigationProccess;
 import com.providio.pageObjects.homePage;
-import com.providio.paymentProccess.tc__CheckOutProcess;
+import com.providio.paymentProccess.tc__MinicartViewCartProcess;
 import com.providio.paymentProccess.tc__CreditCardPaymentProcess;
 import com.providio.testcases.baseClass;
 
@@ -46,7 +46,7 @@ public class  tc__PickUpStore_Guest_InGcAndPaypal extends baseClass {
 	    	     pickUpstore.mens_Pants_PickUpInStore(driver);
 
 		      //common checkoutProcess	         
-				 tc__CheckOutProcess cp = new tc__CheckOutProcess();         
+				 tc__MinicartViewCartProcess cp = new tc__MinicartViewCartProcess();         
 				 cp.checkoutprocess();
 				
 			  //gc and paypal
@@ -62,7 +62,7 @@ public class  tc__PickUpStore_Guest_InGcAndPaypal extends baseClass {
 	    	     
 	    	
 			   //common checkoutProcess	         
-				 tc__CheckOutProcess cp = new tc__CheckOutProcess();         
+				 tc__MinicartViewCartProcess cp = new tc__MinicartViewCartProcess();         
 				 cp.checkoutprocess();
 				 
 				//gc and paypal

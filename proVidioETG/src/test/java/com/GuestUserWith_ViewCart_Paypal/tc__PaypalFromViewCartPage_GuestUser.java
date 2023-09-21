@@ -3,8 +3,8 @@ package com.GuestUserWith_ViewCart_Paypal;
 import org.testng.annotations.Test;
 
 import com.providio.commonfunctionality.navigationProccess;
-import com.providio.paymentProccess.tc__CheckOutProcess;
-import com.providio.paymentProccess.tc__CheckOutProcessByPayPal;
+import com.providio.paymentProccess.tc__MinicartViewCartProcess;
+import com.providio.paymentProccess.tc__MinicartViewCartProcessByPayPal;
 import com.providio.testcases.baseClass;
 
 public class tc__PaypalFromViewCartPage_GuestUser extends baseClass {
@@ -22,7 +22,7 @@ public class tc__PaypalFromViewCartPage_GuestUser extends baseClass {
 	          
 	     
     	 //paypal checkout form view cart page
- 	          tc__CheckOutProcessByPayPal paypal= new tc__CheckOutProcessByPayPal();	         
+ 	          tc__MinicartViewCartProcessByPayPal paypal= new tc__MinicartViewCartProcessByPayPal();	         
  	          paypal.checkoutprocessFromViewCart();
    
 		        }

@@ -8,8 +8,8 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.providio.pageObjects.GiftCertificate;
-import com.providio.paymentProccess.tc__CheckOutProcess;
-import com.providio.paymentProccess.tc__CheckOutProcessByPayPal;
+import com.providio.paymentProccess.tc__MinicartViewCartProcess;
+import com.providio.paymentProccess.tc__MinicartViewCartProcessByPayPal;
 import com.providio.paymentProccess.tc__CreditCardPaymentProcess;
 import com.providio.testcases.baseClass;
 
@@ -57,7 +57,7 @@ public class tc__OnlyGiftCards_Reg_InCC extends baseClass{
 			            logger.info("Product is not added to cart");
 			      }	        
 				 }
-				 tc__CheckOutProcess cp = new tc__CheckOutProcess();				     
+				 tc__MinicartViewCartProcess cp = new tc__MinicartViewCartProcess();				     
 			     cp.checkoutprocess();
 			     
 			   //payment process             

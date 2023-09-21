@@ -10,8 +10,8 @@ import org.testng.annotations.Test;
 import com.providio.commonfunctionality.Gc__CC_Paypal;
 import com.providio.pageObjects.GiftCertificate;
 import com.providio.pageObjects.SimpleProductFromExcel;
-import com.providio.paymentProccess.tc__CheckOutProcess;
-import com.providio.paymentProccess.tc__CheckOutProcessByPayPal;
+import com.providio.paymentProccess.tc__MinicartViewCartProcess;
+import com.providio.paymentProccess.tc__MinicartViewCartProcessByPayPal;
 import com.providio.paymentProccess.tc__CreditCardPaymentProcess;
 import com.providio.testcases.baseClass;
 
@@ -70,7 +70,7 @@ public class tc__SimpleProductAndGc_Reg_InGc extends baseClass {
 		 }
 		 
 		 //checkoutProcess				        
-	     tc__CheckOutProcess cp = new tc__CheckOutProcess();				     
+	     tc__MinicartViewCartProcess cp = new tc__MinicartViewCartProcess();				     
 	     cp.checkoutprocess();
 	     
 		 //gc payment 
