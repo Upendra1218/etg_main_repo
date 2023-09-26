@@ -17,9 +17,9 @@ public class attributesSelection extends baseClass{
 	
 	
     //SizeSelection
-	@FindBy(xpath ="//select[contains(@class,'select-size')]" )
-	static
-	WebElement Size;
+	//@FindBy(xpath ="//select[contains(@class,'select-size')]" )
+	
+	//WebElement Size;
 	public static void sizeSelction() throws InterruptedException {
 		
 		//sizes in boxess
@@ -47,6 +47,8 @@ public class attributesSelection extends baseClass{
                 selectedSizeElement.click();
             }
 		}else if(sizeDropDown.size()>0) {
+			
+		WebElement Size = driver.findElement(By.xpath("//select[contains(@class, 'select-size')]"));
 		// sizes from drop down Create a Select object and select the first enabled size
 	    Select colorElement = new Select(Size);
 	    List<WebElement> options = colorElement.getOptions();

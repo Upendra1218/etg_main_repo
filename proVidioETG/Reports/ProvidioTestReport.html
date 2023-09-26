@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary"></span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Sep 26, 2023 04:47:12 PM</span></a>
+<a href="#"><span class="badge badge-primary">Sep 26, 2023 06:08:25 PM</span></a>
 </li>
 </ul>
 </div>
@@ -61,13 +61,13 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Sep 26, 2023 04:47:12 PM</h3>
+<h3>Sep 26, 2023 06:08:25 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Sep 26, 2023 04:49:06 PM</h3>
+<h3>Sep 26, 2023 06:12:18 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -79,7 +79,7 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Tests Failed</p>
-<h3>1</h3>
+<h3>0</h3>
 </div></div>
 </div>
 </div>
@@ -95,12 +95,12 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='50%'>
+<div><small data-tooltip='100%'>
 <b>1</b> tests passed
 </small>
 </div>
 <div>
-<small data-tooltip='50%'><b>1</b> tests failed,
+<small data-tooltip='0%'><b>0</b> tests failed,
 <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
@@ -118,10 +118,10 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='28%'><b>2</b> events passed</small></div>
+<div><small data-tooltip='47%'><b>19</b> events passed</small></div>
 <div>
-<small data-tooltip='42%'><b>3</b> events failed,
-<b data-tooltip='%'>2</b> others
+<small data-tooltip='0%'><b>0</b> events failed,
+<b data-tooltip='%'>21</b> others
 </small>
 </div>
 </div>
@@ -137,7 +137,7 @@
 </div></div>
 <script>
 var timeline = {
-"tc__Login":32.941,"tc__WishListtoAddtoCart":68.556
+"tc__VariationProductForGuestUser_InGcAndCc":218.269
 };
 </script>
 <div class="row">
@@ -147,7 +147,7 @@ var timeline = {
 var statusGroup = {
 parentCount: 5,
 passParent: 1,
-failParent: 1,
+failParent: 0,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
@@ -163,11 +163,11 @@ warningGrandChild: 0,
 skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
-passEvents: 2,
-failEvents: 3,
+passEvents: 19,
+failEvents: 0,
 warningEvents: 0,
 skipEvents: 0,
-infoEvents: 2
+infoEvents: 21
 };
 </script><div class="test-wrapper row view test-view">
   <div class="test-list">
@@ -180,7 +180,6 @@ infoEvents: 2
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
 <a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
-<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
@@ -193,9 +192,9 @@ infoEvents: 2
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">tc__Login</p>
+            <p class="name">tc__VariationProductForGuestUser_InGcAndCc</p>
             <p class="text-sm">
-              <span>4:47:16 PM</span> / <span>00:00:32:941</span>
+              <span>6:08:29 PM</span> / <span>00:03:38:269</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -203,10 +202,10 @@ infoEvents: 2
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">tc__Login</h5>
-<span class='badge badge-success'>09.26.2023 4:47:16 PM</span>
-<span class='badge badge-danger'>09.26.2023 4:47:49 PM</span>
-<span class='badge badge-default'>00:00:32:941</span>
+<h5 class="test-status text-pass">tc__VariationProductForGuestUser_InGcAndCc</h5>
+<span class='badge badge-success'>09.26.2023 6:08:29 PM</span>
+<span class='badge badge-danger'>09.26.2023 6:12:08 PM</span>
+<span class='badge badge-default'>00:03:38:269</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -217,142 +216,287 @@ infoEvents: 2
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>4:47:16 PM</td>
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>6:08:53 PM</td>
         <td>
-          Test case Validation started
+           searched for for the right product and product id is 25493602M
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:09:09 PM</td>
+        <td>
+          Validating product is add to the cart
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>4:47:49 PM</td>
+        <td>6:09:09 PM</td>
         <td>
-          User logged in successfully
+          Product added to cart
         </td>
       </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="fail" test-id="2"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">tc__WishListtoAddtoCart</p>
-            <p class="text-sm">
-              <span>4:47:51 PM</span> / <span>00:01:08:556</span>
-              <span class="badge fail-bg log float-right">Fail</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-fail">tc__WishListtoAddtoCart</h5>
-<span class='badge badge-success'>09.26.2023 4:47:51 PM</span>
-<span class='badge badge-danger'>09.26.2023 4:49:00 PM</span>
-<span class='badge badge-default'>00:01:08:556</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
-<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
-<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
-</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>4:48:16 PM</td>
+        <td>6:09:23 PM</td>
         <td>
-          verify that Womens of  EARRINGS 
+          Verify the mini-cart button is clicked
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>4:48:16 PM</td>
+        <td>6:09:25 PM</td>
         <td>
-          Successfully clicked on the Womens of  EARRINGS 
+          Successfully clicked on the mini cart button
         </td>
       </tr>
       <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>4:48:59 PM</td>
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:09:25 PM</td>
         <td>
-          NoSuchElementException
+          Verify the viewcart, checkout, paypal buttons and products are displayed
         </td>
       </tr>
       <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>4:48:59 PM</td>
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:09:25 PM</td>
         <td>
-          <textarea readonly class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"(//div[@class ='attributes px-0'])[1]"}
-  (Session info: chrome=117.0.5938.89)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.11.0', revision: '040bc5406b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [bba26e502acaaa4f93c4658ac1fdbf96, findElement {using=xpath, value=(//div[@class ='attributes px-0'])[1]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.89, chrome: {chromedriverVersion: 117.0.5938.92 (67649b10b92b..., userDataDir: C:\Users\etgadmin\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55440}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55440/devtoo..., se:cdpVersion: 117.0.5938.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: bba26e502acaaa4f93c4658ac1fdbf96
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at com.providio.commonfunctionality.allAttributesinOneFile.quickshopallAttributes(allAttributesinOneFile.java:146)
-	at com.providio.testcases.tc__WishlistProccess.wishlistPage(tc__WishlistProccess.java:92)
-	at com.providio.testcases.tc__WishListtoAddtoCart.wishListtoCart(tc__WishListtoAddtoCart.java:19)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:829)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-	at org.testng.TestNG.runSuites(TestNG.java:1099)
-	at org.testng.TestNG.run(TestNG.java:1067)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</textarea>
-          
+          The number of Products in minicart are1
         </td>
       </tr>
       <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>4:49:00 PM</td>
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:09:25 PM</td>
         <td>
-          Screenshot
-    <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='C:\Users\etgadmin\git\Test\proVidioETG\.\Screenshots\wishListtoCart_.png' src="C:\Users\etgadmin\git\Test\proVidioETG\.\Screenshots\wishListtoCart_.png">
-    
-    </div></div>
+          The products name in cart are Flat Front Classic Pant
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>6:09:25 PM</td>
+        <td>
+          Successfully displayed the viewcart, checkout, paypal buttons and products, The number of products are: 1
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:09:35 PM</td>
+        <td>
+          Verify the view-cart button is clicked
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>6:09:35 PM</td>
+        <td>
+          Successfully clicked on the view cart button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:10:19 PM</td>
+        <td>
+          Stripe payment activated
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:10:22 PM</td>
+        <td>
+          Verifying check balance button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>6:10:24 PM</td>
+        <td>
+          Check button is enabled and selected
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:10:31 PM</td>
+        <td>
+          Verifying apply button is selected
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>6:10:31 PM</td>
+        <td>
+          Apply button is selected
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:10:40 PM</td>
+        <td>
+          Verifying check balance button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>6:10:43 PM</td>
+        <td>
+          Check button is enabled and selected
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:10:50 PM</td>
+        <td>
+          Verifying apply button is selected
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>6:10:50 PM</td>
+        <td>
+          Apply button is selected
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:10:59 PM</td>
+        <td>
+          Verifying check balance button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>6:11:01 PM</td>
+        <td>
+          Check button is enabled and selected
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:11:08 PM</td>
+        <td>
+          Verifying apply button is selected
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>6:11:09 PM</td>
+        <td>
+          Apply button is selected
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:11:18 PM</td>
+        <td>
+          Verifying check balance button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>6:11:20 PM</td>
+        <td>
+          Check button is enabled and selected
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:11:27 PM</td>
+        <td>
+          Verifying apply button is selected
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>6:11:27 PM</td>
+        <td>
+          Apply button is selected
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:11:29 PM</td>
+        <td>
+          Gift certificate codes are applied
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:11:29 PM</td>
+        <td>
+          GC  is redemeed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:11:29 PM</td>
+        <td>
+          Verify that shipping address added
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>6:11:29 PM</td>
+        <td>
+          Successfully added the shipping address
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:11:29 PM</td>
+        <td>
+          Verify the payment button is clicked
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>6:11:29 PM</td>
+        <td>
+          Successfully clicked on the Payment button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:11:30 PM</td>
+        <td>
+          Cyber source payment activated
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:11:59 PM</td>
+        <td>
+          verify that order is placed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>6:12:02 PM</td>
+        <td>
+          Successfully Order is Placed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>6:12:07 PM</td>
+        <td>
+          Successfully Order is Placed and the Order number is 80027649
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>6:12:07 PM</td>
+        <td>
+          Successfully Order is Placed and the Ordered date is 9/26/23
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>6:12:08 PM</td>
+        <td>
+          Successfully Order is Placed and payment is Credit Visa
+************1111
+Ending 9/ 2029
+Gift Card
+************TWCM
         </td>
       </tr>
   </tbody>

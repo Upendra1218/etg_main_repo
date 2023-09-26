@@ -123,6 +123,8 @@ public class tc__CreditCardPaymentProcess extends baseClass{
 			            selectedPaymentInstrument.click();
 			            WebElement securityCode = driver.findElement(By.id("saved-payment-security-code"));
 			            securityCode.sendKeys("9876");
+			    	}else {
+			    		cyberSourceNewcard();
 			    	}
 			    }			    			    
 			    //Salesforce payment integration place the order

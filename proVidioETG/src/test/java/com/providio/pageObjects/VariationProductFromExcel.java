@@ -119,10 +119,10 @@ public class VariationProductFromExcel extends baseClass{
 							test.pass(" searched for for the right product and product id is " +randomValue );
 							logger.info("Searched for right product");
 							
-							size s = new size();
-							 s.selectSize(driver);
+//							size s = new size();
+//							 s.selectSize(driver);
 							
-							//allAttributesinOneFile.selectTheAttributesInPdp(driver);
+							allAttributesinOneFile.selectTheAttributesInPdp(driver);
 							 
 							//validating the product is add to the cart
 						   	    addtoCartValidation.validatingProductisAddtoCart(driver);

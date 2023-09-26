@@ -1228,3 +1228,172 @@ Visa ending in 1111
 2023-09-26 16:48:39,204 [main] INFO Providio - Product value is not null.
 2023-09-26 16:48:59,351 [main] INFO Providio - countofSizeElement: 1
 2023-09-26 16:48:59,385 [main] INFO Providio - countofmemorysize: 0
+2023-09-26 17:30:36,347 [main] INFO Providio - enterd into url
+2023-09-26 17:30:43,386 [main] INFO Providio - clicked on sign in
+2023-09-26 17:30:45,618 [main] INFO Providio - entered email
+2023-09-26 17:30:47,850 [main] INFO Providio - entered password
+2023-09-26 17:30:59,957 [main] INFO Providio - click on the submit button
+2023-09-26 17:31:05,047 [main] INFO Providio - User logged in successfully
+2023-09-26 17:31:31,327 [main] INFO Providio - 0
+2023-09-26 17:31:31,352 [main] INFO Providio - 0
+2023-09-26 17:31:31,383 [main] INFO Providio - 0
+2023-09-26 17:31:31,446 [main] INFO Providio - click Success Electronics of  IPOD & MP3 PLAYERS
+2023-09-26 17:31:31,446 [main] INFO Providio - Selected random menu
+2023-09-26 17:31:43,734 [main] INFO Providio - Added product to wishlist
+2023-09-26 17:31:54,550 [main] INFO Providio - clicked on  wishlist
+2023-09-26 17:31:54,624 [main] INFO Providio - 0
+2023-09-26 17:31:54,625 [main] INFO Providio - Product value is not null.
+2023-09-26 17:31:54,659 [main] INFO Providio - 0
+2023-09-26 17:31:54,659 [main] INFO Providio - Product value is not null.
+2023-09-26 17:31:54,692 [main] INFO Providio - 0
+2023-09-26 17:31:54,692 [main] INFO Providio - Product value is not null.
+2023-09-26 17:31:54,742 [main] INFO Providio - 0
+2023-09-26 17:31:54,742 [main] INFO Providio - Product value is not null.
+2023-09-26 17:31:54,792 [main] INFO Providio - 0
+2023-09-26 17:31:54,792 [main] INFO Providio - Product value is not null.
+2023-09-26 17:31:54,845 [main] INFO Providio - 0
+2023-09-26 17:31:54,846 [main] INFO Providio - Product value is not null.
+2023-09-26 17:31:54,894 [main] INFO Providio - 0
+2023-09-26 17:31:54,895 [main] INFO Providio - Product value is not null.
+2023-09-26 17:31:54,934 [main] INFO Providio - 0
+2023-09-26 17:31:54,935 [main] INFO Providio - Product value is not null.
+2023-09-26 17:32:15,041 [main] INFO Providio - countofSizeElement: 0
+2023-09-26 17:32:15,073 [main] INFO Providio - countofmemorysize: 1
+2023-09-26 17:32:23,334 [main] INFO Providio - memory size
+2023-09-26 17:32:31,495 [main] INFO Providio - Clicked on update
+2023-09-26 17:32:41,590 [main] INFO Providio - countofSizeElement: 0
+2023-09-26 17:32:41,605 [main] INFO Providio - countofmemorysize: 1
+2023-09-26 17:32:49,838 [main] INFO Providio - memory size
+2023-09-26 17:32:57,983 [main] INFO Providio - Clicked on update
+2023-09-26 17:33:08,068 [main] INFO Providio - countofSizeElement: 0
+2023-09-26 17:33:08,083 [main] INFO Providio - countofmemorysize: 0
+2023-09-26 17:49:28,717 [main] INFO Providio - Entered into url
+2023-09-26 17:49:28,723 [main] INFO Providio - Placing the order as guest user
+2023-09-26 17:49:28,992 [main] INFO Providio - Menus are displayed on the page.
+2023-09-26 17:49:31,064 [main] INFO Providio - Logo is displayed on the page.
+2023-09-26 17:49:33,136 [main] INFO Providio - Search input field is enabled.
+2023-09-26 17:49:35,216 [main] INFO Providio - MiniCart is displayed on the page.
+2023-09-26 17:49:37,264 [main] INFO Providio - Wishlist is displayed on the page.
+2023-09-26 17:49:39,321 [main] INFO Providio - Profile (Sign In) is displayed on the page.
+2023-09-26 17:49:41,393 [main] INFO Providio - Footer is displayed on the page.
+2023-09-26 17:49:42,479 [main] INFO Providio - Searched for  SONY-PS3-BUNDLEM this product Id
+2023-09-26 17:49:49,440 [main] INFO Providio - Clicked on this SONY-PS3-BUNDLEM product
+2023-09-26 17:49:51,550 [main] INFO Providio - Searched for right product
+2023-09-26 17:49:56,568 [main] INFO Providio - Searched bundle  product
+2023-09-26 17:49:56,646 [main] INFO Providio - addallto buttonenabled
+2023-09-26 17:49:57,820 [main] INFO Providio - Product is  added to cart
+2023-09-26 17:50:01,588 [main] INFO Providio - Gift Certificate added to cart
+2023-09-26 17:50:06,824 [main] INFO Providio - Searched for  013742002836M this product Id
+2023-09-26 17:50:12,824 [main] INFO Providio - Clicked on this 013742002836M product
+2023-09-26 17:50:12,864 [main] INFO Providio - Searched for right product
+2023-09-26 17:50:17,979 [main] INFO Providio - add to buttonenabled
+2023-09-26 17:50:56,659 [main] INFO Providio - Test case failed and returned into homepage
+2023-09-26 17:59:54,280 [main] INFO Providio - Test case failed and returned into homepage
+2023-09-26 18:02:58,329 [main] INFO Providio - Entered into url
+2023-09-26 18:02:58,342 [main] INFO Providio - Placing the order as guest user
+2023-09-26 18:03:08,636 [main] INFO Providio - Searched for right product
+2023-09-26 18:03:24,821 [main] INFO Providio - Product is  added to cart
+2023-09-26 18:03:37,026 [main] INFO Providio - searched for Variation product
+2023-09-26 18:03:47,493 [main] INFO Providio - Your shopping cart
+2023-09-26 18:03:47,493 [main] INFO Providio - Successfully clicked on the mini cart button
+2023-09-26 18:03:47,634 [main] INFO Providio - true
+2023-09-26 18:03:47,697 [main] INFO Providio - true
+2023-09-26 18:03:47,697 [main] INFO Providio - Successfully displayed the viewcart, checkout, paypal buttons and products
+2023-09-26 18:03:57,523 [main] INFO Providio - clicked the view cart button in the minicart
+2023-09-26 18:03:57,586 [main] INFO Providio - Order Summary
+2023-09-26 18:03:57,586 [main] INFO Providio - Successfully clicked on the view cart button
+2023-09-26 18:04:07,868 [main] INFO Providio - 1
+2023-09-26 18:04:07,991 [main] INFO Providio - Guest checkout
+2023-09-26 18:04:08,142 [main] INFO Providio - Guest mail again
+2023-09-26 18:04:08,253 [main] INFO Providio - Guest continue as guest
+2023-09-26 18:04:14,531 [main] INFO Providio - Entered fname
+2023-09-26 18:04:14,719 [main] INFO Providio - Entered lname
+2023-09-26 18:04:20,197 [main] INFO Providio - Entered phone number
+2023-09-26 18:04:35,348 [main] INFO Providio - Clicked on the payment button
+2023-09-26 18:04:41,706 [main] INFO Providio - [ZAZTPVGTLWZFOIDV, SOVMQMMPRLIFTCSS, FADZCMQVAAAIJAZY, GOGVSYAHGSVVTWCM, QGJFIIJOMIIHKTZA, MLWPADAZCQQWPOPV, VJJZOTZGVJGQWKWW, YYCTOVPDFCOCMFVJ, LCIMGOLARSTLITOR, DRYYRILIHLVMZFHM, JAYFKHVTHHYJJPDF, ZDSIAFIYZAPVDHRW]
+2023-09-26 18:04:46,018 [main] INFO Providio - Card Amount-$25.00
+2023-09-26 18:04:46,034 [main] INFO Providio - Check button is enabled and selected
+2023-09-26 18:04:53,267 [main] INFO Providio - Apply button is selected
+2023-09-26 18:04:55,326 [main] INFO Providio - This ZAZTPVGTLWZFOIDV Gift Card belongs to a different customer
+2023-09-26 18:04:55,415 [main] INFO Providio - After applying GC we have this in datalist: [SOVMQMMPRLIFTCSS, FADZCMQVAAAIJAZY, GOGVSYAHGSVVTWCM, QGJFIIJOMIIHKTZA, MLWPADAZCQQWPOPV, VJJZOTZGVJGQWKWW, YYCTOVPDFCOCMFVJ, LCIMGOLARSTLITOR, DRYYRILIHLVMZFHM, JAYFKHVTHHYJJPDF, ZDSIAFIYZAPVDHRW]
+2023-09-26 18:05:04,750 [main] INFO Providio - Card Amount-$0.00
+2023-09-26 18:05:04,781 [main] INFO Providio - Check button is enabled and selected
+2023-09-26 18:05:12,026 [main] INFO Providio - Apply button is selected
+2023-09-26 18:05:14,059 [main] INFO Providio - Insufficient funds in this SOVMQMMPRLIFTCSS gift card
+2023-09-26 18:05:14,151 [main] INFO Providio - After applying GC we have this in datalist: [FADZCMQVAAAIJAZY, GOGVSYAHGSVVTWCM, QGJFIIJOMIIHKTZA, MLWPADAZCQQWPOPV, VJJZOTZGVJGQWKWW, YYCTOVPDFCOCMFVJ, LCIMGOLARSTLITOR, DRYYRILIHLVMZFHM, JAYFKHVTHHYJJPDF, ZDSIAFIYZAPVDHRW]
+2023-09-26 18:05:23,449 [main] INFO Providio - Card Amount-$0.00
+2023-09-26 18:05:23,480 [main] INFO Providio - Check button is enabled and selected
+2023-09-26 18:05:30,725 [main] INFO Providio - Apply button is selected
+2023-09-26 18:05:32,756 [main] INFO Providio - Insufficient funds in this FADZCMQVAAAIJAZY gift card
+2023-09-26 18:05:32,818 [main] INFO Providio - After applying GC we have this in datalist: [GOGVSYAHGSVVTWCM, QGJFIIJOMIIHKTZA, MLWPADAZCQQWPOPV, VJJZOTZGVJGQWKWW, YYCTOVPDFCOCMFVJ, LCIMGOLARSTLITOR, DRYYRILIHLVMZFHM, JAYFKHVTHHYJJPDF, ZDSIAFIYZAPVDHRW]
+2023-09-26 18:05:42,133 [main] INFO Providio - Card Amount-$25.00
+2023-09-26 18:05:42,164 [main] INFO Providio - Check button is enabled and selected
+2023-09-26 18:05:49,370 [main] INFO Providio - Apply button is selected
+2023-09-26 18:05:51,467 [main] INFO Providio - Gift certificate codes are applied
+2023-09-26 18:05:51,483 [main] INFO Providio - Total data: 12
+2023-09-26 18:05:51,484 [main] INFO Providio - Total operations performed: 3
+2023-09-26 18:05:51,484 [main] INFO Providio - applied gift card code 
+2023-09-26 18:05:51,642 [main] INFO Providio - Payment Method
+2023-09-26 18:05:51,642 [main] INFO Providio - Successfully clicked on the Payment button
+2023-09-26 18:05:51,658 [main] INFO Providio - 1
+2023-09-26 18:08:36,101 [main] INFO Providio - Entered into url
+2023-09-26 18:08:36,111 [main] INFO Providio - Placing the order as guest user
+2023-09-26 18:08:53,641 [main] INFO Providio - Searched for right product
+2023-09-26 18:09:09,908 [main] INFO Providio - Product is  added to cart
+2023-09-26 18:09:14,923 [main] INFO Providio - searched for Variation product
+2023-09-26 18:09:25,379 [main] INFO Providio - Your shopping cart
+2023-09-26 18:09:25,392 [main] INFO Providio - Successfully clicked on the mini cart button
+2023-09-26 18:09:25,505 [main] INFO Providio - true
+2023-09-26 18:09:25,552 [main] INFO Providio - true
+2023-09-26 18:09:25,552 [main] INFO Providio - Successfully displayed the viewcart, checkout, paypal buttons and products
+2023-09-26 18:09:35,413 [main] INFO Providio - clicked the view cart button in the minicart
+2023-09-26 18:09:35,476 [main] INFO Providio - Order Summary
+2023-09-26 18:09:35,476 [main] INFO Providio - Successfully clicked on the view cart button
+2023-09-26 18:09:45,965 [main] INFO Providio - 1
+2023-09-26 18:09:46,084 [main] INFO Providio - Guest checkout
+2023-09-26 18:09:46,238 [main] INFO Providio - Guest mail again
+2023-09-26 18:09:46,306 [main] INFO Providio - Guest continue as guest
+2023-09-26 18:09:52,605 [main] INFO Providio - Entered fname
+2023-09-26 18:09:52,838 [main] INFO Providio - Entered lname
+2023-09-26 18:09:58,370 [main] INFO Providio - Entered phone number
+2023-09-26 18:10:13,542 [main] INFO Providio - Clicked on the payment button
+2023-09-26 18:10:19,894 [main] INFO Providio - [ZAZTPVGTLWZFOIDV, SOVMQMMPRLIFTCSS, FADZCMQVAAAIJAZY, GOGVSYAHGSVVTWCM, QGJFIIJOMIIHKTZA, MLWPADAZCQQWPOPV, VJJZOTZGVJGQWKWW, YYCTOVPDFCOCMFVJ, LCIMGOLARSTLITOR, DRYYRILIHLVMZFHM, JAYFKHVTHHYJJPDF, ZDSIAFIYZAPVDHRW]
+2023-09-26 18:10:24,309 [main] INFO Providio - Card Amount-$25.00
+2023-09-26 18:10:24,325 [main] INFO Providio - Check button is enabled and selected
+2023-09-26 18:10:31,569 [main] INFO Providio - Apply button is selected
+2023-09-26 18:10:33,637 [main] INFO Providio - This ZAZTPVGTLWZFOIDV Gift Card belongs to a different customer
+2023-09-26 18:10:33,727 [main] INFO Providio - After applying GC we have this in datalist: [SOVMQMMPRLIFTCSS, FADZCMQVAAAIJAZY, GOGVSYAHGSVVTWCM, QGJFIIJOMIIHKTZA, MLWPADAZCQQWPOPV, VJJZOTZGVJGQWKWW, YYCTOVPDFCOCMFVJ, LCIMGOLARSTLITOR, DRYYRILIHLVMZFHM, JAYFKHVTHHYJJPDF, ZDSIAFIYZAPVDHRW]
+2023-09-26 18:10:43,037 [main] INFO Providio - Card Amount-$0.00
+2023-09-26 18:10:43,059 [main] INFO Providio - Check button is enabled and selected
+2023-09-26 18:10:50,314 [main] INFO Providio - Apply button is selected
+2023-09-26 18:10:52,349 [main] INFO Providio - Insufficient funds in this SOVMQMMPRLIFTCSS gift card
+2023-09-26 18:10:52,446 [main] INFO Providio - After applying GC we have this in datalist: [FADZCMQVAAAIJAZY, GOGVSYAHGSVVTWCM, QGJFIIJOMIIHKTZA, MLWPADAZCQQWPOPV, VJJZOTZGVJGQWKWW, YYCTOVPDFCOCMFVJ, LCIMGOLARSTLITOR, DRYYRILIHLVMZFHM, JAYFKHVTHHYJJPDF, ZDSIAFIYZAPVDHRW]
+2023-09-26 18:11:01,755 [main] INFO Providio - Card Amount-$0.00
+2023-09-26 18:11:01,786 [main] INFO Providio - Check button is enabled and selected
+2023-09-26 18:11:09,027 [main] INFO Providio - Apply button is selected
+2023-09-26 18:11:11,047 [main] INFO Providio - Insufficient funds in this FADZCMQVAAAIJAZY gift card
+2023-09-26 18:11:11,148 [main] INFO Providio - After applying GC we have this in datalist: [GOGVSYAHGSVVTWCM, QGJFIIJOMIIHKTZA, MLWPADAZCQQWPOPV, VJJZOTZGVJGQWKWW, YYCTOVPDFCOCMFVJ, LCIMGOLARSTLITOR, DRYYRILIHLVMZFHM, JAYFKHVTHHYJJPDF, ZDSIAFIYZAPVDHRW]
+2023-09-26 18:11:20,476 [main] INFO Providio - Card Amount-$25.00
+2023-09-26 18:11:20,507 [main] INFO Providio - Check button is enabled and selected
+2023-09-26 18:11:27,726 [main] INFO Providio - Apply button is selected
+2023-09-26 18:11:29,802 [main] INFO Providio - Gift certificate codes are applied
+2023-09-26 18:11:29,802 [main] INFO Providio - Total data: 12
+2023-09-26 18:11:29,802 [main] INFO Providio - Total operations performed: 3
+2023-09-26 18:11:29,802 [main] INFO Providio - applied gift card code 
+2023-09-26 18:11:29,977 [main] INFO Providio - Payment Method
+2023-09-26 18:11:29,977 [main] INFO Providio - Successfully clicked on the Payment button
+2023-09-26 18:11:30,006 [main] INFO Providio - 1
+2023-09-26 18:11:32,450 [main] INFO Providio - entered card number
+2023-09-26 18:11:35,897 [main] INFO Providio - entered exp month
+2023-09-26 18:11:39,305 [main] INFO Providio - entered exp year
+2023-09-26 18:11:41,453 [main] INFO Providio - entered scecode
+2023-09-26 18:11:47,595 [main] INFO Providio - Clicked on review order button
+2023-09-26 18:11:54,739 [main] INFO Providio - successfully click on the place order button by normal click
+2023-09-26 18:12:02,867 [main] INFO Providio - Thank you for your order.
+2023-09-26 18:12:02,867 [main] INFO Providio - Successfully Order is Placed
+2023-09-26 18:12:07,939 [main] INFO Providio - Successfully Order is Placed and the Order number is 80027649
+2023-09-26 18:12:08,033 [main] INFO Providio - Successfully Order is Placed and the Order number is Credit Visa
+************1111
+Ending 9/ 2029
+Gift Card
+************TWCM
