@@ -6,13 +6,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
+import com.providio.commonfunctionality.size;
 import com.providio.pageObjects.homePage;
 import com.providio.pageObjects.navigationPage;
 import com.providio.pageObjects.productDescriptionPage;
 import com.providio.pageObjects.productListingPage;
 import com.providio.paymentProccess.tc__CreditCardPaymentProcess;
 import com.providio.paymentProccess.tc__MinicartViewCartProcess;
-import com.providio.payments.size;
 
 public class tc__By_BuyNow_Button extends baseClass{
 	@Test

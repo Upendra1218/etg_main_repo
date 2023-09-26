@@ -10,6 +10,8 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
+import com.providio.commonfunctionality.addtoCartValidation;
+import com.providio.commonfunctionality.validatingInstock;
 import com.providio.pageObjects.SimpleProductFromExcel;
 import com.providio.paymentProccess.tc__MinicartViewCartProcess;
 import com.providio.paymentProccess.tc__MinicartViewCartProcessByPayPal;
@@ -25,37 +27,23 @@ public class tc__SimpleProductReg_InVC_Paypal extends baseClass{
 		 
 		 
 	if(isLoggedIn) {
-		
-		 	WebElement minicartcount = driver.findElement(By.xpath("//span[@class ='minicart-quantity ml-1']"));
-	        String countOfMinicart = minicartcount.getText();
-	        int minicartCountValue = Integer.parseInt(countOfMinicart);
-	        
-	        logger.info(minicartCountValue);
-		
-		
-			SimpleProductFromExcel  simpleProduct = new SimpleProductFromExcel ();			
-			simpleProduct.performRandomOperations(driver);
-		
-			WebElement minicartcountafteradding = driver.findElement(By.xpath("//span[@class ='minicart-quantity ml-1']"));
-	        String countOfMinicartafteradding = minicartcountafteradding.getText();
-	        int minicartCountValueafteradding = Integer.parseInt(countOfMinicartafteradding);
-	        
-	        logger.info(minicartCountValueafteradding);
-
-			//validation for product add to cart
-			test.info("Verifying the product is added to cart or not ");
 	
-			if( minicartCountValueafteradding!= minicartCountValue) {
-				test.pass("Product added to cart");
-				logger.info("Product is  added to cart");
-			}else {
-				test.fail("Product is not added to cart");
-				logger.info("Product is not added to cart");
-			}
-        
-			//paypal checkout form view cart page
-             tc__MinicartViewCartProcessByPayPal paypal= new tc__MinicartViewCartProcessByPayPal();	         
-             paypal.checkoutprocessFromViewCart();   
+
+		 //adding simple product into cart
+		 SimpleProductFromExcel  simpleProduct = new SimpleProductFromExcel();	
+		 simpleProduct.performRandomOperations(driver);
+		 test.info("Searched for  simple product");
+		 
+		//validating the product is instock and adding to the cart
+		  validatingInstock.inStockValidation();
+		  
+		//validating the product is add to the cart
+	    addtoCartValidation.validatingProductisAddtoCart(driver);
+		 
+
+		//paypal checkout form view cart page
+         tc__MinicartViewCartProcessByPayPal paypal= new tc__MinicartViewCartProcessByPayPal();	         
+         paypal.checkoutprocessFromViewCart();   
              
 	        }
 

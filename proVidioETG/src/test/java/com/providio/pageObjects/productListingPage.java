@@ -296,12 +296,20 @@ WebDriver lDriver;
 		}
 		
 		//WishList
-		@FindBy(xpath ="(//a[@title= 'Wishlist'])[1]")
-		WebElement WishlistPlp;
-		public void selecttheWishlist() throws InterruptedException{
-			WishlistPlp.click();
-	    	Thread.sleep(3000);
-		}
+				@FindBy(xpath ="(//a[@title= 'Wishlist'])[1]")
+				WebElement WishlistPlp;
+				public void selecttheWishlist() throws InterruptedException{
+					
+					for(int i =2;i<=4 ;i++) {
+						
+						WebElement wishlistPlp = driver.findElement(By.xpath("(//a[@title= 'Wishlist'])["+i+"]"));
+						Thread.sleep(4000);
+						JavascriptExecutor executor = (JavascriptExecutor) driver;
+						executor.executeScript("arguments[0].click();", wishlistPlp);
+						
+						//wishlistPlp.click();
+					}
+				}
 		
 		//quickshop
 		@FindBy(xpath ="(//div[@class='d-flex flex-row']/a[@class='quickview hidden-md-down btn btn-outline-primary w-100'])[1]")
@@ -323,7 +331,7 @@ WebDriver lDriver;
 	    	Thread.sleep(3000);
 		}
 
-		public void selectProductRandom(WebDriver driver) throws InterruptedException {
+		/*public void selectProductRandom(WebDriver driver) throws InterruptedException {
 			
 	        Random random = new Random();
 	        List<WebElement> products = driver.findElements(By.xpath("//a[@class ='tile-img-contain']"));
@@ -341,7 +349,55 @@ WebDriver lDriver;
             
 	        }
 	        //RandomSelectProductFormPLP.click();
+	    }*/
+		
+public void selectProductRandom(WebDriver driver) throws InterruptedException {
+			
+			Random random1 = new Random();
+	        List<WebElement> products1 = driver.findElements(By.xpath("//a[@class ='tile-img-contain']"));
+	        int totalProductcount1 = products1.size();
+	        if(totalProductcount1>0)
+	        {
+	        int randomselectProduct = random1.nextInt(totalProductcount1) + 1;
+
+	        WebElement RandomSelectProductFormPLP = driver.findElement(By.xpath("(//a[@class ='tile-img-contain'])[" + randomselectProduct + "]"));
+	        
+	        JavascriptExecutor js = (JavascriptExecutor)driver;
+            js.executeScript("arguments[0].click();", RandomSelectProductFormPLP);
+	        }
+	        
+	        Thread.sleep(2000);
+			
+			List<WebElement> validatingPdpIsLoading = driver.findElements(By.xpath("//a[contains(@class, 'continue-shopping')]"));
+			logger.info(validatingPdpIsLoading.size());
+			
+			if(validatingPdpIsLoading.size()>0) {
+				logger.info("Pdpisnot validating");
+				WebElement continueShoppingBtn = driver.findElement(By.xpath("//a[contains(@class, 'continue-shopping')]"));
+				continueShoppingBtn.click();
+				Thread.sleep(3000);
+				navigationPage nav = new navigationPage(driver);
+				nav.selectRandomMenu(driver);
+				
+				Random random = new Random();
+		        List<WebElement> products = driver.findElements(By.xpath("//a[@class ='tile-img-contain']"));
+		        int totalProductcount = products.size();
+		        if(totalProductcount>0)
+		        {
+		        int randomselectProduct = random.nextInt(totalProductcount) + 1;
+//		        ScrollBarfuctions sbf = new ScrollBarfuctions();
+//		        sbf.scrollmedium(driver);
+		        WebElement RandomSelectProductFormPLP = driver.findElement(By.xpath("(//a[@class ='tile-img-contain'])[" + randomselectProduct + "]"));
+		        
+		        JavascriptExecutor js = (JavascriptExecutor)driver;
+	            js.executeScript("arguments[0].click();", RandomSelectProductFormPLP);
+				
+		        }
+				
+						}
+	        //RandomSelectProductFormPLP.click();
 	    }
+
 
 	    public void selectAllProductsFormPLP(WebDriver driver) throws InterruptedException {
 	        List<Integer> numbers = new ArrayList();

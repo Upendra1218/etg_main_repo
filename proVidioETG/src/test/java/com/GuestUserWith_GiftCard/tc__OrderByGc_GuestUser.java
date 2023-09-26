@@ -8,7 +8,7 @@ import com.providio.paymentProccess.tc__MinicartViewCartProcess;
 import com.providio.testcases.baseClass;
 
 public class tc__OrderByGc_GuestUser extends baseClass {
-	int minicartCountValue;
+	 
 	@Test
 	public void paymentByGiftCardInGuestUser() throws InterruptedException  {
 			  // enters into url

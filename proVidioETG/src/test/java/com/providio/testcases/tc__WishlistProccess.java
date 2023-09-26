@@ -89,7 +89,7 @@ public class tc__WishlistProccess extends baseClass {
 			  Thread.sleep(5000);
 			  
 			  
-			  allAttributesinOneFile.allAttributes();
+			  allAttributesinOneFile.quickshopallAttributes();
 			  //size selection
 //			  SizeSelectionInQuickShop sizeSelection = new SizeSelectionInQuickShop();
 //			  sizeSelection.sizeSelectionInQuickShop(driver);

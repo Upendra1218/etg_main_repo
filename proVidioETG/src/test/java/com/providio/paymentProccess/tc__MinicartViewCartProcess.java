@@ -129,6 +129,7 @@ public class tc__MinicartViewCartProcess extends baseClass {
 
 
     private void selectShippingAddress(checkOutPage cp) throws InterruptedException {
+    	
         WebElement existingAddress = driver.findElement(By.xpath("//select[@name='shipmentSelector' and @id='shipmentSelector-default']"));
         List<WebElement> options1 = existingAddress.findElements(By.xpath("./option"));
         System.out.println(options1.size());
@@ -163,73 +164,9 @@ public class tc__MinicartViewCartProcess extends baseClass {
     	
         cp.clickpaymentbutton(driver);
         logger.info("Clicked on the payment button");
-        //Thread.sleep(5000);
-
-        List<WebElement> errorMessageInvalidCityList = driver.findElements(By.xpath("//div[@id='defaultCity']"));
-        if(errorMessageInvalidCityList.size()>0) {
-	        WebElement errorMessageInvalidCity = driver.findElement(By.xpath("//div[@id='defaultCity']"));
-	        boolean isDisplayedinvalidcity = errorMessageInvalidCity.isDisplayed();
-	        test.info("The error is " + errorMessageInvalidCity.getText() );
-
-	        if(isDisplayedinvalidcity) {
-	        	test.info("User entered the wrong city and we are entering the new address");
-	        	test.pass("User entered the wrong city and we are entering the new address");         
-	            logger.info("User entered the wrong city and we are entering the new address");
-	
-	        	WebElement Address1 = driver.findElement(By.xpath("//input[@id='shippingAddressOnedefault']"));
-	        	Address1.clear();          
-	            int randomNumber = 123; //random.nextInt(900) + 100// Generates a random number between 100 and 999
-	            address = String.valueOf(randomNumber);
-	            Address1.sendKeys(address);
-	            WebElement Address11 = driver.switchTo().activeElement();         
-	            Thread.sleep(1000);
-	            Address11.sendKeys(Keys.ARROW_DOWN);
-	            Thread.sleep(1000);
-	            Address11.sendKeys(Keys.ARROW_DOWN);
-	            Address11.sendKeys(Keys.ENTER);
-	            Thread.sleep(1000);
-	            cp.clickpaymentbutton(driver);
-	            logger.info("Clicked on the payment button");
-	
-	
-	        }else {
-	        	//test.fail("User entered the wrong creditials and error not displayed");         
-	            logger.info("city name is not empty");
-	        }
+        Thread.sleep(5000);
+    
         }
-   /*public void selectPaymentMethod(checkOutPage cp) throws InterruptedException {	   
-        cp.clickpaymentbutton(driver);
-        logger.info("Clicked on the payment button");
-        Thread.sleep(2000);
-    }*/
-        
-      
     }
-    public void addressDetails(checkOutPage cp) throws InterruptedException {
-    	Thread.sleep(1000);	        		        	
-        cp.setFisrtName(fname);	
-        logger.info("Entered fname");	
-        Thread.sleep(1000);	
-        cp.setLastname(lname);	
-        logger.info("Entered lname");	
-        WebElement Address1 = driver.findElement(By.xpath("//input[@id='shippingAddressOnedefault']"));	
-        Random random = new Random();	
-        int randomNumber = random.nextInt(900) + 100; // Generates a random number between 100 and 999	
-        address = String.valueOf(randomNumber);	
-        Address1.clear();	
-        Address1.sendKeys(address);	
-        WebElement Address11 = driver.switchTo().activeElement();
-        Thread.sleep(1000);	
-        Address11.sendKeys(Keys.ARROW_DOWN);	
-        Thread.sleep(1000);	
-        Address11.sendKeys(Keys.ARROW_DOWN);	
-        Address11.sendKeys(Keys.ENTER);	
-        Thread.sleep(2000);	
-        cp.setPhone(phonenumber);	
-        logger.info("Entered phone number");	            
-        Thread.sleep(2000);   
-        cp.clickpaymentbutton(driver);
-        logger.info("Clicked on the payment button");
-        Thread.sleep(2000);
-    }
-}
+   
+

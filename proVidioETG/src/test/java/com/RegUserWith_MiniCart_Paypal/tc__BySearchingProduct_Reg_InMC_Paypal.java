@@ -2,12 +2,13 @@
 
 package com.RegUserWith_MiniCart_Paypal;
 
+import com.providio.commonfunctionality.addtoCartValidation;
+import com.providio.commonfunctionality.size;
 import com.providio.pageObjects.homePage;
 import com.providio.pageObjects.productDescriptionPage;
 import com.providio.paymentProccess.tc__MinicartViewCartProcess;
 import com.providio.paymentProccess.tc__MinicartViewCartProcessByPayPal;
 import com.providio.paymentProccess.tc__CreditCardPaymentProcess;
-import com.providio.payments.size;
 import com.providio.testcases.baseClass;
 
 import java.util.List;
@@ -19,7 +20,7 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 public class tc__BySearchingProduct_Reg_InMC_Paypal extends baseClass {
-	int minicartCountValue;
+	 
 	SoftAssert softAssert = new SoftAssert();
 
 	@Test(dependsOnMethods = {"com.providio.testcases.tc__LoginSc.verifySuccessfulLogin"}, alwaysRun = true)
@@ -35,43 +36,17 @@ public class tc__BySearchingProduct_Reg_InMC_Paypal extends baseClass {
             //clicked on searched product
             homepage.clickOnSearchedProduct();
             test.info("clicked on searched product");
-            
-            //count of cart before adding the product in cart 
-            Thread.sleep(2000);
-			List<WebElement> minicartcountList = driver.findElements(By.cssSelector(".minicart-quantity"));
-			if(minicartcountList.size()>0) {
-				 WebElement minicartcount = driver.findElement(By.cssSelector(".minicart-quantity"));
-			    	String countOfMinicart = minicartcount.getText();
-			   
-			// Check if the string is not empty and contains only digits
-			 if (!countOfMinicart.isEmpty() && countOfMinicart.matches("\\d+")) {
-			        minicartCountValue = Integer.parseInt(countOfMinicart);
-			        System.out.println("The minicart count before adding the product is " + minicartCountValue);    		
-			      }
-			 }
+        
 			
 			 List<WebElement> pdpPage = driver.findElements(By.xpath("//button[contains(@class,'add-to-cart btn btn-primary')]"));
     		 if( pdpPage.size()>0) {
 		          size s = new size();
 		          s.selectSize(driver);
-	    		 }
-           // cart count after adding the product		 
-            WebElement minicartcountafteradding =driver.findElement(By.cssSelector(".minicart-quantity"));
-            String countOfMinicartafteradding = minicartcountafteradding.getText();
-            int minicartCountValueafteradding = Integer.parseInt(countOfMinicartafteradding);
-
-            logger.info("The minicart count after adding the product is"+minicartCountValueafteradding);
-
-	      //validation for product add to cart
-	        test.info("Verifying the product is added to cart or not ");
-		        if( minicartCountValueafteradding!= minicartCountValue) {
-		            test.pass("Product added to cart");
-		            logger.info("Product is  added to cart");
-		        }else {
-		            test.fail("Product is not added to cart");
-		            logger.info("Product is not added to cart");
-		        }
-		  
+    		 }
+   		  
+   		   //validating the product is add to the cart
+    	    addtoCartValidation.validatingProductisAddtoCart(driver);
+    	    
 		        //checkout from mini cart by paypal	        
 		        tc__MinicartViewCartProcessByPayPal checkOutProcessByPayPal= new tc__MinicartViewCartProcessByPayPal();
 		        checkOutProcessByPayPal. checkoutprocessFromMiniCart();

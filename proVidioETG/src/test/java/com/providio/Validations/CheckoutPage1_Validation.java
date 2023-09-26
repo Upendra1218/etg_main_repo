@@ -14,6 +14,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import com.github.javafaker.Faker;
+import com.providio.commonfunctionality.size;
 import com.providio.logout.tc__LogOut;
 import com.providio.pageObjects.CreateAccount;
 import com.providio.pageObjects.guestUserLoginPage;
@@ -21,7 +22,6 @@ import com.providio.pageObjects.loginPage;
 import com.providio.pageObjects.miniCartPage;
 import com.providio.pageObjects.navigationPage;
 import com.providio.pageObjects.productListingPage;
-import com.providio.payments.size;
 import com.providio.testcases.baseClass;
 import com.providio.testcases.tc__createAccount;
 

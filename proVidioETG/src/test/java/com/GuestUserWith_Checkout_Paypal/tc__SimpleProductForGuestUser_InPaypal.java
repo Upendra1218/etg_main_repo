@@ -8,6 +8,8 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
+import com.providio.commonfunctionality.addtoCartValidation;
+import com.providio.commonfunctionality.validatingInstock;
 import com.providio.pageObjects.SimpleProductFromExcel;
 import com.providio.paymentProccess.tc__MinicartViewCartProcess;
 import com.providio.paymentProccess.tc__MinicartViewCartProcessByPayPal;
@@ -17,49 +19,24 @@ import com.providio.testcases.baseClass;
 
 public class tc__SimpleProductForGuestUser_InPaypal extends baseClass{
 	SoftAssert softAssert = new SoftAssert();
-	int minicartCountValue;
+	 
 	 @Test
 	public void simpleProduct() throws InterruptedException {
 		 
 			 driver.get(baseURL);
 			 logger.info("Entered into url");
 			 
-		 	 Thread.sleep(2000);
-    		 List<WebElement> minicartcountList = driver.findElements(By.cssSelector(".minicart-quantity"));
-    		 if(minicartcountList.size()>0) {
-    			 WebElement minicartcount = driver.findElement(By.cssSelector(".minicart-quantity"));
-    			 String countOfMinicart = minicartcount.getText();
-
-             // Check if the string is not empty and contains only digits
-             if (!countOfMinicart.isEmpty() && countOfMinicart.matches("\\d+")) {
-                minicartCountValue = Integer.parseInt(countOfMinicart);
-                 System.out.println("The minicart count before adding the product is " + minicartCountValue);    		
-              }
-	    		 }
-
+		 	 //Search for simple product and select the product
 			 SimpleProductFromExcel  simpleProduct = new SimpleProductFromExcel();	
 			 simpleProduct.performRandomOperations(driver);
 			 test.info("Searched for  simple product");
+			 
+			//validating the product is instock and adding to the cart
+			  validatingInstock.inStockValidation();
+			  
+			//validating the product is add to the cart
+	 	    addtoCartValidation.validatingProductisAddtoCart(driver);
 			
-			 if(minicartcountList.size()>0) {
-	          WebElement minicartcountafteradding = driver.findElement(By.xpath("//span[@class ='minicart-quantity ml-1']"));
-	          String countOfMinicartafteradding = minicartcountafteradding.getText();
-	          int minicartCountValueafteradding = Integer.parseInt(countOfMinicartafteradding);
-
-		          logger.info("The minicart count after adding the product is "+minicartCountValueafteradding);
-	
-		       //validation for product add to cart
-		        test.info("Verifying the product is added to cart or not ");
-	
-			        if( minicartCountValueafteradding!= minicartCountValue) {
-			            test.pass("Product added to cart");
-			            logger.info("Product is  added to cart");
-			        }else {
-			            test.fail("Product is not added to cart");
-			            logger.info("Product is not added to cart");
-			        }	        
-	    		 }
-					
 	        //checkoutProcess	        
 	        tc__MinicartViewCartProcess cp = new tc__MinicartViewCartProcess();	        
 	        cp.checkoutprocess();

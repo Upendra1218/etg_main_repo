@@ -581,42 +581,18 @@ WebDriver lDriver;
 	                 loginbutton1.click();
 	                 Thread.sleep(1000);
                  }
-                 /*
-                 WebElement visaCard=cardParentDiv.findElement(By.xpath("(//input[@class='ppvx_radio__input___2-11-1'])[3]"));
-                 JavascriptExecutor js = (JavascriptExecutor) driver;
-                 js.executeScript("window.scrollBy(0,100)", "");
-                 Thread.sleep(2000);
-                 js.executeScript("arguments[0].click();", visaCard);
-                 */
-                 Thread.sleep(2000);
-                 /*
-                 if(changeTheAddressList.size()>0) {
-                	 WebElement changeTheAddress=driver.findElement(By.xpath("//button[@id='changeShippingAddress']"));
-                	 changeTheAddress.click();
-                	 
-                	// Find all the address list items
-                     List<WebElement> addressListItems = driver.findElements(By.cssSelector(".SelectShippingSidebar__sidebarListItem--7i3hP"));
-                     System.out.println("Total number of address in paypal "+ addressListItems);
-                     if(addressListItems.size()>0) {
-	                     // Generate a random index to select an address randomly
-	                     Random random = new Random();
-	                     int randomIndex = random.nextInt(addressListItems.size());
-	
-	                     // Click on the randomly selected address
-	                     WebElement randomAddressButton = addressListItems.get(randomIndex).findElement(By.tagName("button"));
-	                     randomAddressButton.click();
-                     }
-                 }*/
+                
+       
                  Thread.sleep(2000);
                  if(reviewOrderButton.size()>0) {
                 	WebElement reviewOrder=driver.findElement(By.id("payment-submit-btn"));
                 	reviewOrder.click();
                 	Thread.sleep(7000);
-                	/*if(reviewOrder.isDisplayed()) {
+                	if(reviewOrderButton.size()>0 && reviewOrder.isDisplayed()) {
                 	      JavascriptExecutor js = (JavascriptExecutor) driver;                       
                           js.executeScript("arguments[0].click();", reviewOrder);
                          
-                	}*/
+                	}
                 	
                 	
                 	//reviewOrder.click();

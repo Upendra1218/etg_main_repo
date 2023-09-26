@@ -96,7 +96,7 @@ public class baseClass {
 	protected static boolean isLoggedIn=false;
 	
 	private static ExtentReports report = new ExtentReports();
-    private ExtentSparkReporter reporter = new ExtentSparkReporter("C:\\Users\\UpendraReddy\\git\\repository2\\proVidioETG\\Reports\\ProvidioTestReport.html");
+    private ExtentSparkReporter reporter = new ExtentSparkReporter("C:\\Users\\etgadmin\\git\\Test\\proVidioETG\\Reports\\ProvidioTestReport.html");
 	
 	//Reporting
 	//static ExtentReports report;
@@ -186,7 +186,7 @@ public class baseClass {
 		   report.flush();
 		   
 
-		   driver.get("C:\\Users\\UpendraReddy\\git\\repository2\\proVidioETG\\Reports\\ProvidioTestReport.html");
+		   driver.get("C:\\Users\\etgadmin\\git\\Test\\proVidioETG\\Reports\\ProvidioTestReport.html");
 			driver.manage().window().maximize();
 			Thread.sleep(5000);
 			// Take a screenshot of the entire browser window

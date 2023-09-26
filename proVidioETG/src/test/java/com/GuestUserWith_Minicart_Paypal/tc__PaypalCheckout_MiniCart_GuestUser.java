@@ -7,11 +7,11 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import com.providio.commonfunctionality.navigationProccess;
+import com.providio.commonfunctionality.size;
 import com.providio.pageObjects.navigationPage;
 import com.providio.pageObjects.productListingPage;
 import com.providio.paymentProccess.tc__MinicartViewCartProcess;
 import com.providio.paymentProccess.tc__MinicartViewCartProcessByPayPal;
-import com.providio.payments.size;
 import com.providio.testcases.baseClass;
 
 public class tc__PaypalCheckout_MiniCart_GuestUser extends baseClass {

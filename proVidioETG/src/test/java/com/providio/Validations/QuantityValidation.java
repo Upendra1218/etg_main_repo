@@ -10,10 +10,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
+import com.providio.commonfunctionality.size;
 import com.providio.pageObjects.miniCartPage;
 import com.providio.pageObjects.navigationPage;
 import com.providio.pageObjects.productListingPage;
-import com.providio.payments.size;
 import com.providio.testcases.baseClass;
 
 public class QuantityValidation extends baseClass {

@@ -13,6 +13,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 import com.github.javafaker.Faker;
+import com.providio.commonfunctionality.addtoCartValidation;
+import com.providio.commonfunctionality.validatingInstock;
 
 public class GiftCertificate {
 
@@ -118,9 +120,15 @@ public class GiftCertificate {
 
        // Thread.sleep(1000);
         confirmFriendsMail.sendKeys(fakeEmail);
-	
+     
 
-        addToCart.click();
+        //addToCart.click();
+        js.executeScript("arguments[0].click();", 	addToCart);
+        //System.out.println("clicked");
+        
+        //validating the gift card is add to the cart
+	    addtoCartValidation.validatingGiftCardAddtoCart(driver);
+        
         Thread.sleep(3000);
 	
 	}

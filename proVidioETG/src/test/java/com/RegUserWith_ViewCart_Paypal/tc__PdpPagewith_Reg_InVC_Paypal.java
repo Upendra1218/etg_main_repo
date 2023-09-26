@@ -5,13 +5,13 @@
 
 package com.RegUserWith_ViewCart_Paypal;
 
+import com.providio.commonfunctionality.size;
 import com.providio.pageObjects.navigationPage;
 import com.providio.pageObjects.productDescriptionPage;
 import com.providio.pageObjects.productListingPage;
 import com.providio.paymentProccess.tc__MinicartViewCartProcess;
 import com.providio.paymentProccess.tc__MinicartViewCartProcessByPayPal;
 import com.providio.paymentProccess.tc__CreditCardPaymentProcess;
-import com.providio.payments.size;
 import com.providio.testcases.baseClass;
 
 import java.util.List;

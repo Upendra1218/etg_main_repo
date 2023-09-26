@@ -16,7 +16,7 @@ import com.providio.paymentProccess.tc__PaymentProccessByGC;
 import com.providio.testcases.baseClass;
 
 public class tc__OrderByGc_RegUser extends baseClass {
-	int minicartCountValue;
+	 
 	@Test(dependsOnMethods = {"com.providio.testcases.tc__LoginSc.verifySuccessfulLogin"}, alwaysRun = true)
 	public void orderByGc_RegUser() throws InterruptedException {
 		

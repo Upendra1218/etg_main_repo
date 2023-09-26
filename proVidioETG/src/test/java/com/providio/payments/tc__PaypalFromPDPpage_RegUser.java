@@ -7,13 +7,14 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import com.providio.commonfunctionality.size;
 import com.providio.pageObjects.navigationPage;
 import com.providio.pageObjects.productListingPage;
 import com.providio.paymentProccess.tc__MinicartViewCartProcessByPayPal;
 import com.providio.testcases.baseClass;
 
 public class tc__PaypalFromPDPpage_RegUser extends baseClass{
-	int minicartCountValue;
+	 
 	@Test
 	public void paypalFromPDPpage() throws InterruptedException {
 		
@@ -37,12 +38,7 @@ public class tc__PaypalFromPDPpage_RegUser extends baseClass{
 	    			 WebElement minicartcount = driver.findElement(By.cssSelector(".minicart-quantity"));
 	    			 String countOfMinicart = minicartcount.getText();
 
-	             // Check if the string is not empty and contains only digits
-	             if (!countOfMinicart.isEmpty() && countOfMinicart.matches("\\d+")) {
-	                minicartCountValue = Integer.parseInt(countOfMinicart);
-	                 System.out.println("The minicart count before adding the product is " + minicartCountValue);    		
-	              }
-	    		 }
+
 
 	  //paypal buy now button
 	    		 List<WebElement> paypalbuyNowPdp =driver.findElements(By.xpath("//div[contains(@class,'salesforce-buynow-element ')]"));
@@ -66,4 +62,5 @@ public class tc__PaypalFromPDPpage_RegUser extends baseClass{
 			 Assert.fail("User not logged in");
 		}
 	}
-}
+	}
+	}

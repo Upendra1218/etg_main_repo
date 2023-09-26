@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
+import com.providio.commonfunctionality.size;
 import com.providio.pageObjects.checkOutPage;
 import com.providio.pageObjects.miniCartPage;
 import com.providio.pageObjects.navigationPage;
@@ -13,7 +14,6 @@ import com.providio.pageObjects.productListingPage;
 import com.providio.pageObjects.viewCartPage;
 import com.providio.paymentProccess.tc__MinicartViewCartProcess;
 import com.providio.paymentProccess.tc__CreditCardPaymentProcess;
-import com.providio.payments.size;
 import com.providio.testcases.baseClass;
 
 public class CheckoutPage2_Validation extends baseClass {

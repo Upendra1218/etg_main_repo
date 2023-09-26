@@ -2,11 +2,15 @@
 
 package com.providio.login;
 
+import com.providio.commonfunctionality.waitForTheElement;
 import com.providio.pageObjects.loginPage;
 import com.providio.testcases.baseClass;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -35,8 +39,10 @@ public class tc__Login extends baseClass {
         logger.info("click on the submit button");
         Thread.sleep(5000L);
         
+        Wait<WebDriver> wait = waitForTheElement.createFluentWait(driver);
+        WebElement Login = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(" //h1[@class ='account-page-title']")));
         
-        WebElement Login = driver.findElement(By.xpath(" //h1[@class ='account-page-title']"));
+        //WebElement Login = driver.findElement(By.xpath(" //h1[@class ='account-page-title']"));
         String expectedTitle = "Dashboard";
         String actualTitle = Login.getText();
         

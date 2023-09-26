@@ -158,7 +158,10 @@ public void clickOnProduct1() throws InterruptedException{
 			@FindBy(xpath = "//label[text()='Yes, I would recommend this to a friend']")
 			WebElement forYes;
 			public void clickOnYes() throws InterruptedException {
-				forYes.click();
+				
+				JavascriptExecutor js = (JavascriptExecutor)driver;
+				 js.executeScript("arguments[0].click();",forYes);
+				//forYes.click();
 				Thread.sleep(2000);
 			}
 			
@@ -345,11 +348,14 @@ public void clickOnProduct1() throws InterruptedException{
 					 Thread.sleep(2000);
 					 
 				}
+				
+				
 				//to select size
 				
 				@FindBy(xpath ="//select[contains(@class,'select-size')]" )
 				WebElement Size;
 				public void clickOnSize(WebDriver driver) throws InterruptedException {
+					
 					//sizes in boxess
 					List<WebElement> sizeBox= driver.findElements(By.xpath("//div[contains(@class, 'select-size')]"));
 					List<WebElement> sizeDropDown= driver.findElements(By.xpath("//select[contains(@class,'select-size')]"));
@@ -702,10 +708,13 @@ public void clickOnProduct1() throws InterruptedException{
 				 	public void clickOnPaypalBuyNow(WebDriver driver) {
 				 		if(paypalBuyNow.isDisplayed()) {
 				 			JavascriptExecutor js = (JavascriptExecutor) driver;
-					    	 js.executeScript("arguments[0].click();", paypalBuyNow);
-				 		}if(paypalBuyNow.isDisplayed()) {				    	 
-				 			paypalBuyNow.click();
+				 			  ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", paypalBuyNow);
+				 		        js.executeScript("arguments[0].click();", paypalBuyNow);
+				 		
 				 		}
+		//			    	 if(paypalBuyNow.isDisplayed()) {				    	 
+//				 			paypalBuyNow.click();
+//				 		}
 				 	}
 				 	
 				 	//validations of pdp page

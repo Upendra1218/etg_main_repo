@@ -66,7 +66,7 @@ import com.providio.testcases.baseClass;
 		
 		public void performRandomOperations(WebDriver driver) throws InterruptedException {
 			
-			String filePath = "C:\\Users\\UpendraReddy\\git\\MYLatest\\proVidioETG\\testDate\\BundleProductSkew.xlsx";
+			String filePath = "C:\\Users\\etgadmin\\git\\Test\\proVidioETG\\testDate\\BundleProductSkew.xlsx";
 			String sheetName = "SkewId";
 
 			try {
@@ -116,8 +116,11 @@ import com.providio.testcases.baseClass;
 	
 					//validation of product by the skew id
 						Thread.sleep(2000);
-						WebElement searchedForProduct= driver.findElement(By.xpath("//div[@class='product-number']/span"));
-						String searchedForText= searchedForProduct.getText();
+						List<WebElement> searchedForProduct= driver.findElements(By.cssSelector(".product-id"));
+						if(searchedForProduct.size()>0) {
+						WebElement searchedForProductDisplay= driver.findElement(By.cssSelector(".product-id"));
+						if(searchedForProductDisplay.isDisplayed()) {
+						String searchedForText= searchedForProductDisplay.getText();
 						System.out.println("The product ID in PDP is "+ searchedForText);
 							if(randomValue.equals(searchedForText)) {
 								test.pass(" searched for for the right product and product id is " +randomValue );
@@ -133,13 +136,14 @@ import com.providio.testcases.baseClass;
 						Thread.sleep(5000);
 						//operations++;
 						break;
+						}
 					}
-					}
+				}
 
 					System.out.println("Total data: " + totalProducts);
 					System.out.println("Total operations performed: " + operations);
 				}
-			
+			}
 		catch (IOException e) {
 		
 				e.printStackTrace();

@@ -12,7 +12,7 @@
 	   <class name="com.GuestUserWith_CreditCard.tc__SimpleProductsAndBundle_Gc_InCC"/>
 	   <class name="com.GuestUserWith_GcAndCC.tc__VariationProductForGuestUser_InGcAndCc"/>
 	   <class name="com.GuestUserWith_Minicart_Paypal.tc__BundleProductForGuestUser_InMC_Paypal"/>
-	   <class name="com.GuestUserWith_Minicart_Paypal.tc__PaypalFromPDPpage_GuestUser"/>
+	
 	   <class name="com.GuestUserWith_ViewCart_Paypal.tc__PickUpStore_Guest_InVC_Paypal"/>
 	   
        <class name="com.providio.login.tc__Login"/>	

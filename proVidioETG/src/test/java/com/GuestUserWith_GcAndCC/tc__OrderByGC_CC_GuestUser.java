@@ -8,7 +8,7 @@ import com.providio.paymentProccess.tc__MinicartViewCartProcess;
 import com.providio.testcases.baseClass;
 
 public class tc__OrderByGC_CC_GuestUser extends baseClass {
-	int minicartCountValue;
+	 
 	@Test
 	public void paypalFromCheckoutPage() throws InterruptedException {	
 
