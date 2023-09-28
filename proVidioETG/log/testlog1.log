@@ -1397,3 +1397,58 @@ Visa ending in 1111
 Ending 9/ 2029
 Gift Card
 ************TWCM
+2023-09-27 10:49:32,161 [main] INFO Providio - Entered into url
+2023-09-27 10:49:32,192 [main] INFO Providio - Placing the order as guest user
+2023-09-27 10:49:32,496 [main] INFO Providio - Menus are displayed on the page.
+2023-09-27 10:49:34,676 [main] INFO Providio - Logo is displayed on the page.
+2023-09-27 10:49:36,756 [main] INFO Providio - Search input field is enabled.
+2023-09-27 10:49:38,825 [main] INFO Providio - MiniCart is displayed on the page.
+2023-09-27 10:49:40,892 [main] INFO Providio - Wishlist is displayed on the page.
+2023-09-27 10:49:42,965 [main] INFO Providio - Profile (Sign In) is displayed on the page.
+2023-09-27 10:49:45,015 [main] INFO Providio - Footer is displayed on the page.
+2023-09-27 10:49:45,869 [main] INFO Providio - Searched for  MICROSOFT-XBOX360-BUNDLEM this product Id
+2023-09-27 10:49:52,782 [main] INFO Providio - Clicked on this MICROSOFT-XBOX360-BUNDLEM product
+2023-09-27 10:49:54,910 [main] INFO Providio - Searched for right product
+2023-09-27 10:49:59,912 [main] INFO Providio - Searched bundle  product
+2023-09-27 10:49:59,992 [main] INFO Providio - addallto buttonenabled
+2023-09-27 10:50:01,158 [main] INFO Providio - Product is  added to cart
+2023-09-27 10:50:05,387 [main] INFO Providio - Gift Certificate added to cart
+2023-09-27 10:50:10,638 [main] INFO Providio - Searched for  013742002836M this product Id
+2023-09-27 10:50:17,643 [main] INFO Providio - Clicked on this 013742002836M product
+2023-09-27 10:50:17,704 [main] INFO Providio - Searched for right product
+2023-09-27 10:50:22,874 [main] INFO Providio - add to buttonenabled
+2023-09-27 10:51:02,590 [main] INFO Providio - Test case failed and returned into homepage
+2023-09-27 10:54:42,754 [main] INFO Providio - Entered into url
+2023-09-27 10:54:45,236 [main] INFO Providio - Searched for  013742002836M this product Id
+2023-09-27 10:54:52,365 [main] INFO Providio - Clicked on this 013742002836M product
+2023-09-27 10:54:52,436 [main] INFO Providio - Searched for right product
+2023-09-27 10:54:57,595 [main] INFO Providio - add to buttonenabled
+2023-09-27 10:55:36,612 [main] INFO Providio - Test case failed and returned into homepage
+2023-09-27 10:56:28,202 [main] INFO Providio - Entered into url
+2023-09-27 10:56:29,540 [main] INFO Providio - Searched for  013742002836M this product Id
+2023-09-27 10:56:36,612 [main] INFO Providio - Clicked on this 013742002836M product
+2023-09-27 10:56:36,663 [main] INFO Providio - Searched for right product
+2023-09-27 10:56:48,364 [main] INFO Providio - add to buttonenabled
+2023-09-27 10:56:49,603 [main] INFO Providio - Product is  added to cart
+2023-09-27 10:57:00,109 [main] INFO Providio - Your shopping cart
+2023-09-27 10:57:00,110 [main] INFO Providio - Successfully clicked on the mini cart button
+2023-09-27 10:57:00,230 [main] INFO Providio - true
+2023-09-27 10:57:00,277 [main] INFO Providio - true
+2023-09-27 10:57:00,278 [main] INFO Providio - Successfully displayed the viewcart, checkout, paypal buttons and products
+2023-09-27 10:57:10,606 [main] INFO Providio - clicked the view cart button in the minicart
+2023-09-27 10:57:10,687 [main] INFO Providio - Order Summary
+2023-09-27 10:57:10,689 [main] INFO Providio - Successfully clicked on the view cart button
+2023-09-27 10:57:20,702 [main] INFO Providio - 1
+2023-09-27 10:57:20,832 [main] INFO Providio - Guest checkout
+2023-09-27 10:57:20,959 [main] INFO Providio - Guest mail again
+2023-09-27 10:57:21,028 [main] INFO Providio - Guest continue as guest
+2023-09-27 10:57:27,214 [main] INFO Providio - Entered fname
+2023-09-27 10:57:27,389 [main] INFO Providio - Entered lname
+2023-09-27 10:57:32,843 [main] INFO Providio - Entered phone number
+2023-09-27 10:57:48,024 [main] INFO Providio - Clicked on the payment button
+2023-09-27 19:39:54,243 [main] INFO Providio - enterd into url
+2023-09-27 19:39:59,945 [main] INFO Providio - clicked on sign in
+2023-09-27 19:40:02,698 [main] INFO Providio - entered email
+2023-09-27 19:40:05,221 [main] INFO Providio - entered password
+2023-09-27 19:40:17,535 [main] INFO Providio - click on the submit button
+2023-09-27 19:40:22,634 [main] INFO Providio - User logged in successfully

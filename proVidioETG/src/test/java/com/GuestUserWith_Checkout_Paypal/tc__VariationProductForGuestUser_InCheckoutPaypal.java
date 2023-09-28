@@ -33,15 +33,6 @@ public class tc__VariationProductForGuestUser_InCheckoutPaypal extends baseClass
 		 fromExcel.performRandomOperations(driver);
 		 logger.info("searched for Variation product");
 
-		    attributesSelection.colorSelection();
-   	    	Thread.sleep(3000);
-   	    	//select the size
-   	    	attributesSelection.sizeSelction();
-   	    	Thread.sleep(3000);
-   	        //validate the product is instock or not
-   	    	validatingInstock.inStockValidation();
-
-  		  
   		//validating the product is add to the cart
    	    addtoCartValidation.validatingProductisAddtoCart(driver);
 			

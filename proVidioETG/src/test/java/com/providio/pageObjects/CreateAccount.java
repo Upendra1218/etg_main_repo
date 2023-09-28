@@ -10,87 +10,85 @@ import org.openqa.selenium.support.PageFactory;
 public class CreateAccount {
 
 	WebDriver lDriver;
+	//pageFactory constructor for this page
 	public CreateAccount(WebDriver rDriver ){
-			
 			lDriver=rDriver;
 			PageFactory.initElements(rDriver, this);
-		}
-
-		@FindBy(xpath = "//a[contains(text(),'Create Account')]")
-		WebElement createAcc;
-		
-		@FindBy(id = "registration-form-fname")
-		 WebElement firstNameInput;
-		
-		@FindBy(id = "registration-form-lname")
-		 WebElement lastNameInput;
-		
-		@FindBy(id = "registration-form-phone")
-		 WebElement phoneInput;
-		
-		@FindBy(id = "registration-form-email")
-		 WebElement emailInput;
-		
-		@FindBy(id = "registration-form-email-confirm")
-		 WebElement confirmEmailInput;
-		
-		@FindBy(id = "registration-form-password")
-		 WebElement passwordInput;
-		
-		@FindBy(id = "registration-form-password-confirm")
-		 WebElement confirmPasswordInput;
-		
-		@FindBy(xpath = "//button[contains(text(), 'Create Account')]")
-		 WebElement createAccountButton;
-
-		
-		    public void clickOnCreateAcc(WebDriver driver) throws InterruptedException {
-		        Thread.sleep(2000);
-		        JavascriptExecutor js = (JavascriptExecutor) driver;
-		        js.executeScript("arguments[0].click();", createAcc);
-		    }
-
-		    public void enterFirstName(String firstName) {
-		        firstNameInput.clear();
-		        firstNameInput.sendKeys(firstName);
-		    }
-
-		    public void enterLastName(String lastName) {
-		        lastNameInput.clear();
-		        lastNameInput.sendKeys(lastName);
-		    }
-
-		    public void enterPhone(String phone) {
-		        phoneInput.clear();
-		        phoneInput.sendKeys(phone);
-		    }
-
-		    public void enterEmail(String email) {
-		        emailInput.clear();
-		        emailInput.sendKeys(email);
-		    }
-
-		    public void enterConfirmEmail(String confirmEmail) {
-		        confirmEmailInput.clear();
-		        confirmEmailInput.sendKeys(confirmEmail);
-		    }
-
-		    public void enterPassword(String passwordCreateAcc) {
-		        passwordInput.clear();
-		        passwordInput.sendKeys(passwordCreateAcc);
-		    }
-
-		    public void enterConfirmPassword(String ConfirmPasswordCreateAcc) {
-		        confirmPasswordInput.clear();
-		        confirmPasswordInput.sendKeys(ConfirmPasswordCreateAcc);
-		    }
-
-		    public void clickCreateAccountButton(WebDriver driver) throws InterruptedException {
-		        Thread.sleep(2000);
-		        JavascriptExecutor js = (JavascriptExecutor) driver;
-		        js.executeScript("arguments[0].scrollIntoView(true);", createAccountButton);
-		        js.executeScript("arguments[0].click();", createAccountButton);
-		    }
-
-
+	}
+	
+	//Creating account page xpaths, actionMethods and passing data to create a account
+	
+	//create account link
+	@FindBy(xpath = "//a[contains(text(),'Create Account')]")
+	WebElement createAcc;
+	//ActionMethod
+    public void clickOnCreateAcc(WebDriver driver) throws InterruptedException {
+        Thread.sleep(2000);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].click();", createAcc);
+    }
+    //reg firstName
+	@FindBy(id = "registration-form-fname")
+	 WebElement firstNameInput;
+    //ActionMethod
+    public void enterFirstName(String firstName) {
+        firstNameInput.clear();
+        firstNameInput.sendKeys(firstName);
+    }
+    //req lastName
+    @FindBy(id = "registration-form-lname")
+	 WebElement lastNameInput;
+    //ActionMethod
+    public void enterLastName(String lastName) {
+        lastNameInput.clear();
+        lastNameInput.sendKeys(lastName);
+    }
+	//reg Phone number
+	@FindBy(id = "registration-form-phone")
+	 WebElement phoneInput;
+	//ActonMethod
+    public void enterPhone(String phone) {
+        phoneInput.clear();
+        phoneInput.sendKeys(phone);
+    }
+	//reg email
+	@FindBy(id = "registration-form-email")
+	 WebElement emailInput;
+	//ActonMethod
+    public void enterEmail(String email) {
+        emailInput.clear();
+        emailInput.sendKeys(email);
+    }
+	//reg conform mail
+	@FindBy(id = "registration-form-email-confirm")
+	 WebElement confirmEmailInput;
+	//ActonMethod
+    public void enterConfirmEmail(String confirmEmail) {
+        confirmEmailInput.clear();
+        confirmEmailInput.sendKeys(confirmEmail);
+    }
+	//password
+	@FindBy(id = "registration-form-password")
+	 WebElement passwordInput;
+    public void enterPassword(String passwordCreateAcc) {
+        passwordInput.clear();
+        passwordInput.sendKeys(passwordCreateAcc);
+    }
+	//confrom password
+	@FindBy(id = "registration-form-password-confirm")
+	 WebElement confirmPasswordInput;
+    public void enterConfirmPassword(String ConfirmPasswordCreateAcc) {
+        confirmPasswordInput.clear();
+        confirmPasswordInput.sendKeys(ConfirmPasswordCreateAcc);
+    }
+	//create account button after entering the details
+	@FindBy(xpath = "//button[contains(text(), 'Create Account')]")
+	 WebElement createAccountButton;
+    public void clickCreateAccountButton(WebDriver driver) throws InterruptedException {
+        Thread.sleep(2000);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView(true);", createAccountButton);
+        js.executeScript("arguments[0].click();", createAccountButton);
+    }
+	
 }

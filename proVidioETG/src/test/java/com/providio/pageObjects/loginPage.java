@@ -11,7 +11,6 @@ public class loginPage {
 WebDriver lDriver;
 	
 	public loginPage(WebDriver rDriver ){
-		
 		lDriver=rDriver;
 		PageFactory.initElements(rDriver, this);
 	}

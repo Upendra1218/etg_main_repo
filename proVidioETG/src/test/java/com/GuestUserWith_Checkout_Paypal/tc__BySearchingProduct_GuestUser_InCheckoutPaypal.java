@@ -23,6 +23,7 @@ public class tc__BySearchingProduct_GuestUser_InCheckoutPaypal extends baseClass
 	@Test//(dependsOnMethods = {"com.providio.testcases.tc__LoginSc.verifySuccessfulLogin"}, alwaysRun = true)
     public void bySearchingProduct() throws InterruptedException {
 		    //step2 1: site url
+		
 		    //launching the browser and passing the url into it
 			 driver.get(baseURL); 
 			 logger.info("Entered into url");

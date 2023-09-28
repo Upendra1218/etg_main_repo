@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.GuestUserWith_GcAndCC.tc__VariationProductForGuestUser_InGcAndCc">
+      <class name="com.GuestUserWith_Checkout_Paypal.tc__SimpleProductForGuestUser_InPaypal">
         <methods>
-          <include name="variationProduct"/>
           <include name="setUpforReport"/>
+          <include name="simpleProduct"/>
           <include name="setUp"/>
           <include name="afterMethod"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.GuestUserWith_GcAndCC.tc__VariationProductForGuestUser_InGcAndCc -->
+      </class> <!-- com.GuestUserWith_Checkout_Paypal.tc__SimpleProductForGuestUser_InPaypal -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

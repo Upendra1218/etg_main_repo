@@ -5,7 +5,6 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-import com.providio.pageObjects.bundleProductAddAllToCart;
 import com.providio.pageObjects.navigationPage;
 import com.providio.pageObjects.productListingPage;
 import com.providio.testcases.baseClass;
@@ -38,8 +37,8 @@ public class navigationProccess extends baseClass {
 	   	  //if selected product is bundle them
 	   	     List<WebElement> bundleProduct = driver.findElements(By.cssSelector(".bundle-item"));
 	   	     if(bundleProduct.size()>0){
-	   	    	bundleProductAddAllToCart bundle= new bundleProductAddAllToCart();
-	   	    	bundle.addAllToCart(driver);
+	   	    	 //validating the product is instock and adding to the cart
+	   		      validatingInstock.inStockValidation();
 	   	     }    
 	   	
 	   	// size selection

@@ -26,8 +26,6 @@ public class GiftCertificate {
 	}
 	
 	
-	
-	
 	//gift card
 	@FindBy(xpath = "//a[contains(text(),'Gift Registry')]")
 	WebElement giftCardElement;

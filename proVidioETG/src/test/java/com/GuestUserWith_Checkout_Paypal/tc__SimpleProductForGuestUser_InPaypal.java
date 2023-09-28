@@ -9,6 +9,7 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 import com.providio.commonfunctionality.addtoCartValidation;
+import com.providio.commonfunctionality.allAttributesinOneFile;
 import com.providio.commonfunctionality.validatingInstock;
 import com.providio.pageObjects.SimpleProductFromExcel;
 import com.providio.paymentProccess.tc__MinicartViewCartProcess;
@@ -30,6 +31,9 @@ public class tc__SimpleProductForGuestUser_InPaypal extends baseClass{
 			 SimpleProductFromExcel  simpleProduct = new SimpleProductFromExcel();	
 			 simpleProduct.performRandomOperations(driver);
 			 test.info("Searched for  simple product");
+			 
+			 //selecting attributes
+			 allAttributesinOneFile.allAttributes();
 			 
 			//validating the product is instock and adding to the cart
 			  validatingInstock.inStockValidation();

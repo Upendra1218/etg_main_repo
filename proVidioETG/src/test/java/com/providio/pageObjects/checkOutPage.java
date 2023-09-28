@@ -10,10 +10,10 @@ import org.openqa.selenium.support.ui.Select;
 import com.github.javafaker.Faker;
 
 public class checkOutPage {
-WebDriver lDriver;
+    WebDriver lDriver;
 	
+    //pageFactory constructor for this page
 	public checkOutPage(WebDriver rDriver ){
-		
 		lDriver=rDriver;
 		PageFactory.initElements(rDriver, this);
 	}
@@ -21,32 +21,28 @@ WebDriver lDriver;
 	//shippingMethods
 	@FindBy(xpath = "(//span[contains(text(),'Ground')])[1]")
 	WebElement GroundElement;
-	
-	//shipping method for express
-	@FindBy(xpath = "(//span[contains(text(),'Express')])[1]")
-	WebElement ExpressElement;
-	
-	//usps
-	@FindBy(xpath = "(//span[contains(text(),'Ground')])[1]")
-	WebElement USPS_Element;
-	
-	
 	public void clickOnGround() throws InterruptedException{
 		Thread.sleep(1000);
 		GroundElement.click();
 	}
 	
-
+	//shipping method for express
+	@FindBy(xpath = "(//span[contains(text(),'Express')])[1]")
+	WebElement ExpressElement;
 	public void clickOnExpress() throws InterruptedException{
 		Thread.sleep(1000);
 		ExpressElement.click();
 	}
 	
-
+	//usps
+	@FindBy(xpath = "(//span[contains(text(),'Ground')])[1]")
+	WebElement USPS_Element;
 	public void clickOnUSPS() throws InterruptedException{
 		Thread.sleep(1000);
 		USPS_Element.click();
 	}
+	
+
 	
 	//ShippingDetails
 	//FirstName
@@ -65,7 +61,10 @@ WebDriver lDriver;
 		LastName.clear();
 		LastName.sendKeys(lname);
 	}
-	//Address1
+	
+	//Address is we are entering the google when we need the each column that time need each element
+	
+	//Address1 
 	@FindBy(css="#shippingAddressOnedefault")
 	WebElement Address1;
 	public void setAddress1(String address ){
@@ -113,38 +112,39 @@ WebDriver lDriver;
 		 Phone.sendKeys("9876543212");
 	}
 	
+	
+	//For generating the fake data for the input fields
 	Faker faker =new Faker();
 	//billing address when we add GC to cart
+	//Billing address firstName
 	@FindBy(id="billingFirstName")
 	WebElement billingFName;
-	
 	public void setBillingFName() {
 	   String yoursFakeName = faker.name().firstName();
 	   billingFName.sendKeys(yoursFakeName);
 	}
-	
+	//Billing address lastName
 	@FindBy(id="billingLastName")
 	WebElement billingLName;
-	
 	public void setBillingLName() {
 		   String yoursFakeName = faker.name().lastName();
 		   billingLName.sendKeys(yoursFakeName);
 	}
 		
+	//billing address address column
 	@FindBy(id="billingAddressOne")
 	WebElement billingAddress;
 	
-	
+	//Billing Phone Number
 	@FindBy(id="phoneNumber")
 	WebElement phoneNumber;
-	
 	public void setBillingPhoneNum() {
 		   String phoneNum = "9876543212";
 		   phoneNumber.sendKeys(phoneNum);
 	}
 	
 	//buttonforthepaymentpage
-	@FindBy(xpath ="//button[@name ='submit' and @class ='btn btn-primary btn-block submit-shipping']")
+	@FindBy(xpath ="//button[contains(text(),'Next: Payment')]")
 	WebElement paymentbutton;
     public void clickpaymentbutton(WebDriver driver) throws InterruptedException {
     	if(paymentbutton.isDisplayed()) {
@@ -156,26 +156,12 @@ WebDriver lDriver;
     	}
     }
     
-    //add to my address
-    
+    //add to my address when register user is check out
     @FindBy(xpath = "(//input[@id='addShippingAddressToMyAccount'])[1]")
-    
 	WebElement addToMyAddress;
     public void clickaddToMyAddress(WebDriver driver) throws InterruptedException {
-    	
     	addToMyAddress.click();
-    	
-//        JavascriptExecutor js = (JavascriptExecutor) driver;
-//        js.executeScript("arguments[0].click();", addToMyAddress);
         Thread.sleep(5000);
     }
-    
-    
-    
-
-    
-    
-    
-    
 
 }

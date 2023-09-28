@@ -3,6 +3,7 @@ package com.GuestUserWith_Checkout_Paypal;
 import org.testng.asserts.SoftAssert;
 
 import com.providio.commonfunctionality.addtoCartValidation;
+import com.providio.commonfunctionality.allAttributesinOneFile;
 import com.providio.commonfunctionality.validatingInstock;
 import com.providio.pageObjects.ProductSetFromExcel;
 import com.providio.pageObjects.SizeSelectionForProductSet;
@@ -26,9 +27,10 @@ public class tc__ProductSetForGuestUser_InCheckoutPaypal extends baseClass{
 			
 			
 			//selecting size for product
-			SizeSelectionForProductSet set =new SizeSelectionForProductSet();
-			set.sizeSelection(driver);
-			logger.info("Selected size and added to cart");
+			allAttributesinOneFile.allAttributes();
+//			SizeSelectionForProductSet set =new SizeSelectionForProductSet();
+//			set.sizeSelection(driver);
+//			logger.info("Selected size and added to cart");
 			
 			//validating the product is instock and adding to the cart
 			  validatingInstock.inStockValidation();
