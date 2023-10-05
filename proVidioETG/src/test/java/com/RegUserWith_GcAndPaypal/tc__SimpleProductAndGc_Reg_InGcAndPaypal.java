@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import com.providio.Scenarios.SimpleProductAndGc;
 import com.providio.commonfunctionality.Gc__CC_Paypal;
 import com.providio.commonfunctionality.addtoCartValidation;
 import com.providio.commonfunctionality.validatingInstock;
@@ -19,38 +20,22 @@ import com.providio.testcases.baseClass;
 
 public class tc__SimpleProductAndGc_Reg_InGcAndPaypal extends baseClass {
 	
-	int  minicartCountValue;
+	  
 	@Test(dependsOnMethods = {"com.providio.testcases.tc__LoginSc.verifySuccessfulLogin"}, alwaysRun = true)
 	public void simpleProduct_Gc() throws InterruptedException {
 		if(isLoggedIn) {      
 	
-
-	 		 //adding simple product into cart
-			 SimpleProductFromExcel  simpleProduct = new SimpleProductFromExcel();	
-			 simpleProduct.performRandomOperations(driver);
-			 test.info("Searched for  simple product");
-			 
-			//validating the product is instock and adding to the cart
-			  validatingInstock.inStockValidation();
-			  
-			//validating the product is add to the cart
-		    addtoCartValidation.validatingProductisAddtoCart(driver);
-			 
-			 //adding GC into cart
-			 for(int i=1; i<=1;i++) {
-				 GiftCertificate gc= new  GiftCertificate(driver);
-				 gc.clickOnGiftCard(driver);
-				 test.info("Gift card added to cart");
-			 }
-
+			//simple proudct
+			SimpleProductAndGc spGc = new SimpleProductAndGc();
+			spGc.simpleProductAndGc();
 		 
-		 //checkoutProcess				        
-	     tc__MinicartViewCartProcess cp = new tc__MinicartViewCartProcess();				     
-	     cp.checkoutprocess();
-	     
-	   //gc and paypal
-		  Gc__CC_Paypal gcAndPaypal = new Gc__CC_Paypal();
-		  gcAndPaypal.paymentProccessByGCandPaypal();
+			 //checkoutProcess				        
+		     tc__MinicartViewCartProcess cp = new tc__MinicartViewCartProcess();				     
+		     cp.checkoutprocess();
+		     
+		   //gc and paypal
+			  Gc__CC_Paypal gcAndPaypal = new Gc__CC_Paypal();
+			  gcAndPaypal.paymentProccessByGCandPaypal();
 		 
 		 }else {
 		   	 Assert.fail("User not logged in");

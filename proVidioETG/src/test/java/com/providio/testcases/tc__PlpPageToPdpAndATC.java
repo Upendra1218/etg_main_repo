@@ -132,11 +132,11 @@ public class tc__PlpPageToPdpAndATC extends baseClass {
 	private void addProductToCart() throws InterruptedException {
 	    productDescriptionPage pdp = new productDescriptionPage(driver);
 	    
-	    pdp.clickOnColor(driver);
-	    logger.info("clicked on the colorss");
-	    Thread.sleep(10000);
-	    pdp.clickOnSize(driver);
-	    logger.info("Clicked on Size");
+//	    pdp.clickOnColor(driver);
+//	    logger.info("clicked on the colorss");
+//	    Thread.sleep(10000);
+//	    pdp.clickOnSize(driver);
+//	    logger.info("Clicked on Size");
 	    Thread.sleep(2000);
 //	    pdp.clickOnSize(driver);
 //	    logger.info("Clicked on Size");

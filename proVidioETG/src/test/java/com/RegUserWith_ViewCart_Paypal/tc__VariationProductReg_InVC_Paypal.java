@@ -1,12 +1,5 @@
 package com.RegUserWith_ViewCart_Paypal;
 
-import java.time.Duration;
-import java.util.List;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -14,11 +7,8 @@ import org.testng.asserts.SoftAssert;
 import com.providio.commonfunctionality.addtoCartValidation;
 import com.providio.commonfunctionality.attributesSelection;
 import com.providio.commonfunctionality.validatingInstock;
-import com.providio.pageObjects.SizeSelectioForVariation;
 import com.providio.pageObjects.VariationProductFromExcel;
-import com.providio.paymentProccess.tc__MinicartViewCartProcess;
 import com.providio.paymentProccess.tc__MinicartViewCartProcessByPayPal;
-import com.providio.paymentProccess.tc__CreditCardPaymentProcess;
 import com.providio.testcases.baseClass;
 
 

@@ -8,9 +8,11 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
+import com.providio.Scenarios.SimpleProduct;
 import com.providio.commonfunctionality.Gc__CC_Paypal;
 import com.providio.commonfunctionality.addtoCartValidation;
 import com.providio.commonfunctionality.validatingInstock;
+import com.providio.launchingbrowser.launchBrowsering;
 import com.providio.pageObjects.SimpleProductFromExcel;
 import com.providio.pageObjects.productDescriptionPage;
 import com.providio.paymentProccess.tc__MinicartViewCartProcess;
@@ -24,21 +26,14 @@ public class tc__SimpleProductForGuestUser_InGcAndCC extends baseClass{
 	 @Test
 	public void simpleProduct() throws InterruptedException {
 		 
-		// enters into url
-	      driver.get(baseURL);		      
-        logger.info("enterd into url");	
-
-		 //adding simple product into cart
-		 SimpleProductFromExcel  simpleProduct = new SimpleProductFromExcel();	
-		 simpleProduct.performRandomOperations(driver);
-		 test.info("Searched for  simple product");
-		 
-		//validating the product is instock and adding to the cart
-		  validatingInstock.inStockValidation();
-		  
-		//validating the product is add to the cart
-	    addtoCartValidation.validatingProductisAddtoCart(driver);
-					
+			//launching the browser and passing the url into it
+			launchBrowsering lb = new launchBrowsering();
+			lb.chromeBrowser();
+			 
+			//simple product
+		    SimpleProduct sp = new SimpleProduct();
+		    sp.simpleProdcut();
+		    
 	        //checkoutProcess	        
 	        tc__MinicartViewCartProcess cp = new tc__MinicartViewCartProcess();	        
 	        cp.checkoutprocess();

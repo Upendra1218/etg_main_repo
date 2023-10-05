@@ -9,6 +9,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
+import com.providio.Scenarios.SimpleProduct;
 import com.providio.commonfunctionality.Gc__CC_Paypal;
 import com.providio.commonfunctionality.addtoCartValidation;
 import com.providio.commonfunctionality.validatingInstock;
@@ -28,16 +29,9 @@ public class tc__SimpleProductForReg_InGc extends baseClass{
 
 		if(isLoggedIn) {      
 
-	 		 //adding simple product into cart
-			 SimpleProductFromExcel  simpleProduct = new SimpleProductFromExcel();	
-			 simpleProduct.performRandomOperations(driver);
-			 test.info("Searched for  simple product");
-			 
-			//validating the product is instock and adding to the cart
-			  validatingInstock.inStockValidation();
-			  
-			//validating the product is add to the cart
-		    addtoCartValidation.validatingProductisAddtoCart(driver);
+			//simple product
+		    SimpleProduct sp = new SimpleProduct();
+		    sp.simpleProdcut();
 					
 	        //checkoutProcess	        
 	        tc__MinicartViewCartProcess cp = new tc__MinicartViewCartProcess();	        

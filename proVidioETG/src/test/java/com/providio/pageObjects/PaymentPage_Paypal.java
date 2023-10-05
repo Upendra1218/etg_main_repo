@@ -408,8 +408,6 @@ WebDriver lDriver;
 		    
   //paypalchekout
 		    
-//paypalchekout
-		    
 		    @FindBy(xpath = "//img[@alt='PayPal Credit']")
 		    WebElement paypal;
 		    

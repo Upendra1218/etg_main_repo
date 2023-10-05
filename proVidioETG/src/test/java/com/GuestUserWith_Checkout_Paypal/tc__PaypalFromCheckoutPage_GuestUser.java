@@ -9,6 +9,7 @@ import org.testng.annotations.Test;
 import com.providio.commonfunctionality.navigationProccess;
 import com.providio.commonfunctionality.selectAProduct;
 import com.providio.commonfunctionality.size;
+import com.providio.launchingbrowser.launchBrowsering;
 import com.providio.pageObjects.navigationPage;
 import com.providio.pageObjects.productListingPage;
 import com.providio.paymentProccess.tc__MinicartViewCartProcess;
@@ -20,22 +21,22 @@ public class tc__PaypalFromCheckoutPage_GuestUser extends baseClass {
 	@Test
 	public void paypalFromCheckoutPage() throws InterruptedException {
 	
-		      //launching the browser and passing the url into it
-			  driver.get(baseURL);	
-			  test.info("Entered into url");
+		//launching the browser and passing the url into it
+		launchBrowsering lb = new launchBrowsering();
+		lb.chromeBrowser();
 		   
-		  // selects a random catgory and product add to cart
-    	      selectAProduct Product = new selectAProduct();
-    	      Product.AddingAProductToCart();
-	          
-	        
-		  // common checkoutProcess	         
-			 tc__MinicartViewCartProcess cp = new tc__MinicartViewCartProcess();         
-			 cp.checkoutprocess();
-	         
-		 //paypal process from checkout page
-			 tc__MinicartViewCartProcessByPayPal cpp = new tc__MinicartViewCartProcessByPayPal();
-			 cpp.checkoutprocessFromCheckout();
-		
+	  // selects a random catgory and product add to cart
+	      selectAProduct Product = new selectAProduct();
+	      Product.AddingAProductToCart();
+          
+        
+	  // common checkoutProcess	         
+		 tc__MinicartViewCartProcess cp = new tc__MinicartViewCartProcess();         
+		 cp.checkoutprocess();
+         
+	 //paypal process from checkout page
+		 tc__MinicartViewCartProcessByPayPal cpp = new tc__MinicartViewCartProcessByPayPal();
+		 cpp.checkoutprocessFromCheckout();
+	
 	}
 }

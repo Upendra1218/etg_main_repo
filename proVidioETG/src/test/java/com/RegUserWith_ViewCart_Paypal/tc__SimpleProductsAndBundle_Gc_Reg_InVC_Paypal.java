@@ -1,62 +1,38 @@
+// Import necessary packages and classes
 package com.RegUserWith_ViewCart_Paypal;
 
-import java.util.List;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.providio.commonfunctionality.addtoCartValidation;
-import com.providio.commonfunctionality.validatingInstock;
-import com.providio.pageObjects.BundleProductFromEXcel;
-import com.providio.pageObjects.GiftCertificate;
-import com.providio.pageObjects.SimpleProductFromExcel;
-import com.providio.paymentProccess.tc__MinicartViewCartProcess;
+// Import various classes and methods from other packages
+import com.providio.Scenarios.SimpleProductsAndBundle_Gc;
 import com.providio.paymentProccess.tc__MinicartViewCartProcessByPayPal;
-import com.providio.paymentProccess.tc__CreditCardPaymentProcess;
 import com.providio.testcases.baseClass;
 
+// Define a test class named "tc__SimpleProductsAndBundle_Gc_Reg_InVC_Paypal"
 public class tc__SimpleProductsAndBundle_Gc_Reg_InVC_Paypal extends baseClass {
-	 
+	
+	// Define a test method named "simpleProducts_Bundle_Gc"
 	@Test(dependsOnMethods = {"com.providio.testcases.tc__LoginSc.verifySuccessfulLogin"}, alwaysRun = true)
 	public void simpleProducts_Bundle_Gc() throws InterruptedException {
 		
+		// Check if the user is logged in
 		if(isLoggedIn) {
-
-			 //adding simple product into cart
-			 SimpleProductFromExcel  simpleProduct = new SimpleProductFromExcel();	
-			 simpleProduct.performRandomOperations(driver);
-			 test.info("Searched for  simple product");
-			 
-			//validating the product is instock and adding to the cart
-			  validatingInstock.inStockValidation();
-			  
-			//validating the product is add to the cart
-		    addtoCartValidation.validatingProductisAddtoCart(driver);
-			 
-			 //adding GC into cart
-			 for(int i=1; i<=1;i++) {
-				 GiftCertificate gc= new  GiftCertificate(driver);
-				 gc.clickOnGiftCard(driver);
-				 test.info("Gift card added to cart");
-			 }		
-			 //searching the bundle product from excel sheet
-			 BundleProductFromEXcel bundleProduct = new  BundleProductFromEXcel();
-			 bundleProduct.performRandomOperations(driver);
-			 logger.info("Searched a bundle  product");
-			 
-			//validating the product is instock and adding to the cart
-			  validatingInstock.inStockValidation();
-			  
-			//validating the product is add to the cart
-		    addtoCartValidation.validatingProductisAddtoCart(driver);
+			
+			// Create an instance of the "SimpleProductsAndBundle_Gc" class
+			SimpleProductsAndBundle_Gc spb = new SimpleProductsAndBundle_Gc();
+			
+			// Call the "simpleProductsAndBundle_Gc" method to perform certain actions
+			spb.simpleProductsAndBundle_Gc();
 		    
-		//paypal checkout form view cart page
-          tc__MinicartViewCartProcessByPayPal paypal= new tc__MinicartViewCartProcessByPayPal();	         
-          paypal.checkoutprocessFromViewCart();   
-		}else {
-		        Assert.fail("User not logged in");
-		    }
+			// Create an instance of the "tc__MinicartViewCartProcessByPayPal" class
+			tc__MinicartViewCartProcessByPayPal paypal = new tc__MinicartViewCartProcessByPayPal();
+			
+			// Call the "checkoutprocessFromViewCart" method to perform PayPal checkout from the View Cart page
+			paypal.checkoutprocessFromViewCart();   
+		} else {
+			// If the user is not logged in, fail the test with a message
+		    Assert.fail("User not logged in");
 		}
+	}
 }

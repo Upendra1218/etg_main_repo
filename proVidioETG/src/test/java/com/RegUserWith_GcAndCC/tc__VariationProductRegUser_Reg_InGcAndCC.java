@@ -12,7 +12,7 @@ import com.providio.commonfunctionality.Gc__CC_Paypal;
 import com.providio.commonfunctionality.addtoCartValidation;
 import com.providio.commonfunctionality.attributesSelection;
 import com.providio.commonfunctionality.validatingInstock;
-import com.providio.pageObjects.SizeSelectioForVariation;
+
 import com.providio.pageObjects.VariationProductFromExcel;
 import com.providio.paymentProccess.tc__MinicartViewCartProcess;
 import com.providio.testcases.baseClass;

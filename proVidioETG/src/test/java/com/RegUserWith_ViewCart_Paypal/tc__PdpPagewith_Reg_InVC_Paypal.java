@@ -89,8 +89,8 @@ public class tc__PdpPagewith_Reg_InVC_Paypal extends baseClass {
 	// Step 3: Perform actions on Product Description Page
 	private void performActionsOnProductDescriptionPage() throws InterruptedException {
 	    productDescriptionPage pdp = new productDescriptionPage(driver);
-	    pdp.clickOnSize(driver);
-	    logger.info("Clicked on Size");
+//	    pdp.clickOnSize(driver);
+//	    logger.info("Clicked on Size");
 //	    pdp.clickOnLeftCarousel(driver);
 //	    logger.info("Clicked on Left Carousel");
 //	    pdp.clickOnRightCarousel(driver);

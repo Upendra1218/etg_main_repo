@@ -6,9 +6,11 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
+import com.providio.Scenarios.BundleProduct;
 import com.providio.commonfunctionality.Gc__CC_Paypal;
 import com.providio.commonfunctionality.addtoCartValidation;
 import com.providio.commonfunctionality.validatingInstock;
+import com.providio.launchingbrowser.launchBrowsering;
 import com.providio.pageObjects.BundleProductFromEXcel;
 import com.providio.paymentProccess.tc__MinicartViewCartProcess;
 import com.providio.testcases.baseClass;
@@ -19,23 +21,13 @@ public class tc__BundleProductForGuestUser_InGiftCard  extends baseClass{
 
 		 @Test
 		public void bundleProduct() throws InterruptedException {
-
 			//launching the browser and passing the url into it
-			 driver.get(baseURL); 
-			 logger.info("Entered into url");
-			 logger.info("Placing the order as guest user");
+				launchBrowsering lb = new launchBrowsering();
+				lb.chromeBrowser();
 			 
-			 
-			 //searching the bundle product from excel sheet
-			 BundleProductFromEXcel bundleProduct = new  BundleProductFromEXcel();
-			 bundleProduct.performRandomOperations(driver);
-			 logger.info("Searched a product");
-			 
-   	        //validate the product is instock or not
-   	    	validatingInstock.inStockValidation();
-   	    	
-   	    	//validating the product is add to the cart
-   	    	addtoCartValidation.validatingProductisAddtoCart(driver);
+				 //searching the bundle product from excel sheet
+			    BundleProduct bp = new BundleProduct();
+			    bp.bundleproduct();
    	    	
 	         //checkoutProcess		        
 			  tc__MinicartViewCartProcess cp = new tc__MinicartViewCartProcess();	         

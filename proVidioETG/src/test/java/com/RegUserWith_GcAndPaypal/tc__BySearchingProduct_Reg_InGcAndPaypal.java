@@ -2,6 +2,7 @@
 
 package com.RegUserWith_GcAndPaypal;
 
+import com.providio.Scenarios.SearchingProduct;
 import com.providio.commonfunctionality.Gc__CC_Paypal;
 import com.providio.commonfunctionality.addtoCartValidation;
 import com.providio.commonfunctionality.size;
@@ -28,24 +29,9 @@ public class tc__BySearchingProduct_Reg_InGcAndPaypal extends baseClass {
     public void bySearchingProduct() throws InterruptedException {
 
 		if(isLoggedIn) {      
-        	//searching a product 
-            homePage homepage = new homePage(driver);
-            homepage.clickOnSearchBar(this.searchBar);
-            test.info("searched a product " + this.searchBar);
-            
-            //clicked on searched product
-            homepage.clickOnSearchedProduct();
-            test.info("clicked on searched product");
-        
-			
-			 List<WebElement> pdpPage = driver.findElements(By.xpath("//button[contains(@class,'add-to-cart btn btn-primary')]"));
-    		 if( pdpPage.size()>0) {
-		          size s = new size();
-		          s.selectSize(driver);
-    		 }
-   		  
-   		   //validating the product is add to the cart
-    	    addtoCartValidation.validatingProductisAddtoCart(driver);
+			//searching a product 
+			SearchingProduct sp = new SearchingProduct();
+			sp.searchingProduct();
     	    
 		      //gc and paypal
 				  Gc__CC_Paypal gcAndPaypal = new Gc__CC_Paypal();

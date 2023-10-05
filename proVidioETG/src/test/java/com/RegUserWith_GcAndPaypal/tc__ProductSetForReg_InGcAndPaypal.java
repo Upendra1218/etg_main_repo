@@ -12,7 +12,7 @@ import com.providio.commonfunctionality.Gc__CC_Paypal;
 import com.providio.commonfunctionality.addtoCartValidation;
 import com.providio.commonfunctionality.validatingInstock;
 import com.providio.pageObjects.ProductSetFromExcel;
-import com.providio.pageObjects.SizeSelectionForProductSet;
+  
 import com.providio.paymentProccess.tc__MinicartViewCartProcess;
 import com.providio.paymentProccess.tc__MinicartViewCartProcessByPayPal;
 import com.providio.paymentProccess.tc__CreditCardPaymentProcess;
@@ -31,8 +31,8 @@ public class tc__ProductSetForReg_InGcAndPaypal extends baseClass{
 				
 				
 				//selecting size for product
-				SizeSelectionForProductSet set =new SizeSelectionForProductSet();
-				set.sizeSelection(driver);
+				//                SizeSelectionForProductSet set =new SizeSelectionForProductSet();
+				//  set.sizeSelection(driver);
 				logger.info("Selected size and added to cart");
 				
 				//validating the product is instock and adding to the cart

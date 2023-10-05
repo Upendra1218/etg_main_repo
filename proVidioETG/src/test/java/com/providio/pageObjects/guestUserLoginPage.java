@@ -15,110 +15,123 @@ import net.bytebuddy.asm.MemberSubstitution.FieldValue;
 
 public class guestUserLoginPage {
     WebDriver lDriver;
-    
-   
-    @FindBy(xpath = "//button[contains(text(),'Guest Checkout')]")
-    WebElement guestCheckOut;
-    @FindBy( xpath = "//input[@id='email-guest']")
-    WebElement reEnterMailInGuest;
-    @FindBy(xpath = "//button[contains(text(),' Continue as guest')]" )
-    WebElement continueAsGuest;
-   @FindBy(xpath = "//button[contains(@class,'js-cancel-login')]")
-    WebElement guestCheckout1;
-
-   @FindBy(xpath = "(//a[contains(text(),'Sign Up')])[2]")
-   WebElement signUp;
-   
-   @FindBy(xpath = "//button[contains(text(),'Sign In')][1]")
-   WebElement signIn;
-   
-   @FindBy( xpath = "//input[@id='email']")
-   WebElement guestmail;
-   @FindBy( xpath = "//input[@id='password']")
-   WebElement guestPassword;
-  
-   @FindBy(xpath = "//button[@value='submit-login']")
-   WebElement loginButton;
-   
-   @FindBy(xpath = "//a[@id='password-reset']")
-   WebElement forgotPwd;
-   
-   @FindBy(xpath = "//input[@id='reset-password-email']")
-   WebElement emailForgotPwd;
-   
-   @FindBy(xpath = "//button[contains(text(),'Send')]")
-   WebElement sendButton;
-   
-   @FindBy(xpath = "(//button[contains(text(),'Login')])[2]")
-   WebElement loginForgotPwd;
-   //back to cart 
-   @FindBy(xpath = "//a[@class='back-to-cart']")
-   WebElement backToCart;
-   
+  //pageFactory constructor for this page
     public guestUserLoginPage(WebDriver rDriver) {
         this.lDriver = rDriver;
         PageFactory.initElements(rDriver, this);
     }
-
+   
+    //Guest login page of xpaths, actionMethods and passing the data
+    
+    //guestCheckout button
+    @FindBy(xpath = "//button[contains(text(),'Guest Checkout')]")
+    WebElement guestCheckOut;
+    //actionMethod
     public void clickOnGuestCheckOut() {
         this.guestCheckOut.click();
     }
-
+    //reEntermailguest
+    @FindBy( xpath = "//input[@id='email-guest']")
+    WebElement reEnterMailInGuest;
+    //actionMethod
+    public void clickOnEmailClear() {
+        reEnterMailInGuest.clear();
+       
+     }
+    //actionMethod
     public void clickOnEmail(String reEnterMail) {
         this.reEnterMailInGuest.sendKeys(new CharSequence[]{reEnterMail});
-      
-    }
-    public void clickOnEmailClear() {
-       reEnterMailInGuest.clear();
-      
-    }
+    } 
+    
+    //Continue as guest
+    @FindBy(xpath = "//button[contains(text(),' Continue as guest')]" )
+    WebElement continueAsGuest;
+    //actionMethod
     public void clickOnContinueAsGuest() {
-        this.continueAsGuest.click();
+        continueAsGuest.click();
     }
-    
-    public void clickOnGuest() {
-    	guestCheckout1.click();
-    }
-    
-    public void clickOnSignUp() {
-    	signUp.click();
-    }
-    public void clickOnSignIn() {
-    	signIn.click();
-    }
+    //guest checkout1
+   @FindBy(xpath = "//button[contains(@class,'js-cancel-login')]")
+    WebElement guestCheckout1;
+   //actionMethod
+   public void clickOnGuest() {
+   	guestCheckout1.click();
+   }
+   //sign up
+   @FindBy(xpath = "(//a[contains(text(),'Sign Up')])[2]")
+   WebElement signUp;
+   //actionMethod
+   public void clickOnSignUp() {
+   	signUp.click();
+   }
+   //sign in
+   @FindBy(xpath = "//button[contains(text(),'Sign In')][1]")
+   WebElement signIn;
+   //actionMethod
+   public void clickOnSignIn() {
+   	signIn.click();
+   }
+   //guestmail
+   @FindBy( xpath = "//input[@id='email']")
+   WebElement guestmail;
+   //actionMethod
+   public void clickOnGuestMail(String mail) throws InterruptedException {
+       guestmail.clear();
+   	guestmail.sendKeys( mail);
+       Thread.sleep(2000L);
+   }
+   //guestPassword
+   @FindBy( xpath = "//input[@id='password']")
+   WebElement guestPassword;
+   //actionMethod
+   public void clickOnGuestPassword(String pwd ) throws InterruptedException {
+       guestPassword.clear();
+   	guestPassword.sendKeys(pwd);
+       Thread.sleep(2000L);
+   }
+   //login button
+   @FindBy(xpath = "//button[@value='submit-login']")
+   WebElement loginButton;
+   //actionMethod
+   public void clickOnLogin() {
+   	loginButton.click();
+   }
+   //forgot password
+   @FindBy(xpath = "//a[@id='password-reset']")
+   WebElement forgotPwd;
+   //actionMethod
+   public void clickOnForgotPwd() {
+   	forgotPwd.click();
+   }
+   //forgot email  pwd
+   @FindBy(xpath = "//input[@id='reset-password-email']")
+   WebElement emailForgotPwd;
+   //actionMethod
+   public void enterForgotPwdEmail() {
+   	emailForgotPwd.sendKeys("akhila.m@etg.digital");
+   }
+   //send button
+   @FindBy(xpath = "//button[contains(text(),'Send')]")
+   WebElement sendButton;
+   //actionMethod
+   public void clickOnSend(WebDriver driver) {
+   	JavascriptExecutor js = (JavascriptExecutor) driver;
+       js.executeScript("arguments[0].click();", sendButton);
+   	//sendButton.click();
+   }
+   //login forgot password
+   @FindBy(xpath = "(//button[contains(text(),'Login')])[2]")
+   WebElement loginForgotPwd;
+   //actionMethod
+   public void clickOnLoginPwd() {
+   	loginForgotPwd.click();
+   }
+   //back to cart 
+   @FindBy(xpath = "//a[@class='back-to-cart']")
+   WebElement backToCart;
+   //actionMethod
+   public void clickOnBackToCart() {
+   	backToCart.click();
+   }
 
-    public void clickOnGuestMail(String mail) throws InterruptedException {
-        guestmail.clear();
-    	guestmail.sendKeys( mail);
-        Thread.sleep(2000L);
-    }
-
-    public void clickOnGuestPassword(String pwd ) throws InterruptedException {
-        guestPassword.clear();
-    	guestPassword.sendKeys(pwd);
-        Thread.sleep(2000L);
-    }
-    
-    public void clickOnLogin() {
-    	loginButton.click();
-    }
-    public void clickOnForgotPwd() {
-    	forgotPwd.click();
-    }
-    public void enterForgotPwdEmail() {
-    	emailForgotPwd.sendKeys("akhila.m@etg.digital");
-    }
-   
-    public void clickOnSend(WebDriver driver) {
-    	JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].click();", sendButton);
-    	//sendButton.click();
-    }
-    
-    public void clickOnLoginPwd() {
-    	loginForgotPwd.click();
-    }
-    public void clickOnBackToCart() {
-    	backToCart.click();
-    }
 }

@@ -1,5 +1,4 @@
-
-
+// Import necessary packages and classes
 package com.providio.login;
 
 import com.providio.commonfunctionality.waitForTheElement;
@@ -14,50 +13,66 @@ import org.openqa.selenium.support.ui.Wait;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
+// Define a test class named "tc__Login"
 public class tc__Login extends baseClass {
+	// Create an instance of the SoftAssert class to perform soft assertions
 	SoftAssert softAssert = new SoftAssert();
 
+    // Define a test method named "loginTest"
     @Test
     public void loginTest() throws InterruptedException {
     	
-        //test.log(LogStatus.INFO, "Test case Validation started");
-    	test.info("Test case Validation started");
+        // Log test information
+        test.info("Test case validation started");
+        
+        // Navigate to the application's base URL
         driver.get(baseURL);
-        logger.info("enterd into url");
+        logger.info("Entered into URL");
         Thread.sleep(2000L);
+        
+        // Create an instance of the "loginPage" class
         loginPage lp = new loginPage(driver);
+        
+        // Click on the "Sign In" button
         lp.clickSign();
-        logger.info("clicked on sign in");
+        logger.info("Clicked on Sign In");
         Thread.sleep(2000L);
+        
+        // Enter the email address
         lp.setEmail(name);
-        logger.info("entered email");
+        logger.info("Entered email");
         Thread.sleep(2000L);
+        
+        // Enter the password
         lp.setPassword(password);
-        logger.info("entered password");
+        logger.info("Entered password");
         Thread.sleep(2000L);
+        
+        // Click on the "Submit" button
         lp.clickSubmit();
-        logger.info("click on the submit button");
+        logger.info("Clicked on the Submit button");
         Thread.sleep(5000L);
         
+        // Use FluentWait to wait for the visibility of the "Dashboard" element
         Wait<WebDriver> wait = waitForTheElement.createFluentWait(driver);
-        WebElement Login = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(" //h1[@class ='account-page-title']")));
+        WebElement loginTitle = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(" //h1[@class ='account-page-title']")));
         
-        //WebElement Login = driver.findElement(By.xpath(" //h1[@class ='account-page-title']"));
+        // Get the actual title from the "Dashboard" element
         String expectedTitle = "Dashboard";
-        String actualTitle = Login.getText();
+        String actualTitle = loginTitle.getText();
         
+        // Check if the actual title matches the expected title
         if (actualTitle.equals(expectedTitle)) {
+        	// Log a pass message if the user is logged in successfully
         	test.pass("User logged in successfully");
             logger.info("User logged in successfully");
             isLoggedIn = true;
         } else {
+        	// Log a fail message if the page title does not match the expected title
         	test.fail("The page Title does not match expected " + expectedTitle + " but found " + actualTitle);
-            //test.log(LogStatus.FAIL, "The page Title does not match expected " + expectedTitle + " " + "  but found" + " " + actualTitle + " ");
             logger.info("Click failed");
-            //isLoggedIn = true;
         }
         
-      
         // Assert all the soft assertions
         softAssert.assertAll();
     }

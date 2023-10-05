@@ -18,6 +18,8 @@ public class checkOutPage {
 		PageFactory.initElements(rDriver, this);
 	}
 	
+	//Check out page xpaths, actionMethods and passing data values
+	
 	//shippingMethods
 	@FindBy(xpath = "(//span[contains(text(),'Ground')])[1]")
 	WebElement GroundElement;

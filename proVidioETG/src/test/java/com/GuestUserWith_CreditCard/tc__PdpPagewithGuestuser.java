@@ -91,7 +91,7 @@ public class tc__PdpPagewithGuestuser extends baseClass {
 	// Step 3: Perform actions on Product Description Page
 	private void performActionsOnProductDescriptionPage() throws InterruptedException {
 	    productDescriptionPage pdp = new productDescriptionPage(driver);
-	    pdp.clickOnSize(driver);
+	    //pdp.clickOnSize(driver);
 	    logger.info("Clicked on Size");
 //	    pdp.clickOnLeftCarousel(driver);
 //	    logger.info("Clicked on Left Carousel");

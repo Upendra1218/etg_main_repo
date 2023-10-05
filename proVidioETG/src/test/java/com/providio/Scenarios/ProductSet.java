@@ -9,10 +9,6 @@ import com.providio.testcases.baseClass;
 public class ProductSet extends baseClass{
 
 	public void productSet() throws InterruptedException {
-		
-        //launching the browser and passing the url into it
-	 	driver.get(baseURL);
-	 	logger.info("Entered into url");
 	 	
 	 	//searching the product set from excel sheet
 		ProductSetFromExcel fromExcel= new ProductSetFromExcel();
@@ -22,8 +18,8 @@ public class ProductSet extends baseClass{
 		
 		//selecting size for product
 		allAttributesinOneFile.allAttributes();
-//		SizeSelectionForProductSet set =new SizeSelectionForProductSet();
-//		set.sizeSelection(driver);
+//		//                SizeSelectionForProductSet set =new SizeSelectionForProductSet();
+//		//  set.sizeSelection(driver);
 //		logger.info("Selected size and added to cart");
 		
 		//validating the product is instock and adding to the cart

@@ -7,11 +7,6 @@ import com.providio.testcases.baseClass;
 public class VariationProduct extends baseClass{
 
 	public void variationProduct() throws InterruptedException {
-		
-		//launching the browser and passing the url into it
-		 driver.get(baseURL);
-		 logger.info("Entered into url");
-		 logger.info("Placing the order as guest user");
 		  
 		 //searched for variation product
 		 VariationProductFromExcel fromExcel = new VariationProductFromExcel();

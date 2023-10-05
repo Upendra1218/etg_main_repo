@@ -7,6 +7,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
+import com.providio.Scenarios.BundleProduct;
 import com.providio.commonfunctionality.addtoCartValidation;
 import com.providio.commonfunctionality.validatingInstock;
 import com.providio.pageObjects.BundleProductFromEXcel;
@@ -21,16 +22,9 @@ public class tc__BundleProductForReg_InMC_Paypal  extends baseClass{
 		 @Test(dependsOnMethods = {"com.providio.testcases.tc__LoginSc.verifySuccessfulLogin"}, alwaysRun = true)
 		public void bundleProduct() throws InterruptedException {
 		if(isLoggedIn) {      
-			//searching the bundle product from excel sheet
-			 BundleProductFromEXcel bundleProduct = new  BundleProductFromEXcel();
-			 bundleProduct.performRandomOperations(driver);
-			 logger.info("Searched a product");
-			 
- 	        //validate the product is instock or not
- 	    	validatingInstock.inStockValidation();
- 	    	
- 	    	//validating the product is add to the cart
- 	    	addtoCartValidation.validatingProductisAddtoCart(driver);
+			 //searching the bundle product from excel sheet
+		    BundleProduct bp = new BundleProduct();
+		    bp.bundleproduct();
  	    	
 	        //checkout from mini cart by paypal	        
 	        tc__MinicartViewCartProcessByPayPal checkOutProcessByPayPal= new tc__MinicartViewCartProcessByPayPal();

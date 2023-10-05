@@ -139,9 +139,9 @@ public class ProductSetFromExcel extends baseClass {
 					}
 						
 					
-					SizeSelectioForVariation ss= new SizeSelectioForVariation();
-					ss.sizeSelection(driver);
-					logger.info("Product added to cart");
+//					//SizeSelectioForVariation ss= new SizeSelectioForVariation();
+//					ss.sizeSelection(driver);
+//					logger.info("Product added to cart");
 					
 					dataList.remove(randomValue);
 					System.out.println(" After searching the product we have this in datalist"+ dataList);

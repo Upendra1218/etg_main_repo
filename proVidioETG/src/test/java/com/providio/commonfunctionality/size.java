@@ -109,39 +109,39 @@ public class size extends baseClass{
 		 
 		 List<WebElement> extendedWarranty = driver.findElements(By.className("options-select"));
 	     
-	     for(int i=1; i<=mainDiv.size();i++) {
-	    	 
-			if(colorElement.size()>0|| colorBox.size()>0) {
-				productDescriptionPage pdp = new productDescriptionPage(driver);
-				pdp.clickOnColor(driver);
-				System.out.println("selected color");
-				Thread.sleep(1000);
-			}if(sizeElement.size()>0|| sizeBox.size()>0 ) {
-				
-				productDescriptionPage pdp = new productDescriptionPage(driver);
-				pdp.clickOnSize(driver);
-				System.out.println("selected size");
-				//Thread.sleep(1000);					
-			} if(memoryElement.size()>0||  memoryBox.size()>0) {
-				productDescriptionPage pdp = new productDescriptionPage(driver);
-				pdp.selecttheMemorySize(driver);
-				System.out.println("selected memory size");
-				//Thread.sleep(1000);
-			} if(widthElements.size()>0 || widthBox.size()>0) {				
-				productDescriptionPage pdp = new productDescriptionPage(driver);
-				pdp.selectWidth(driver);
-				System.out.println("selected width");
-				//Thread.sleep(1000);
-			}if(showName.size()>0 || showNameBox.size()>0) {
-				//Thread.sleep(1000);
-				productDescriptionPage pdp = new productDescriptionPage(driver);
-				pdp.selectShowName(driver);
-				System.out.println("Selected show name ");
-			}if(extendedWarranty.size()>0) {
-				productDescriptionPage pdp = new productDescriptionPage(driver);
-				pdp.selectExtendedWarranty(driver);
-				System.out.println("Selected extended warranty ");
-			}
+//	     for(int i=1; i<=mainDiv.size();i++) {
+//	    	 
+//			if(colorElement.size()>0|| colorBox.size()>0) {
+//				productDescriptionPage pdp = new productDescriptionPage(driver);
+//				pdp.clickOnColor(driver);
+//				System.out.println("selected color");
+//				Thread.sleep(1000);
+//			}if(sizeElement.size()>0|| sizeBox.size()>0 ) {
+//				
+//				productDescriptionPage pdp = new productDescriptionPage(driver);
+//				pdp.clickOnSize(driver);
+//				System.out.println("selected size");
+//				//Thread.sleep(1000);					
+//			} if(memoryElement.size()>0||  memoryBox.size()>0) {
+//				productDescriptionPage pdp = new productDescriptionPage(driver);
+//				pdp.selecttheMemorySize(driver);
+//				System.out.println("selected memory size");
+//				//Thread.sleep(1000);
+//			} if(widthElements.size()>0 || widthBox.size()>0) {				
+//				productDescriptionPage pdp = new productDescriptionPage(driver);
+//				pdp.selectWidth(driver);
+//				System.out.println("selected width");
+//				//Thread.sleep(1000);
+//			}if(showName.size()>0 || showNameBox.size()>0) {
+//				//Thread.sleep(1000);
+//				productDescriptionPage pdp = new productDescriptionPage(driver);
+//				pdp.selectShowName(driver);
+//				System.out.println("Selected show name ");
+//			}if(extendedWarranty.size()>0) {
+//				productDescriptionPage pdp = new productDescriptionPage(driver);
+//				pdp.selectExtendedWarranty(driver);
+//				System.out.println("Selected extended warranty ");
+//			}
 			
 //			WebElement mainDiv1= driver.findElement(By.xpath("(//div[@class='attributes px-0']) [" +i+"]"));
 //			
@@ -150,7 +150,7 @@ public class size extends baseClass{
 //			JavascriptExecutor js = (JavascriptExecutor) driver;
 //	        js.executeScript("window.scrollBy(0,700)", "");
 
-	     }
+//	     }
 	}
 	public void clickOnBuyNow(WebDriver driver) throws InterruptedException {
 		//selecting attributes

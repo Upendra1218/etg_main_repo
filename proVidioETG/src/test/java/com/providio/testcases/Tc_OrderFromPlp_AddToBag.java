@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import com.providio.pageObjects.AddToBag_FromPlp;
-import com.providio.pageObjects.navigateAllTheMenusWithValidation;
+import com.providio.pageObjects.navigationProcess;
 import com.providio.pageObjects.navigationPage;
 import com.providio.paymentProccess.tc__CreditCardPaymentProcess;
 import com.providio.paymentProccess.tc__MinicartViewCartProcess;

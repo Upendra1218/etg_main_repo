@@ -13,11 +13,7 @@ import com.providio.testcases.baseClass;
 public class SearchingProduct extends baseClass{
 
 	public  void searchingProduct() throws InterruptedException {
-		
-		//launching the browser and passing the url into it
-		 driver.get(baseURL); 
-		 logger.info("Entered into url");
-		 logger.info("Placing the order as guest user");
+
 		
    	  //searching a product
        homePage homepage = new homePage(driver);

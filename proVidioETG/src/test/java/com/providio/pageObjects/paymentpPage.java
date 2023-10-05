@@ -57,7 +57,36 @@ WebDriver lDriver;
     public void setcardnumber(WebDriver driver) throws InterruptedException {	    	
     	driver.switchTo().frame("braintree-hosted-field-number");
     	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", entercnumber);
-    	entercnumber.sendKeys("4111 1111 1111 1111");
+    	String[] cardNumbers = {
+
+                "378282246310005",
+     	       "371449635398431",
+     	       "36259600000004",
+     	       "6011000991300009",
+     	       "3530111333300000",
+     	       "6304000000000000",
+     	       "5555555555554444",	        
+     	      "2223000048400011",
+     	       "4111111111111111",
+     	       "4005519200000004",
+     	       "4009348888881881",
+     	       "4012000033330026",
+     	       "4012000077777777",
+     	       "4012888888881881",	        
+     	       "4217651111111119",
+     	       "4500600000000061",
+     	       "6243030000000001",
+     	       "6221261111117766",
+     	       "6223164991230014"
+                // Add more card numbers here
+            };
+
+    	// Generate a random index to select a card number
+        Random rand = new Random();
+        int randomIndex = rand.nextInt(cardNumbers.length);
+        // Send the randomly selected card number
+        entercnumber.sendKeys(cardNumbers[randomIndex]);
+    	
     	driver.switchTo().defaultContent();
     }
     //Braintree cvv
@@ -94,7 +123,20 @@ WebDriver lDriver;
     @FindBy(xpath ="//input[@id ='cardNumber']")
     WebElement newCreditcard;
     public void latestcardnumber(WebDriver driver) throws InterruptedException {	    	
-    	newCreditcard.sendKeys("4111111111111111");
+    	String[] cardNumbers = {
+   			 "4111 1111 1111 1111",
+		         "4242 4242 4242 4242",
+		         "5555 5555 5555 4444",
+		         "5200 8282 8282 8210",
+		         "3714 4963 539 8431"
+               // Add more card numbers here
+           };
+
+   	// Generate a random index to select a card number
+       Random rand = new Random();
+       int randomIndex = rand.nextInt(cardNumbers.length);
+       // Send the randomly selected card number
+       newCreditcard.sendKeys(cardNumbers[randomIndex]);
         Thread.sleep(2000);
     }
     //CyberSource exp month
@@ -121,6 +163,15 @@ WebDriver lDriver;
     	newSceuritycode.sendKeys("789");
         Thread.sleep(2000);
     }
+    
+    //cybersource 
+  //CyberSource cvv
+    @FindBy(xpath ="//button[contains(@class,'add-payment')]")
+    WebElement AddpaymentBtn;
+    public void cyberAddpaymentBtn(WebDriver driver) throws InterruptedException {	  
+    	AddpaymentBtn.click();
+        Thread.sleep(2000);
+    }
 	
     
    //salesForce CreditCard xpaths, actionMethods and passing the details of the card
@@ -132,7 +183,25 @@ WebDriver lDriver;
     	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.cssSelector("iframe[title='Secure card number input frame']")));
         Thread.sleep(2000);
-    	cardNumber.sendKeys("4111111111111111");
+        String[] cardNumbers = {
+
+        		"4111 1111 1111 1111",
+ 		        "4242 4242 4242 4242",
+ 		        "2223 0031 2200 3222",
+ 		        "4000 0566 5566 5556",
+ 		        "5555 5555 5555 4444",
+ 		        "5200 8282 8282 8210",
+ 		        "3714 4963 539 8431"
+
+                // Add more card numbers here
+            };
+
+    	// Generate a random index to select a card number
+        Random rand = new Random();
+        int randomIndex = rand.nextInt(cardNumbers.length);
+
+        // Send the randomly selected card number
+        cardNumber.sendKeys(cardNumbers[randomIndex]);
         Thread.sleep(2000);
         driver.switchTo().defaultContent();
     }
@@ -158,6 +227,16 @@ WebDriver lDriver;
         driver.switchTo().defaultContent();
     }
     
+    //Salesforce reg credit card button
+    @FindBy(xpath="//div[text()='Credit Card']")
+    WebElement creditCardBtn;
+    public void creditCard(WebDriver driver) {
+    	JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click();", creditCardBtn);
+    	//creditCardBtn.click();
+    }
+    
+    
     //Stripe credit card of xpaths, actionMethods and passing the card details
     
     //stripe  CardNumber
@@ -166,7 +245,25 @@ WebDriver lDriver;
     public void cardNum(WebDriver driver) {
     	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.cssSelector("iframe[title='Secure card payment input frame']")));
-    	newCardNumber.sendKeys("4111111111111111");
+        String[] cardNumbers = {
+
+        		"4111 1111 1111 1111",
+ 		        "4242 4242 4242 4242",
+ 		        "2223 0031 2200 3222",
+ 		        "4000 0566 5566 5556",
+ 		        "5555 5555 5555 4444",
+ 		        "5200 8282 8282 8210",
+ 		        "3714 4963 539 8431"
+
+                // Add more card numbers here
+            };
+
+    	// Generate a random index to select a card number
+        Random rand = new Random();
+        int randomIndex = rand.nextInt(cardNumbers.length);
+
+        // Send the randomly selected card number
+        newCardNumber.sendKeys(cardNumbers[randomIndex]);
     	 driver.switchTo().defaultContent();
     }
     //stripe exp date

@@ -19,6 +19,8 @@ public class contactUsCustomerSupport {
 		lDriver=rDriver;
 		PageFactory.initElements(rDriver, this);
 	}
+	
+	//customer support page of xpaths, actionMethods and passing data
 
 	//contact us button
 	@FindBy(xpath="//div[@class='embeddedServiceHelpButton']//button")
