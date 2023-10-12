@@ -6,7 +6,7 @@ import org.testng.asserts.SoftAssert;
 
 import com.providio.Scenarios.SimpleProduct;
 import com.providio.launchingbrowser.launchBrowsering;
-import com.providio.paymentProccess.tc__MinicartViewCartProcessByPayPal;
+import com.providio.paymentProccess.MinicartViewCartProcessByPayPal;
 import com.providio.testcases.baseClass;
 
 
@@ -25,7 +25,7 @@ public class tc__SimpleProductForGuestUser_InMC_Paypal extends baseClass{
 		    sp.simpleProdcut();
 		    
          //checkout from mini cart by paypal	        
-	      tc__MinicartViewCartProcessByPayPal checkOutProcessByPayPal= new tc__MinicartViewCartProcessByPayPal();
+	      MinicartViewCartProcessByPayPal checkOutProcessByPayPal= new MinicartViewCartProcessByPayPal();
 	      checkOutProcessByPayPal. checkoutprocessFromMiniCart();
 	        
 	      }   

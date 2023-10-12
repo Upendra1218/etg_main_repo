@@ -10,10 +10,8 @@ import org.testng.annotations.Test;
 
 import com.providio.commonfunctionality.Gc__CC_Paypal;
 import com.providio.commonfunctionality.Mens_Pants_PickUpInStore;
-import com.providio.commonfunctionality.navigationProccess;
 import com.providio.pageObjects.homePage;
-import com.providio.paymentProccess.tc__MinicartViewCartProcess;
-import com.providio.paymentProccess.tc__CreditCardPaymentProcess;
+import com.providio.paymentProccess.MinicartViewCartProcess;
 import com.providio.testcases.baseClass;
 
 
@@ -46,7 +44,7 @@ public class  tc__PickUpStore_Guest_InGcAndCC extends baseClass {
 	    	     
 	    	
 		      //common checkoutProcess	         
-				 tc__MinicartViewCartProcess cp = new tc__MinicartViewCartProcess();         
+				 MinicartViewCartProcess cp = new MinicartViewCartProcess();         
 				 cp.checkoutprocess();
 				
 				 //semi gc and cc 
@@ -61,7 +59,7 @@ public class  tc__PickUpStore_Guest_InGcAndCC extends baseClass {
 	    	     
 	    	
 			   //common checkoutProcess	         
-				 tc__MinicartViewCartProcess cp = new tc__MinicartViewCartProcess();         
+				 MinicartViewCartProcess cp = new MinicartViewCartProcess();         
 				 cp.checkoutprocess();
 				 
 			   //semi gc and cc 

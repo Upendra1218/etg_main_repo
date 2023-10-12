@@ -5,7 +5,7 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-import com.providio.commonfunctionality.addtoCartValidation;
+import com.providio.Validations.validationpopupMessages;
 import com.providio.commonfunctionality.allAttributesinOneFile;
 import com.providio.pageObjects.homePage;
 import com.providio.testcases.baseClass;
@@ -31,7 +31,7 @@ public class SearchingProduct extends baseClass{
 		 }
 		  
 		   //validating the product is add to the cart
-	    addtoCartValidation.validatingProductisAddtoCart(driver);
+	    validationpopupMessages.validatingProductisAddtoCart(driver);
 
 	}
 

@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 import com.providio.Scenarios.BundleProduct;
-import com.providio.paymentProccess.tc__MinicartViewCartProcessByPayPal;
+import com.providio.paymentProccess.MinicartViewCartProcessByPayPal;
 import com.providio.testcases.baseClass;
 
 
@@ -21,7 +21,7 @@ public class tc__BundleProductReg_InVC_Paypal extends baseClass{
 	    bp.bundleproduct();
 	    	
     	 //paypal checkout form view cart page
- 	          tc__MinicartViewCartProcessByPayPal paypal= new tc__MinicartViewCartProcessByPayPal();	         
+ 	          MinicartViewCartProcessByPayPal paypal= new MinicartViewCartProcessByPayPal();	         
  	          paypal.checkoutprocessFromViewCart();   
 	 } else {
 	        Assert.fail("User not logged in");

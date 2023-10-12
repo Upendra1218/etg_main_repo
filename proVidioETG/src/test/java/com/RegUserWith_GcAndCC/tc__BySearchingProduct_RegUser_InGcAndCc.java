@@ -4,7 +4,7 @@ package com.RegUserWith_GcAndCC;
 
 import com.providio.Scenarios.SearchingProduct;
 import com.providio.commonfunctionality.Gc__CC_Paypal;
-import com.providio.paymentProccess.tc__MinicartViewCartProcess;
+import com.providio.paymentProccess.MinicartViewCartProcess;
 import com.providio.testcases.baseClass;
 
 import org.testng.Assert;
@@ -24,7 +24,7 @@ public class tc__BySearchingProduct_RegUser_InGcAndCc extends baseClass {
 			sp.searchingProduct();
     	    
 	       //checkoutProcess	        
-            tc__MinicartViewCartProcess cp = new tc__MinicartViewCartProcess();            
+            MinicartViewCartProcess cp = new MinicartViewCartProcess();            
             cp.checkoutprocess();
             
           //semi gc and cc 

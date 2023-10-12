@@ -1,6 +1,5 @@
 package com.providio.pageObjects;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -8,7 +7,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
@@ -376,6 +374,39 @@ WebDriver lDriver;
 	    	//Quickshop.click();
 	    	Thread.sleep(3000);
 		}
+		
+		//select a random product with breadcramps
+		
+		public void selectRandomProduct() {
+			 // Create a new Random object
+	        Random random = new Random();
+	        
+	        // Find all the product elements on the current page (after navigating)
+	        List<WebElement> products = driver.findElements(By.xpath("//a[@class ='tile-img-contain']"));
+	        
+	        // Get the total count of products found on the page
+	        int totalProductcount = products.size();
+	        
+	        // Check if there are any products found on the page
+	        if (totalProductcount > 0) {
+	            // Generate a random number within the range of the total product count
+	            int randomSelectProduct = random.nextInt(totalProductcount) + 1;
+
+	            // Find the randomly selected product element based on the generated random number
+	            WebElement randomSelectProductFromPLP = driver.findElement(By.xpath("(//a[@class ='tile-img-contain'])[" + randomSelectProduct + "]"));
+	            
+	            // Use JavaScript Executor to click on the randomly selected product element
+	            JavascriptExecutor js = (JavascriptExecutor)driver;
+	            js.executeScript("arguments[0].click();", randomSelectProductFromPLP);
+	        }
+	        
+		}
+		
+
+		
+		
+		
+		
 
 		//select a random product
 		public void selectProductRandom(WebDriver driver) throws InterruptedException {
@@ -448,6 +479,11 @@ WebDriver lDriver;
 		            JavascriptExecutor js = (JavascriptExecutor)driver;
 		            js.executeScript("arguments[0].click();", randomSelectProductFromPLP);
 		        }
+		        
+		        
+		        
+		        
+		        
 		    }
 		}
 

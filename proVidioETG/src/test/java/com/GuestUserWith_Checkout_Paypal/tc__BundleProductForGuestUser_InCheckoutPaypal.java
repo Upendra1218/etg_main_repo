@@ -3,12 +3,9 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 import com.providio.Scenarios.BundleProduct;
-import com.providio.commonfunctionality.addtoCartValidation;
-import com.providio.commonfunctionality.validatingInstock;
 import com.providio.launchingbrowser.launchBrowsering;
-import com.providio.pageObjects.BundleProductFromEXcel;
-import com.providio.paymentProccess.tc__MinicartViewCartProcessByPayPal;
-import com.providio.paymentProccess.tc__MiniCartChekoutButton;
+import com.providio.paymentProccess.MinicartViewCartProcessByPayPal;
+import com.providio.paymentProccess.MiniCartChekoutButton;
 import com.providio.testcases.baseClass;
 
 public class tc__BundleProductForGuestUser_InCheckoutPaypal  extends baseClass{
@@ -27,12 +24,12 @@ public class tc__BundleProductForGuestUser_InCheckoutPaypal  extends baseClass{
 		    bp.bundleproduct();
 
 	         //checkoutProcess		        
-			  tc__MiniCartChekoutButton cp = new tc__MiniCartChekoutButton();	         
+			  MiniCartChekoutButton cp = new MiniCartChekoutButton();	         
               cp.checkoutprocess();
               
               
       		//paypal process from checkout page
-  		   tc__MinicartViewCartProcessByPayPal cpp = new tc__MinicartViewCartProcessByPayPal();
+  		   MinicartViewCartProcessByPayPal cpp = new MinicartViewCartProcessByPayPal();
   		   cpp.checkoutprocessFromCheckout();
       		   
 		}	 

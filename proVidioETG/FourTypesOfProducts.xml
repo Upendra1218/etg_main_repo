@@ -57,12 +57,8 @@
 	   <class name="com.providio.testcases.tc__LoginSc"/>
   </classes>--> 
     <packages>
-			    <package name="com.RegUserWith_CreditCard" />                   
-				<package name="com.RegUserWith_GiftCard" />
-				<package name="com.RegUserWith_GcAndCC" />   
-				<package name="com.RegUserWith_ViewCart_Paypal" /> 
-				<package name="com.RegUserWith_GcAndCC" />  
-				<package name="com.RegUserWith_GcAndPaypal" />
+			    <package name="com.GuestUserWith_Checkout_Paypal" />                   
+
 			
 	</packages>
   

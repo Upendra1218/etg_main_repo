@@ -94,6 +94,23 @@ public class paymentMethods extends baseClass{
 	 		pp.postalCode();
 	 		test.info("entered postal code");
 	 	}
+	     
+	     //stripe payment method
+	     public void stripePaymentReguser() throws InterruptedException {
+	    	Thread.sleep(2000); 
+	 		pp.newCardbtn(driver);
+	 		Thread.sleep(2000); 
+	 		pp.cardNum(driver);
+	 		test.info("entered card number");
+	 		pp. expDate(driver);
+	 		test.info("entered exp date");		
+	 		pp.cvv(driver);
+	 		test.info("entered cvv");
+	 		pp.postalCode();
+	 		test.info("entered postal code");
+	 		Thread.sleep(2000); 
+	 		pp.stripeSaveCreditCard(driver);
+	 	}
 		
 
 }

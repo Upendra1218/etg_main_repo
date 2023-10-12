@@ -4,12 +4,11 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.providio.commonfunctionality.navigationProccess;
-import com.providio.paymentProccess.tc__MinicartViewCartProcess;
-import com.providio.paymentProccess.tc__MinicartViewCartProcessByPayPal;
+import com.providio.paymentProccess.MinicartViewCartProcessByPayPal;
 import com.providio.testcases.baseClass;
 
 public class tc__PaypalReg_InMC_Paypal extends baseClass {
-	int  minicartCountValue=0;
+	  
 	@Test(dependsOnMethods = {"com.providio.testcases.tc__LoginSc.verifySuccessfulLogin"}, alwaysRun = true)
 	public void paypalFromCheckoutPage() throws InterruptedException {
 	
@@ -21,7 +20,7 @@ public class tc__PaypalReg_InMC_Paypal extends baseClass {
 	          
 	  
 		 //checkout from mini cart by paypal	        
-	         tc__MinicartViewCartProcessByPayPal checkOutProcessByPayPal= new tc__MinicartViewCartProcessByPayPal();
+	         MinicartViewCartProcessByPayPal checkOutProcessByPayPal= new MinicartViewCartProcessByPayPal();
 	         checkOutProcessByPayPal. checkoutprocessFromMiniCart();
 	    }else {
 	   	 Assert.fail("User not logged in");

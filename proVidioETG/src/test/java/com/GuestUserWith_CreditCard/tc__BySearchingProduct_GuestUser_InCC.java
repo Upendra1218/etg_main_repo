@@ -3,10 +3,10 @@
 package com.GuestUserWith_CreditCard;
 
 import com.providio.Scenarios.SearchingProduct;
-import com.providio.commonfunctionality.addtoCartValidation;
+import com.providio.Validations.validationpopupMessages;
 import com.providio.launchingbrowser.launchBrowsering;
-import com.providio.paymentProccess.tc__MinicartViewCartProcess;
-import com.providio.paymentProccess.tc__CreditCardPaymentProcess;
+import com.providio.paymentProccess.MinicartViewCartProcess;
+import com.providio.paymentProccess.CreditCardPaymentProcess;
 import com.providio.testcases.baseClass;
 
 import org.testng.annotations.Test;
@@ -30,14 +30,14 @@ public class tc__BySearchingProduct_GuestUser_InCC extends baseClass {
 
 		  
 	   //validating the product is add to the cart
-       addtoCartValidation.validatingProductisAddtoCart(driver);
+       validationpopupMessages.validatingProductisAddtoCart(driver);
 	        
        //checkoutProcess	        
-        tc__MinicartViewCartProcess cp = new tc__MinicartViewCartProcess();            
+        MinicartViewCartProcess cp = new MinicartViewCartProcess();            
         cp.checkoutprocess();
         
         //payment by credit card
-	     tc__CreditCardPaymentProcess cc = new tc__CreditCardPaymentProcess();	     
+	     CreditCardPaymentProcess cc = new CreditCardPaymentProcess();	     
 	     cc.paymentByCreditCard();
     }
 }

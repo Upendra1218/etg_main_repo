@@ -6,11 +6,8 @@
 package com.providio.testcases;
 
 import com.providio.pageObjects.navigationPage;
-import com.providio.testcases.baseClass;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 

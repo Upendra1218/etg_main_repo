@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import com.providio.Validations.validationpopupMessages;
 import com.providio.pageObjects.navigationPage;
 import com.providio.pageObjects.productListingPage;
 import com.providio.testcases.baseClass;
@@ -46,6 +47,6 @@ public class Mens_Pants_PickUpInStore extends baseClass {
 		          s.selectSize(driver);
 	    		 }
    	   //validating the product is add to the cart
-  	    addtoCartValidation.validatingProductisAddtoCart(driver);
+  	    validationpopupMessages.validatingProductisAddtoCart(driver);
 	}
 }

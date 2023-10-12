@@ -6,14 +6,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
+import com.providio.commonfunctionality.GuestCheckout;
 import com.providio.commonfunctionality.size;
 import com.providio.pageObjects.checkOutPage;
 import com.providio.pageObjects.miniCartPage;
 import com.providio.pageObjects.navigationPage;
 import com.providio.pageObjects.productListingPage;
 import com.providio.pageObjects.viewCartPage;
-import com.providio.paymentProccess.tc__MinicartViewCartProcess;
-import com.providio.paymentProccess.tc__CreditCardPaymentProcess;
 import com.providio.testcases.baseClass;
 
 public class CheckoutPage2_Validation extends baseClass {
@@ -78,11 +77,10 @@ public class CheckoutPage2_Validation extends baseClass {
 	 		            Thread.sleep(2000);
 	 		            
 	 		            //validate the button click 
-	 		           miniCartAndCartValidation validation =new miniCartAndCartValidation();
-	 		           validation.validateMiniCartClick();
+	 		           miniCartAndCartValidation.validateMiniCartClick();
 	 		            
 	 		            //validate quantity in minicart
-	 		            QuantityValidation quaValidation= new QuantityValidation();
+	 		            //QuantityValidation quaValidation= new QuantityValidation();
 	 		            //quaValidation.quantityValidationInMinicart();
 	 		            Thread.sleep(5000);
 	 		            //click review order
@@ -90,7 +88,7 @@ public class CheckoutPage2_Validation extends baseClass {
 	 					logger.info("clicked the view cart button in the minicart");
 	 					
 	 					//validate the view cart button click
-	 					validation.validateViewCartClick();
+	 					miniCartAndCartValidation.validateViewCartClick();
 	 					Thread.sleep(5000);
 	 					//Validating the quanity in view cart page
 	 					//quaValidation.quantityValidationInViewCart();
@@ -104,8 +102,9 @@ public class CheckoutPage2_Validation extends baseClass {
 	 			        logger.info(continueasAGuest.size());
 	 			        if(continueasAGuest.size()>0) {
 	 			        	
-	 			        	tc__MinicartViewCartProcess cop = new tc__MinicartViewCartProcess();
-	 			        	cop.clickContinueAsGuest();
+	 		                // Check if the user is a guest user and proceed with guest checkout
+	 		                GuestCheckout guest = new GuestCheckout();
+	 		                guest.clickContinueAsGuest();
 	 			        	
 	 			        	toVerifyTheDisplayOfAllElements();
 	 			        	
@@ -138,11 +137,11 @@ public class CheckoutPage2_Validation extends baseClass {
 			
 			
 				test.info("Verifying the error message by Passing empty address and name ,clicking on payment button");
-				checkOutPage cp = new checkOutPage(driver);
 		         //selecting shipping address
 	            
-	            tc__MinicartViewCartProcess cop = new tc__MinicartViewCartProcess();         
-	            cop.selectPaymentMethod(cp);
+                // Check if the user is a guest user and proceed with guest checkout
+                GuestCheckout guest = new GuestCheckout();
+                guest.clickContinueAsGuest();
 	            
 	            WebElement firstNameError = driver.findElement(By.xpath("//div[contains(text(),'Please enter a First name')]"));
 	            
@@ -177,9 +176,9 @@ public class CheckoutPage2_Validation extends baseClass {
 			cop.setzipCode("535633");
 			cop.setPhone(phonenumber);
 			
-			checkOutPage cp = new checkOutPage(driver);
-			tc__MinicartViewCartProcess cop1 = new tc__MinicartViewCartProcess();         
-	        cop1.selectPaymentMethod(cp);
+            // Check if the user is a guest user and proceed with guest checkout
+            GuestCheckout guest = new GuestCheckout();
+            guest.clickContinueAsGuest();
 			WebElement invalidCodeError= driver.findElement(By.xpath("//div[contains(text(),'Please enter a valid code')]"));
 			
 			if(invalidCodeError.isDisplayed()) {
@@ -194,10 +193,9 @@ public class CheckoutPage2_Validation extends baseClass {
 		public void validAddress() throws InterruptedException {
 			
 			test.info("Verifying the pagination when valid address is given");
-			checkOutPage cp = new checkOutPage(driver);
-			tc__MinicartViewCartProcess cop1 = new tc__MinicartViewCartProcess();       
-			//cop1.selectShippingAddress(cp);
-	        cop1.selectPaymentMethod(cp);
+            // Check if the user is a guest user and proceed with guest checkout
+            GuestCheckout guest = new GuestCheckout();
+            guest.clickContinueAsGuest();
 	        
 	        WebElement paginationOfGuestUser = driver.findElement(By.xpath("//span[contains(@class,'customer-labe')]"));
 	         if(paginationOfGuestUser.isDisplayed()) {

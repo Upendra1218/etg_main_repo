@@ -1,6 +1,5 @@
 package com.providio.testcases;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -8,15 +7,16 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-import com.providio.commonfunctionality.attributesSelection;
+import com.providio.Validations.validationpopupMessages;
+import com.providio.commonfunctionality.allAttributesinOneFile;
 import com.providio.commonfunctionality.validatingInstock;
-import com.providio.paymentProccess.tc__CreditCardPaymentProcess;
-import com.providio.paymentProccess.tc__MinicartViewCartProcess;
+import com.providio.pageObjects.productListingPage;
+import com.providio.paymentProccess.CreditCardPaymentProcess;
+import com.providio.paymentProccess.MinicartViewCartProcess;
 
 
 public class tc__NavigationEachMenuOneItem extends baseClass{
@@ -29,164 +29,114 @@ public class tc__NavigationEachMenuOneItem extends baseClass{
         
         if (isLoggedIn) {
             test.info("Test case for the Navigationmenu of Newarrival Page");
-            
-
-   		 WebElement minicartcount = driver.findElement(By.xpath("//span[@class ='minicart-quantity ml-1']"));
-           String countOfMinicart = minicartcount.getText();
-           int minicartCountValue = Integer.parseInt(countOfMinicart);
-           logger.info(minicartCountValue);
-            
-            
+         // Find all the top-level menu items.
             List<WebElement> countofMenus = driver.findElements(By.xpath("//a[@class='nav-link dropdown-toggle text-uppercase font-weight-bold level-1']"));
-	        int count = countofMenus.size();
 
-	        Random random = new Random();
+            // Loop through each top-level menu item.
+            for (int i = 1; i <= countofMenus.size(); ++i) {
+                
+                // Find all the submenu items for the current top-level menu item.
+                List<WebElement> noelementsofdrop = driver.findElements(By.xpath("(//li[@class='nav-item dropdown'])[" + i + "]//a[@class='dropdown-link']"));
+                
+             // Create a random number generator.
+                Random random = new Random();
+                
+                // Generate a random index to select a top-level menu item.
+                int randomNumbermenu = random.nextInt(noelementsofdrop.size()) + 1;
+                
 
-	        for(int i = 1; i <= count; ++i) {
-	            System.out.println("Menu of number" + i);
-	            List<WebElement> noelementsofdrop = driver.findElements(By.xpath("(//li[@class='nav-item dropdown'])[" + i + "]//a[@class='dropdown-link']"));
-	            int countdropdown = noelementsofdrop.size();
-	            int randomNumbermenuitem = random.nextInt(countdropdown)+1;
+                    Thread.sleep(5000);
 
-	                Thread.sleep(5000);
-	                WebElement NavigationMenu = driver.findElement(By.xpath("(//a[@class='nav-link dropdown-toggle text-uppercase font-weight-bold level-1'])[" + i + "]"));
-	                String menuname = NavigationMenu.getText();
+                    // Locate and hover over the current top-level menu item.
+                    WebElement NavigationMenu = driver.findElement(By.xpath("(//a[@class='nav-link dropdown-toggle text-uppercase font-weight-bold level-1'])[" + i + "]"));
+                    Thread.sleep(5000);
+                    Actions action = new Actions(driver);
+                    action.moveToElement(NavigationMenu).perform();
+                    Thread.sleep(5000L);
 
-	                Thread.sleep(5000);
-	                Actions action = new Actions(driver);
-	                action.moveToElement(NavigationMenu).perform();
-	                Thread.sleep(5000L);
-	                
-	                test.pass ("Successfully Howered on the" + menuname + " ");
-	                logger.info("Successfully Howered on the" + menuname + " ");
+                    // Locate and click on the current submenu item using JavaScriptExecutor.
+                    WebElement NavigationMenuitem = driver.findElement(By.xpath("((//a[@class='nav-link dropdown-toggle text-uppercase font-weight-bold level-1'])[" + i + "]/following::a[@role='menuitem'])[" + randomNumbermenu + "]"));
+                    JavascriptExecutor js = (JavascriptExecutor) driver;
+                    js.executeScript("arguments[0].click();", new Object[] { NavigationMenuitem });
+                    Thread.sleep(5000L);
 
-	                
-	                WebElement NavigationMenuitem = driver.findElement(By.xpath("((//a[@class='nav-link dropdown-toggle text-uppercase font-weight-bold level-1'])[" + i + "]/following::a[@role='menuitem'])[" + randomNumbermenuitem + "]"));
-	                String submenuName = NavigationMenuitem.getText();
-	                System.out.println("Menu name " + submenuName);
-	                JavascriptExecutor js = (JavascriptExecutor)driver;
-	                js.executeScript("arguments[0].click();", new Object[]{NavigationMenuitem});
-	                Thread.sleep(5000L);
-	                
-	                test.pass( "Successfully clicked on the" + submenuName + " of " + menuname + "");
-	                logger.info("Successfully clicked on the" + submenuName + " of " + menuname + "");
-	                
-           
-	                List<WebElement> products = driver.findElements(By.xpath("//a[@class ='tile-img-contain']"));	    	        
-	    	        int totalProductcount = products.size();	    	        
-	    	        int randomselectProduct = random.nextInt(totalProductcount) + 1;
+                 // Check the page title to determine which category was clicked.
+                    List<WebElement> newArrivalplp = driver.findElements(By.xpath("(//a[contains(text(), 'New Arrivals')])[2]"));
+                    List<WebElement> womensplp = driver.findElements(By.xpath("//li[@class='breadcrumb-item']/a[contains(text(), 'Women')]"));
+                    List<WebElement> menplp = driver.findElements(By.xpath("//li[@class='breadcrumb-item']/a[contains(text(), 'Men')]"));
+                    //List<WebElement> electronicsplp = driver.findElements(By.xpath("(//a[contains(text(), 'Electronics')])[3]"));
 
-	    	        WebElement RandomSelectProductFormPLP = driver.findElement(By.xpath("(//a[@class ='tile-img-contain'])"+"  "+"[" + randomselectProduct + "]"));
-	    	       // String productName = RandomSelectProductFormPLP.getText();
-	    	        //logger.info(productName);
-	    	        js.executeScript("arguments[0].click();",  RandomSelectProductFormPLP);
-	    	        
-	    	        
-	    	        //logger.info(productName);
-	    	        Thread.sleep(5000);
-	    	        
-	    	    	
-	    			List <WebElement> mainDiv= driver.findElements(By.xpath("//div[@class='attributes px-0']"));
-	    			System.out.println("The total number of size division are " +mainDiv.size());
-	    		
-	    			List<WebElement> colorElement = driver.findElements(By.xpath("//span[contains(@class,' non-input-label')]"));
-	    			System.out.println("The color count is " + colorElement.size());
-	    			
-	    			List<WebElement> sizeElement = driver.findElements(By.xpath("//select[@class='custom-select form-control select-size']"));
-	    			System.out.println("The size count is " +  sizeElement.size());
-	    			
-	    			List<WebElement> memoryElement = driver.findElements(By.id("memorySize-null"));
-	    			
-	    			 List<WebElement> widthElements = driver.findElements(By.xpath(".//select[@id='width-null']"));
-	    		     System.out.println(widthElements.size());
-	    		     
-	    		     List<WebElement> showName = driver.findElements(By.xpath("//select[contains(@class,'select-showName')]"));
-	    		     System.out.println(showName.size());
-	    		     
-	    		     //another way of attributes
-	    		     
-	    		     List<WebElement> sizeBox= driver.findElements(By.xpath("//div[@class='select-size size-change d-flex flex-wrap']"));
-	    		     	     	 	
-	    		     List<WebElement> colorBox= driver.findElements(By.xpath("//button[contains(@class,'color-attribute')]"));
-	    		     
-	    		     List<WebElement> memoryBox = driver.findElements(By.xpath("//div[@class='select-memorySize size-change d-flex flex-wrap']"));
-	    		     
-	    			 List<WebElement> widthBox = driver.findElements(By.xpath("//div[@class='select-width size-change d-flex flex-wrap']"));
-	    			 
-	    			 List<WebElement> showNameBox= driver.findElements(By.cssSelector(".showName"));
-	    		     
-	    		     for(int i1=1; i1<=mainDiv.size();i1++) {
-	    		    	 
-	    				if(colorElement.size()>0|| colorBox.size()>0) {
-	    					//productDescriptionPage pdp = new productDescriptionPage(driver);
-	    					attributesSelection.colorSelection();
-	    					System.out.println("selected color");
-	    					Thread.sleep(4000);
-	    				}if(sizeElement.size()>0|| sizeBox.size()>0 ) {
-	    					
-	    					//productDescriptionPage pdp = new productDescriptionPage(driver);
-	    					attributesSelection.sizeSelction();
-	    					System.out.println("selected size");
-	    					Thread.sleep(4000);					
-	    				} if(memoryElement.size()>0||  memoryBox.size()>0) {
-	    					//productDescriptionPage pdp = new productDescriptionPage(driver);
-	    					attributesSelection.memorySelection();
-	    					System.out.println("selected memory size");
-	    					Thread.sleep(4000);
-	    				} if(widthElements.size()>0 || widthBox.size()>0) {
-	    					Thread.sleep(4000);
-	    					//productDescriptionPage pdp = new productDescriptionPage(driver);
-	    					attributesSelection.widthSelection();
-	    					System.out.println("selected width");
-	    					Thread.sleep(4000);
-	    				}if(showName.size()>0 || showNameBox.size()>0) {
-	    					Thread.sleep(4000);
-	    					//productDescriptionPage pdp = new productDescriptionPage(driver);
-	    					//attributesSelection.selectShowName();
-	    					System.out.println("Selected show name ");
-	    				}
-	    				
-	    				validatingInstock.inStockValidation();
-//	    				WebElement mainDiv1= driver.findElement(By.xpath("(//div[@class='attributes px-0']) [" +i+"]"));
-//	    				
-//	    				((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", mainDiv1);
-	    				
-//	    				JavascriptExecutor js = (JavascriptExecutor) driver;
-//	    		        js.executeScript("window.scrollBy(0,700)", "");
+                    // Check which category is displayed based on the page title and random submenu item.
+                    if (newArrivalplp.size() > 0) {
+                        // Handle the case when "New Arrivals" category is clicked.
+                        String[] newArrivalsCategory = {"WOMENS", "MENS", "ELECTRONICS"};
+                        WebElement pageTitle = driver.findElement(By.xpath("//h1[contains(@class, 'page-title')]"));
+                        String pageTitleText = pageTitle.getText();
+                        test.info("Verify that New Arrivals of  " + pageTitleText + " ");
+                        if (pageTitleText.equals(newArrivalsCategory[randomNumbermenu - 1])) {
+                            test.pass("Successfully clicked on the New Arrivals of  " + pageTitleText + " ");
+                            logger.info("Click Success New Arrivals of  " + pageTitleText + "");
+                        }
+                        
+                    } else if (womensplp.size() > 0) {
+                        // Handle the case when "Womens" category is clicked.
+                        String[] womensCategory = {"OUTFITS", "TOPS", "DRESSES", "BOTTOMS", "JACKETS & COATS", "FEELING RED", "EARRINGS", "BRACELETS", "NECKLACES", "SCARVES", "SHOES"};
+                        WebElement pageTitle = driver.findElement(By.xpath("//h1[contains(@class, 'page-title')]"));
+                        String pageTitleText = pageTitle.getText();
+                        test.info("Verify that Womens of  " + pageTitleText + " ");
+                        if (pageTitleText.equals(womensCategory[randomNumbermenu - 1])) {
+                            test.pass("Successfully clicked on the Womens of  " + pageTitleText + " ");
+                            logger.info("Click Success Womens of  " + pageTitleText + "");
+                        }
+                    } else if (menplp.size() > 0) {
+                        // Handle the case when "Mens" category is clicked.
+                        String[] mensCategory = {"SUITS", "JACKETS & COATS", "DRESS SHIRTS", "SHORTS", "PANTS", "TIES", "GLOVES", "LUGGAGE"};
+                        WebElement pageTitle = driver.findElement(By.xpath("//h1[contains(@class, 'page-title')]"));
+                        String pageTitleText = pageTitle.getText();
+                        test.info("Verify that Mens of  " + pageTitleText + " ");
+                        if (pageTitleText.equals(mensCategory[randomNumbermenu - 1])) {
+                            test.pass("Successfully clicked on the Mens of  " + pageTitleText + " ");
+                            logger.info("Click Success Mens of  " + pageTitleText + "");
+                        }
+                    } else {
+                        // Handle the case when "Electronics" category is clicked.
+                        String[] electronicsCategory = {"TELEVISIONS", "DIGITAL CAMERAS", "IPOD & MP3 PLAYERS", "GPS NAVIGATION", "GAMING"};
+                        WebElement pageTitle = driver.findElement(By.xpath("//h1[contains(@class, 'page-title')]"));
+                    	String pageTitleText = pageTitle.getText();
+                    	test.info("verify that Electronics of  " + pageTitleText + " ");
+                    	if (pageTitleText.equals(electronicsCategory[randomNumbermenu-1])) {
+                    		test.pass("Successfully clicked on the Electronics of  " + pageTitleText + " ");
+                            logger.info("click Success Electronics of  " + pageTitleText + "");
+                    	}
+                    }
+                    
+                    //select a product form the products loaded on the product listing page
+            		productListingPage plp = new productListingPage(driver);
+            		plp.selectProductRandom(driver);
 
-	    		     }
-	    	        
-	    	        test.info("Verifying the product is added to cart or not ");		
-	    			 
-	    			 WebElement minicartcountafteraddotcart = driver.findElement(By.xpath("//span[@class ='minicart-quantity ml-1']"));
-	    	       String countOfMinicartafteraddotcart = minicartcountafteraddotcart.getText();
-	    	       int minicartCountValueafteraddotcart = Integer.parseInt(countOfMinicartafteraddotcart);
-	    	       logger.info(minicartCountValueafteraddotcart);
-
-	    				  if(minicartCountValue!=minicartCountValueafteraddotcart) {
-//	    					  Thread.sleep(5000);
-//	    					  pratciie.Paynent();
-	    						test.pass("Product added to cart");
-	    						logger.info("Product is  added to cart");
-	    				  }else {
-	    					  //pratciie.Paynent();
-	    					//test.fail("Product is not added to cart");
-	    					logger.info("Product is not added to cart");
-	    				  }
-	    	        Thread.sleep(5000);
-
-	               
-	            }
+                    //Selecting the attributes
+					allAttributesinOneFile.allAttributes();
+                    
+					Thread.sleep(3000);
+                  //validate the product is instock or not
+                	validatingInstock.inStockValidation();
+                	
+                	//validating the product is add to the cart
+                	validationpopupMessages.validatingProductisAddtoCart(driver);
+            	
+                    
+                }
+            
 	        
 	        //checkoutProcess
 	        
-            tc__MinicartViewCartProcess cp = new tc__MinicartViewCartProcess();
+            MinicartViewCartProcess cp = new MinicartViewCartProcess();
             
             cp.checkoutprocess();
             
            //payment process
             
-            tc__CreditCardPaymentProcess cc = new tc__CreditCardPaymentProcess();
+            CreditCardPaymentProcess cc = new CreditCardPaymentProcess();
             
             cc.paymentByCreditCard(); 
             

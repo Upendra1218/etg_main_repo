@@ -7,12 +7,12 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
+import com.providio.Validations.validationpopupMessages;
 import com.providio.commonfunctionality.Gc__CC_Paypal;
-import com.providio.commonfunctionality.addtoCartValidation;
 import com.providio.commonfunctionality.validatingInstock;
 import com.providio.pageObjects.ProductSetFromExcel;
   
-import com.providio.paymentProccess.tc__MinicartViewCartProcess;
+import com.providio.paymentProccess.MinicartViewCartProcess;
 import com.providio.testcases.baseClass;
 public class tc__ProductSetForGuestUser_InGiftCard extends baseClass{
 	SoftAssert softAssert = new SoftAssert();
@@ -39,10 +39,10 @@ public class tc__ProductSetForGuestUser_InGiftCard extends baseClass{
 		  validatingInstock.inStockValidation();
 		  
 		//validating the product is add to the cart
- 	    addtoCartValidation.validatingProductisAddtoCart(driver);
+ 	    validationpopupMessages.validatingProductisAddtoCart(driver);
  	    
 	    //checkoutProcess		        
-			tc__MinicartViewCartProcess cp = new tc__MinicartViewCartProcess();	         
+			MinicartViewCartProcess cp = new MinicartViewCartProcess();	         
             cp.checkoutprocess();
             
             //gc payment 

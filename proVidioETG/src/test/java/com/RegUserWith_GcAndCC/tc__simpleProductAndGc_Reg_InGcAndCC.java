@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 import com.providio.Scenarios.SimpleProductAndGc;
 import com.providio.commonfunctionality.Gc__CC_Paypal;
-import com.providio.paymentProccess.tc__MinicartViewCartProcess;
+import com.providio.paymentProccess.MinicartViewCartProcess;
 import com.providio.testcases.baseClass;
 
 public class tc__simpleProductAndGc_Reg_InGcAndCC extends baseClass {
@@ -21,7 +21,7 @@ public class tc__simpleProductAndGc_Reg_InGcAndCC extends baseClass {
 				spGc.simpleProductAndGc();
 				 
 				 //checkoutProcess				        
-			     tc__MinicartViewCartProcess cp = new tc__MinicartViewCartProcess();				     
+			     MinicartViewCartProcess cp = new MinicartViewCartProcess();				     
 			     cp.checkoutprocess();
 			     
 			   //semi gc and cc 

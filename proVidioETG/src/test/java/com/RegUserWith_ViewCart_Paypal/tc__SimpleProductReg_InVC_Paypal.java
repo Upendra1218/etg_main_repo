@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 import com.providio.Scenarios.SimpleProduct;
-import com.providio.paymentProccess.tc__MinicartViewCartProcessByPayPal;
+import com.providio.paymentProccess.MinicartViewCartProcessByPayPal;
 import com.providio.testcases.baseClass;
 
 
@@ -23,7 +23,7 @@ public class tc__SimpleProductReg_InVC_Paypal extends baseClass{
 	    sp.simpleProdcut();
 
 		//paypal checkout form view cart page
-         tc__MinicartViewCartProcessByPayPal paypal= new tc__MinicartViewCartProcessByPayPal();	         
+         MinicartViewCartProcessByPayPal paypal= new MinicartViewCartProcessByPayPal();	         
          paypal.checkoutprocessFromViewCart();   
              
 	        }

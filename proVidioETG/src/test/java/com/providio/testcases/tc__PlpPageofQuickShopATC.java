@@ -8,12 +8,13 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
+import com.providio.Validations.PdpValidation;
 import com.providio.commonfunctionality.allAttributesinOneFile;
 import com.providio.pageObjects.navigationPage;
 import com.providio.pageObjects.productListingPage;
 import com.providio.pageObjects.quickShopPage;
-import com.providio.paymentProccess.tc__CreditCardPaymentProcess;
-import com.providio.paymentProccess.tc__MinicartViewCartProcess;
+import com.providio.paymentProccess.CreditCardPaymentProcess;
+import com.providio.paymentProccess.MinicartViewCartProcess;
 
 
 public class tc__PlpPageofQuickShopATC extends baseClass{
@@ -22,7 +23,7 @@ public class tc__PlpPageofQuickShopATC extends baseClass{
 		
 		int countofProducts =0;
 		//tc__Login.loginTest tc__LoginSc.verifySuccessfulLogin
-		@Test(dependsOnMethods = {"com.providio.testcases.tc__LoginSc.verifySuccessfulLogin"}, alwaysRun = true)
+		@Test(dependsOnMethods = {"com.providio.login.tc__Login.loginTest"}, alwaysRun = true)
 		public void PlpPage() throws InterruptedException {
 		    // Validate if the user is logged in or not
 		    if (isLoggedIn) {
@@ -45,11 +46,11 @@ public class tc__PlpPageofQuickShopATC extends baseClass{
 		        performQuickshopActions();
 
 		        // Step 7: Checkout Process
-		        tc__MinicartViewCartProcess cp = new tc__MinicartViewCartProcess();
+		        MinicartViewCartProcess cp = new MinicartViewCartProcess();
 		        cp.checkoutprocess();
 		        
 		        //payment process
-		        tc__CreditCardPaymentProcess cc = new tc__CreditCardPaymentProcess();
+		        CreditCardPaymentProcess cc = new CreditCardPaymentProcess();
 		        
 		        cc.paymentByCreditCard();
 		        
@@ -147,10 +148,9 @@ public class tc__PlpPageofQuickShopATC extends baseClass{
 		    allAttributesinOneFile.allAttributes();
 
 		    Thread.sleep(4000);
-		    qs.QuantityofallpagesPlus(driver);
+		    PdpValidation.QuantityofallpagesPlus(driver);
 		    logger.info("Clicked on Increase quantity");
-
-		    qs.Quantityofallpagesminus(driver);
+		    PdpValidation.Quantityofallpagesminus(driver);
 		    logger.info("Clicked on Decrease quantity");
 		    
 		    qs.clickCloseButton();

@@ -4,19 +4,8 @@ package com.RegUserWith_GcAndPaypal;
 
 import com.providio.Scenarios.SearchingProduct;
 import com.providio.commonfunctionality.Gc__CC_Paypal;
-import com.providio.commonfunctionality.addtoCartValidation;
-import com.providio.commonfunctionality.size;
-import com.providio.pageObjects.homePage;
-import com.providio.pageObjects.productDescriptionPage;
-import com.providio.paymentProccess.tc__MinicartViewCartProcess;
-import com.providio.paymentProccess.tc__MinicartViewCartProcessByPayPal;
-import com.providio.paymentProccess.tc__CreditCardPaymentProcess;
 import com.providio.testcases.baseClass;
 
-import java.util.List;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;

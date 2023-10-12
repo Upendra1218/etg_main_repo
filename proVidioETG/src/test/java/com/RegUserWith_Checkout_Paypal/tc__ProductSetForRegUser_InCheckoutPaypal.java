@@ -1,20 +1,15 @@
 package com.RegUserWith_Checkout_Paypal;
 
-import java.util.List;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-import com.providio.commonfunctionality.addtoCartValidation;
+import com.providio.Validations.validationpopupMessages;
 import com.providio.commonfunctionality.validatingInstock;
 import com.providio.pageObjects.ProductSetFromExcel;
   
-import com.providio.paymentProccess.tc__MinicartViewCartProcess;
-import com.providio.paymentProccess.tc__MinicartViewCartProcessByPayPal;
-import com.providio.paymentProccess.tc__CreditCardPaymentProcess;
+import com.providio.paymentProccess.MinicartViewCartProcess;
+import com.providio.paymentProccess.MinicartViewCartProcessByPayPal;
 import com.providio.testcases.baseClass;
 public class tc__ProductSetForRegUser_InCheckoutPaypal extends baseClass{
 	SoftAssert softAssert = new SoftAssert();
@@ -39,15 +34,15 @@ public class tc__ProductSetForRegUser_InCheckoutPaypal extends baseClass{
 				  validatingInstock.inStockValidation();
 				  
 				//validating the product is add to the cart
-		 	    addtoCartValidation.validatingProductisAddtoCart(driver);
+		 	    validationpopupMessages.validatingProductisAddtoCart(driver);
 		 	    
 		    //checkoutProcess		        
-				tc__MinicartViewCartProcess cp = new tc__MinicartViewCartProcess();	         
+				MinicartViewCartProcess cp = new MinicartViewCartProcess();	         
 	            cp.checkoutprocess();
 	            
 	            
     		//paypal process from checkout page
-    			 tc__MinicartViewCartProcessByPayPal cpp = new tc__MinicartViewCartProcessByPayPal();
+    			 MinicartViewCartProcessByPayPal cpp = new MinicartViewCartProcessByPayPal();
     			 cpp.checkoutprocessFromCheckout();
 		 }else {
 		   	 Assert.fail("User not logged in");

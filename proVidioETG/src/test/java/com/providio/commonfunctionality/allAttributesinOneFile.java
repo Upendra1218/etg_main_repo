@@ -6,12 +6,16 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import com.providio.Validations.validationpopupMessages;
 import com.providio.pageObjects.navigationPage;
 import com.providio.pageObjects.productDescriptionPage;
 import com.providio.pageObjects.productListingPage;
 import com.providio.testcases.baseClass;
+import com.providio.utilities.attributesSelection;
 
 public class allAttributesinOneFile extends baseClass{
+	
+	int j =0;
 	
 	
 	public static void selectTheAttributesInPdp(WebDriver driver) throws InterruptedException {
@@ -56,7 +60,7 @@ public class allAttributesinOneFile extends baseClass{
 	    	 selectTheAttributesInPdp(driver);
 	    	 
 	    	//validating the product is add to the cart
-	  	    addtoCartValidation.validatingProductisAddtoCart(driver);
+	  	    validationpopupMessages.validatingProductisAddtoCart(driver);
 	  	    
 	     }
 	     
@@ -67,7 +71,7 @@ public class allAttributesinOneFile extends baseClass{
 		List <WebElement> mainDiv= driver.findElements(By.xpath("//div[@class='attributes px-0']"));
 		System.out.println("The total number of size division are " +mainDiv.size());
 	
-		List<WebElement> colorElement = driver.findElements(By.xpath("//span[contains(@class,' non-input-label')]"));
+		List<WebElement> colorElement = driver.findElements(By.xpath("//select[contains(@class,'select-color-swatch')]"));
 		System.out.println("The colordrop down count is " + colorElement.size());
 		
 		List<WebElement> sizeElement = driver.findElements(By.xpath("//select[contains(@class,'select-size')]"));
@@ -75,7 +79,7 @@ public class allAttributesinOneFile extends baseClass{
 		
 		List<WebElement> memoryElement = driver.findElements(By.id("memorySize-null"));
 		
-		 List<WebElement> widthElements = driver.findElements(By.xpath(".//select[@id='width-null']"));
+		 List<WebElement> widthElements = driver.findElements(By.xpath("//select[contains(@class,'select-width')]"));
 	     System.out.println(widthElements.size());
 	     
 	     List<WebElement> showName = driver.findElements(By.xpath("//select[contains(@class,'select-showName')]"));
@@ -96,6 +100,8 @@ public class allAttributesinOneFile extends baseClass{
 		 List<WebElement> extendedWarranty = driver.findElements(By.className("options-select"));
 	     
 	     for(int i=1; i<=mainDiv.size();i++) {
+	    	 
+	    	 
 	    	 
 			if(colorElement.size()>0|| colorBox.size()>0) {
 				attributesSelection.colorSelection();
@@ -143,7 +149,7 @@ public class allAttributesinOneFile extends baseClass{
 	     for(int p = 1; p <= countofSizeElement.size(); p++) {
 	    	 
            //Find the parent div element that contains size and width elements
-              WebElement parentDiv = driver.findElement(By.xpath("(//div[@class ='attributes px-0'])["+p+"]"));
+              //WebElement parentDiv = driver.findElement(By.xpath("(//div[@class ='attributes px-0'])["+p+"]"));
 
           //Verify the presence of size element within the parent div
    	       List<WebElement> sizeElements = driver.findElements(By.xpath("//select[contains(@class, 'select-size')]"));

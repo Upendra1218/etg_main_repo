@@ -306,7 +306,7 @@ public navigationPage(WebDriver rDriver ){
             logger.info(womensplp.size());
             List<WebElement> menplp = driver.findElements(By.xpath("//li[@class='breadcrumb-item']/a[contains(text(), 'Men')]"));
             logger.info(menplp.size());
-            List<WebElement> electronicsplp = driver.findElements(By.xpath("(//a[contains(text(), 'Electronics')])[3]"));
+            //List<WebElement> electronicsplp = driver.findElements(By.xpath("(//a[contains(text(), 'Electronics')])[3]"));
 
             if(newArrivalplp.size()>0) {
             	 
@@ -391,7 +391,7 @@ public navigationPage(WebDriver rDriver ){
 	                List<WebElement> newArrivalplp = driver.findElements(By.xpath("(//a[contains(text(), 'New Arrivals')])[2]"));
 	                List<WebElement> womensplp = driver.findElements(By.xpath("(//a[contains(text(), 'Womens')])[3]"));
 	                List<WebElement> menplp = driver.findElements(By.xpath("(//a[contains(text(), 'Mens')])[3]"));
-	                List<WebElement> electronicsplp = driver.findElements(By.xpath("(//a[contains(text(), 'Electronics')])[3]"));
+	                //List<WebElement> electronicsplp = driver.findElements(By.xpath("(//a[contains(text(), 'Electronics')])[3]"));
 
 	                
 	                if(newArrivalplp.size()>0) {

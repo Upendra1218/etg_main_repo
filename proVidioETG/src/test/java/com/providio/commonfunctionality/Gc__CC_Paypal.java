@@ -6,10 +6,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import com.providio.paymentProccess.tc__MinicartViewCartProcessByPayPal;
-import com.providio.paymentProccess.tc__CreditCardPaymentProcess;
-import com.providio.paymentProccess.tc__PaymentProccessByGC;
-import com.providio.paymentProccess.tc__PaymentProccessByGC_CC_Paypal;
+import com.providio.paymentProccess.MinicartViewCartProcessByPayPal;
+import com.providio.paymentProccess.CreditCardPaymentProcess;
+import com.providio.paymentProccess.PaymentProccessByGC;
+import com.providio.paymentProccess.PaymentProccessByGC_CC_Paypal;
 import com.providio.testcases.baseClass;
 
 public class Gc__CC_Paypal extends baseClass{
@@ -30,7 +30,7 @@ public class Gc__CC_Paypal extends baseClass{
 					 test.info("brain tree payment is activated");
 					 List<WebElement> giftCertificate = driver.findElements(By.xpath("//input[@class='giftCertCode']"));
 					 if(giftCertificate.size()>0) {
-						 tc__PaymentProccessByGC_CC_Paypal code= new  tc__PaymentProccessByGC_CC_Paypal();				
+						 PaymentProccessByGC_CC_Paypal code= new  PaymentProccessByGC_CC_Paypal();				
 						 code.paymentBySemiGC();					
 						 logger.info("applied gift card code ");
 					 }
@@ -38,7 +38,7 @@ public class Gc__CC_Paypal extends baseClass{
 					 test.info("salesforce payment is activated");	
 					 List<WebElement> giftCertificate = driver.findElements(By.xpath("//input[@class='giftCertCode']"));				 
 					 if(giftCertificate.size()>0) {
-						 tc__PaymentProccessByGC_CC_Paypal code= new  tc__PaymentProccessByGC_CC_Paypal();				
+						 PaymentProccessByGC_CC_Paypal code= new  PaymentProccessByGC_CC_Paypal();				
 						 code.paymentBySemiGC();					
 						 logger.info("applied gift card code ");
 					 }
@@ -46,7 +46,7 @@ public class Gc__CC_Paypal extends baseClass{
 			 		test.info("Stripe payment activated");
 			 		 List<WebElement> giftCertificate = driver.findElements(By.xpath("//input[@class='giftCertCode']"));				 
 					 if(giftCertificate.size()>0) {
-						 tc__PaymentProccessByGC_CC_Paypal code= new  tc__PaymentProccessByGC_CC_Paypal();				
+						 PaymentProccessByGC_CC_Paypal code= new  PaymentProccessByGC_CC_Paypal();				
 						 code.paymentBySemiGC();					
 						 logger.info("applied gift card code ");
 					 }		 		
@@ -59,7 +59,7 @@ public class Gc__CC_Paypal extends baseClass{
 			 if(creditcardsBraintree.size()>0 || creditcardsSalesForce.size()>0 ||stripePayment .size()>0) {
 				 if(gcText.size()>0) {
 					 test.info("GC  is redemeed");
-				     tc__CreditCardPaymentProcess cc = new tc__CreditCardPaymentProcess();			     
+				     CreditCardPaymentProcess cc = new CreditCardPaymentProcess();			     
 				     cc.paymentByCreditCard();
 				 }else {
 					 test.info("No GC code is redemeed ");
@@ -92,7 +92,7 @@ public class Gc__CC_Paypal extends baseClass{
 					 test.info("brain tree payment is activated");
 					 List<WebElement> giftCertificate = driver.findElements(By.xpath("//input[@class='giftCertCode']"));
 					 if(giftCertificate.size()>0) {					 
-						 tc__PaymentProccessByGC_CC_Paypal code= new  tc__PaymentProccessByGC_CC_Paypal();				
+						 PaymentProccessByGC_CC_Paypal code= new  PaymentProccessByGC_CC_Paypal();				
 						 code.paymentBySemiGC();					
 						 logger.info("applied gift card code ");
 					 }
@@ -100,7 +100,7 @@ public class Gc__CC_Paypal extends baseClass{
 					 test.info("salesforce payment is activated");					 
 					 List<WebElement> giftCertificate = driver.findElements(By.id("giftCert"));
 					 if(giftCertificate.size()>0) {
-						 tc__PaymentProccessByGC_CC_Paypal code= new  tc__PaymentProccessByGC_CC_Paypal();				
+						 PaymentProccessByGC_CC_Paypal code= new  PaymentProccessByGC_CC_Paypal();				
 						 code.paymentBySemiGC();					
 						 logger.info("applied gift card code ");
 					 }
@@ -119,7 +119,7 @@ public class Gc__CC_Paypal extends baseClass{
 				 if(gcText.size()>0) {
 					 	test.info("GC  is redemeed");
 					 	logger.info("Entered into paypal");
-						tc__MinicartViewCartProcessByPayPal cpp = new tc__MinicartViewCartProcessByPayPal();
+						MinicartViewCartProcessByPayPal cpp = new MinicartViewCartProcessByPayPal();
 						cpp.checkoutprocessFromCheckout();
 				 }else {
 						 test.info("No GC code is redemeed");
@@ -155,7 +155,7 @@ public class Gc__CC_Paypal extends baseClass{
 			 if(creditcardsBraintree.size()>0 || brainPaypalAcc.size()>0) {
 				 
 					 test.info("brain tree payment is activated");
-					 tc__PaymentProccessByGC code= new tc__PaymentProccessByGC();
+					 PaymentProccessByGC code= new PaymentProccessByGC();
 				     //code.performRandomOperations(driver);
 					 List<WebElement> giftCertificate = driver.findElements(By.id("giftCert"));
 					 if(giftCertificate.size()>0) {
@@ -167,7 +167,7 @@ public class Gc__CC_Paypal extends baseClass{
 			 } else if(creditcardsSalesForce.size()>0 || salesforcePaypal.size()>0) {
 				 
 					 test.info("salesforce payment is activated");					 
-					 tc__PaymentProccessByGC code= new tc__PaymentProccessByGC();
+					 PaymentProccessByGC code= new PaymentProccessByGC();
 					 List<WebElement> giftCertificate = driver.findElements(By.id("giftCert"));
 					 if(giftCertificate.size()>0) {
 						 code.performSequentialOperations(driver);						
@@ -177,7 +177,7 @@ public class Gc__CC_Paypal extends baseClass{
 			 }else if(stripePayment.size()>0) {
 				 
 				 	test.info("Stripe payment is activated");
-				 	tc__PaymentProccessByGC code= new tc__PaymentProccessByGC();
+				 	PaymentProccessByGC code= new PaymentProccessByGC();
 					 List<WebElement> giftCertificate = driver.findElements(By.id("giftCert"));
 					 if(giftCertificate.size()>0) {
 						 code.performSequentialOperations(driver);						

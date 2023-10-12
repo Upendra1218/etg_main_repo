@@ -4,8 +4,8 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.providio.Scenarios.SimpleProductAndGc;
-import com.providio.paymentProccess.tc__MinicartViewCartProcess;
-import com.providio.paymentProccess.tc__CreditCardPaymentProcess;
+import com.providio.paymentProccess.MinicartViewCartProcess;
+import com.providio.paymentProccess.CreditCardPaymentProcess;
 import com.providio.testcases.baseClass;
 
 public class tc__simpleProductAndGc_InCC extends baseClass {
@@ -21,11 +21,11 @@ public class tc__simpleProductAndGc_InCC extends baseClass {
 		spGc.simpleProductAndGc();
 		 
 		 //checkoutProcess				        
-	     tc__MinicartViewCartProcess cp = new tc__MinicartViewCartProcess();				     
+	     MinicartViewCartProcess cp = new MinicartViewCartProcess();				     
 	     cp.checkoutprocess();
 	     
 	     //credit card
-	     tc__CreditCardPaymentProcess cc = new tc__CreditCardPaymentProcess();			     
+	     CreditCardPaymentProcess cc = new CreditCardPaymentProcess();			     
 	     cc.paymentByCreditCard();
 	 } else {
         Assert.fail("User not logged in");

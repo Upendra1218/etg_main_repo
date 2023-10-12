@@ -152,6 +152,10 @@ public class size extends baseClass{
 
 //	     }
 	}
+	
+	
+	
+	
 	public void clickOnBuyNow(WebDriver driver) throws InterruptedException {
 		//selecting attributes
 			allElements(driver);

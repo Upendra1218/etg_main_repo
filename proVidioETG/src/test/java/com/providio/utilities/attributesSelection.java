@@ -1,4 +1,4 @@
-package com.providio.commonfunctionality;
+package com.providio.utilities;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,9 +6,7 @@ import java.util.Random;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 
 import com.providio.testcases.baseClass;
@@ -25,6 +23,7 @@ public class attributesSelection extends baseClass{
 		//sizes in boxess
 		List<WebElement> sizeBox= driver.findElements(By.xpath("//div[contains(@class, 'select-size')]"));
 		List<WebElement> sizeDropDown= driver.findElements(By.xpath("//select[contains(@class,'select-size')]"));
+		
 		if(sizeBox.size()>0) {
 			// Find the parent div containing size options
             WebElement parentDiv = driver.findElement(By.id("size-null"));
@@ -48,7 +47,11 @@ public class attributesSelection extends baseClass{
             }
 		}else if(sizeDropDown.size()>0) {
 			
-		WebElement Size = driver.findElement(By.xpath("//select[contains(@class, 'select-size')]"));
+		List<WebElement> sizedropdown= driver.findElements(By.xpath("//select[contains(@class, 'select-size')]"));
+		logger.info(sizedropdown.size());
+		for(int i=1; i<=sizedropdown.size();i++) {
+		WebElement Size = driver.findElement(By.xpath("(//select[contains(@class, 'select-size')])[" + i + "]"));
+
 		// sizes from drop down Create a Select object and select the first enabled size
 	    Select colorElement = new Select(Size);
 	    List<WebElement> options = colorElement.getOptions();
@@ -72,6 +75,7 @@ public class attributesSelection extends baseClass{
 	    }
 
 	}
+ }
 }
 	
 	
@@ -131,7 +135,11 @@ public class attributesSelection extends baseClass{
 	public static void colorSelection() throws InterruptedException {
  		
  		List<WebElement> colorBox= driver.findElements(By.xpath("//button[contains(@class,'color-attribute')]"));
+ 		logger.info(colorBox.size());
+ 		
+ 		
  		if(colorBox.size()>0) {
+ 			for(int i=1; i<=colorBox.size();i++) {
  			if (!colorBox.isEmpty()) {
  			    // Find all the color buttons that are selectable
  			    List<WebElement> colorButtons = driver.findElements(By.cssSelector(".color-attribute.selectable"));
@@ -147,30 +155,39 @@ public class attributesSelection extends baseClass{
  			        js.executeScript("arguments[0].click();", selectedColorButton);
  			    }
  			}
+ 			}
  		}else {
- 		// Create a Select object and select the first enabled size
-		WebElement color = driver.findElement(By.xpath("//select[contains(@class,'select-color-swatch')]"));
-	    Select colorElement = new Select(color);
-	    List<WebElement> options = colorElement.getOptions();
-	    List<String> enabledSizes = new ArrayList<>();
-	    int optionIndex = 0;
-	    System.out.println(options.size());
-	    for (WebElement option : options) {
-	    	if (optionIndex > 0 && option.isEnabled()) {					    		
-	    		String text = option.getText();
-	    		  //System.out.println(text);
-	            if (!text.isEmpty()) {      	
-	            	String value = option.getAttribute("data-attr-value");
-	                enabledSizes.add(value);
-	                //System.out.println(value);
-	                option.click();
-	                Thread.sleep(5000);
-	                break; 				                
-	            }
-	        }
+ 		    // Create a Select object and select the first enabled size
+			List<WebElement> colors= driver.findElements(By.xpath("//select[contains(@class,'select-color-swatch')]"));
+			logger.info(colors.size());
+			for(int i=1; i<=colors.size();i++) {
+			WebElement color = driver.findElement(By.xpath("(//select[contains(@class,'select-color-swatch')])[" + i + "]"));
 
-	    	 optionIndex++;
-	    }
+		    Select colorElement = new Select(color);
+		    List<WebElement> options = colorElement.getOptions();
+		    List<String> enabledSizes = new ArrayList<>();
+		    int optionIndex = 0;
+		    System.out.println(options.size());
+		    for (WebElement option : options) {
+		    	if (optionIndex > 0 && option.isEnabled()) {					    		
+		    		String text = option.getText();
+		    		  //System.out.println(text);
+		            if (!text.isEmpty()) {      	
+		            	String value = option.getAttribute("data-attr-value");
+		                enabledSizes.add(value);
+		                //System.out.println(value);
+		                option.click();
+		                Thread.sleep(5000);
+		                break; 				                
+		            }
+		        }
+
+		    	 optionIndex++;
+		    }
+
+	     }
+	   
+	
    
     }
 }			
@@ -192,29 +209,60 @@ public class attributesSelection extends baseClass{
  	        }
  			
  		}else {
- 		List<WebElement> widthElementsDropDown = driver.findElements(By.xpath(".//select[@id='width-null']"));
-	    System.out.println(widthElementsDropDown.size());
- 		  //width 
-		  WebElement widthElement = widthElementsDropDown.get(0);
-		  System.out.println("width element is present on the page.");
-		  Select widthSelect = new Select(widthElement);
-	      // Get the list of available options
-		  List<WebElement> availableOptionsofwidth = widthSelect.getOptions();
-		  // Create a list to store the indices of enabled options
-		  List<Integer> enabledIndixes = new ArrayList<>();
-		  // Iterate through the available options and store the indices of enabled options
-		  for (int a = 0; a < availableOptionsofwidth.size(); a++) {
-		      if (availableOptionsofwidth.get(a).isEnabled()) {
-		      	enabledIndixes.add(a);
-		      }
-		  }
-		  Integer randomIndexofwidth = enabledIndixes.set(1, 1);
-		  //logger.info(enabledIndixes);
-		  System.out.println("total numbers of"+enabledIndixes);
-		  System.out.println("only width"+enabledIndixes);
-		  // Select the option at the random index
-		  widthSelect.selectByIndex(randomIndexofwidth); 
-		  Thread.sleep(5000);
+ 			
+ 		// Create a Select object and select the first enabled size
+			List<WebElement> widthdropdown= driver.findElements(By.xpath("//select[contains(@class,'select-width')]"));
+			logger.info(widthdropdown.size());
+			for(int i=1; i<=widthdropdown.size();i++) {
+			WebElement width = driver.findElement(By.xpath("(//select[contains(@class,'select-width')])[" + i + "]"));
+
+		    Select colorElement = new Select(width);
+		    List<WebElement> options = colorElement.getOptions();
+		    List<String> enabledSizes = new ArrayList<>();
+		    int optionIndex = 0;
+		    System.out.println(options.size());
+		    for (WebElement option : options) {
+		    	if (optionIndex > 0 && option.isEnabled()) {					    		
+		    		String text = option.getText();
+		    		  //System.out.println(text);
+		            if (!text.isEmpty()) {      	
+		            	String value = option.getAttribute("data-attr-value");
+		                enabledSizes.add(value);
+		                //System.out.println(value);
+		                option.click();
+		                Thread.sleep(5000);
+		                break; 				                
+		            }
+		        }
+
+		    	 optionIndex++;
+		    }
+
+	     }
+	
+// 		List<WebElement> widthElementsDropDown = driver.findElements(By.xpath("//select[contains(@class,'select-width')]"));
+//	    System.out.println(widthElementsDropDown.size());
+// 		  //width 
+//		  WebElement widthElement = widthElementsDropDown.get(0);
+//		  System.out.println("width element is present on the page.");
+//		  Select widthSelect = new Select(widthElement);
+//	      // Get the list of available options
+//		  List<WebElement> availableOptionsofwidth = widthSelect.getOptions();
+//		  // Create a list to store the indices of enabled options
+//		  List<Integer> enabledIndixes = new ArrayList<>();
+//		  // Iterate through the available options and store the indices of enabled options
+//		  for (int a = 0; a < availableOptionsofwidth.size(); a++) {
+//		      if (availableOptionsofwidth.get(a).isEnabled()) {
+//		      	enabledIndixes.add(a);
+//		      }
+//		  }
+//		  Integer randomIndexofwidth = enabledIndixes.set(1, 1);
+//		  //logger.info(enabledIndixes);
+//		  System.out.println("total numbers of"+enabledIndixes);
+//		  System.out.println("only width"+enabledIndixes);
+//		  // Select the option at the random index
+//		  widthSelect.selectByIndex(randomIndexofwidth); 
+//		  Thread.sleep(5000);
  		}
  	
  }

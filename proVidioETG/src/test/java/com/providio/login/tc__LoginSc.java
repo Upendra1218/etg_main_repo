@@ -97,7 +97,7 @@ public class tc__LoginSc extends baseClass {
         Thread.sleep(5000L);
         
         WebElement errorMessageInvalidCred = driver.findElement(By.xpath("//div[contains(@class, 'alert') and contains(@class, 'alert-danger')]"));
-        String errorMessage = errorMessageInvalidCred.getText();
+        //String errorMessage = errorMessageInvalidCred.getText();
         boolean isDisplayedinvalidcred = errorMessageInvalidCred.isDisplayed();
         logger.info(isDisplayedinvalidcred);
         

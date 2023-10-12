@@ -1,16 +1,19 @@
 package com.providio.pageObjects;
 
+
 import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class viewCartPage {
+import com.providio.commonfunctionality.allAttributesinOneFile;
+import com.providio.testcases.baseClass;
+
+public class viewCartPage extends baseClass{
 	
 WebDriver lDriver;
 	
@@ -19,6 +22,56 @@ WebDriver lDriver;
 		lDriver=rDriver;
 		PageFactory.initElements(rDriver, this);
 	}
+	
+	//edit button on the view cart page
+	public void editBtn() throws InterruptedException {
+		
+		List<WebElement> editBtns = driver.findElements(By.xpath("//div[contains(@class,'card product')]//a[@title='Edit']"));	
+		
+		for(int i = 1;i<=editBtns.size();i++) {
+			
+			WebElement editBtn = driver.findElement(By.xpath("(//div[contains(@class,'card product')]//a[@title='Edit'])[" + i + "]"));
+			Thread.sleep(2000);
+			editBtn.click();
+			
+			//selecting size for product
+			allAttributesinOneFile.allAttributes();
+			
+			
+			Thread.sleep(3000);
+			WebElement updateElement = driver.findElement(By.xpath("//button[contains(@class,'update-cart')]"));
+            
+            // Check if the 'Update' button is enabled
+            boolean isEnabled = updateElement.isEnabled();
+
+            if (isEnabled) {
+                // If the 'Update' button is enabled, click it
+                System.out.println("Button is enabled");
+                updateElement.click();
+                logger.info("Clicked on 'Update'");
+                test.pass("Product is changed from 'Select Attributes' to 'Add To Cart'");
+            } else {
+                // If the 'Update' button is disabled, handle this case as needed
+                System.out.println("Button is disabled");
+                // You may want to log and handle this scenario accordingly
+            }
+           
+			
+			
+		}
+	   
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	//Checkout :- 
 	@FindBy(xpath="//a[@class ='btn btn-primary btn-block checkout-btn ']")

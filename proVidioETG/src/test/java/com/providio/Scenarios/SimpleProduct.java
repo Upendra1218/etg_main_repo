@@ -1,6 +1,6 @@
 package com.providio.Scenarios;
 
-import com.providio.commonfunctionality.addtoCartValidation;
+import com.providio.Validations.validationpopupMessages;
 import com.providio.commonfunctionality.allAttributesinOneFile;
 import com.providio.commonfunctionality.validatingInstock;
 import com.providio.pageObjects.SimpleProductFromExcel;
@@ -18,11 +18,11 @@ public class SimpleProduct extends baseClass{
 		//Selecting the attributes
 	    allAttributesinOneFile.selectTheAttributesInPdp(driver);
 		 
-		//validating the product is instock and adding to the cart
-		 validatingInstock.inStockValidation();
+//		//validating the product is instock and adding to the cart
+//		 validatingInstock.inStockValidation();
 		  
 		//validating the product is add to the cart
-	    addtoCartValidation.validatingProductisAddtoCart(driver);
+	    validationpopupMessages.validatingProductisAddtoCart(driver);
 	}
 		
 }

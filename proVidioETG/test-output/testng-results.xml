@@ -2,49 +2,49 @@
 <testng-results ignored="2" total="4" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-10-04T18:17:32 IST" name="Default suite" finished-at="2023-10-04T18:20:15 IST" duration-ms="162177">
+  <suite started-at="2023-10-12T15:06:53 IST" name="Default suite" finished-at="2023-10-12T15:09:12 IST" duration-ms="138584">
     <groups>
     </groups>
-    <test started-at="2023-10-04T18:17:32 IST" name="Default test" finished-at="2023-10-04T18:20:15 IST" duration-ms="162177">
-      <class name="com.RegUserWith_CreditCard.tc__BundleProductRegUser_InCC">
-        <test-method is-config="true" signature="setUpforReport()[pri:0, instance:com.RegUserWith_CreditCard.tc__BundleProductRegUser_InCC@f2a1813]" started-at="2023-10-04T18:17:30 IST" name="setUpforReport" finished-at="2023-10-04T18:17:32 IST" duration-ms="2683" status="PASS">
+    <test started-at="2023-10-12T15:06:53 IST" name="Default test" finished-at="2023-10-12T15:09:12 IST" duration-ms="138584">
+      <class name="com.RegUserWith_CreditCard.tc__SimpleProductRegUser_InCC">
+        <test-method is-config="true" signature="setUpforReport()[pri:0, instance:com.RegUserWith_CreditCard.tc__SimpleProductRegUser_InCC@f2a1813]" started-at="2023-10-12T15:06:51 IST" name="setUpforReport" finished-at="2023-10-12T15:06:53 IST" duration-ms="2619" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpforReport -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.RegUserWith_CreditCard.tc__BundleProductRegUser_InCC@f2a1813]" started-at="2023-10-04T18:18:11 IST" name="setUp" finished-at="2023-10-04T18:18:13 IST" duration-ms="2022" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.RegUserWith_CreditCard.tc__SimpleProductRegUser_InCC@f2a1813]" started-at="2023-10-12T15:07:28 IST" name="setUp" finished-at="2023-10-12T15:07:30 IST" duration-ms="2010" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="bundleProduct()[pri:0, instance:com.RegUserWith_CreditCard.tc__BundleProductRegUser_InCC@f2a1813]" started-at="2023-10-04T18:18:13 IST" name="bundleProduct" finished-at="2023-10-04T18:20:15 IST" depends-on-methods="com.providio.login.tc__Login.loginTest" duration-ms="121387" status="PASS">
+        <test-method signature="simpleProduct()[pri:0, instance:com.RegUserWith_CreditCard.tc__SimpleProductRegUser_InCC@f2a1813]" started-at="2023-10-12T15:07:30 IST" name="simpleProduct" finished-at="2023-10-12T15:09:12 IST" depends-on-methods="com.providio.login.tc__Login.loginTest" duration-ms="101636" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- bundleProduct -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.RegUserWith_CreditCard.tc__BundleProductRegUser_InCC@f2a1813]" started-at="2023-10-04T18:20:15 IST" name="afterMethod" finished-at="2023-10-04T18:20:15 IST" duration-ms="24" status="PASS">
+        </test-method> <!-- simpleProduct -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.RegUserWith_CreditCard.tc__SimpleProductRegUser_InCC@f2a1813]" started-at="2023-10-12T15:09:12 IST" name="afterMethod" finished-at="2023-10-12T15:09:12 IST" duration-ms="23" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=bundleProduct status=SUCCESS method=tc__BundleProductRegUser_InCC.bundleProduct()[pri:0, instance:com.RegUserWith_CreditCard.tc__BundleProductRegUser_InCC@f2a1813] output={null}]]]>
+                <![CDATA[[TestResult name=simpleProduct status=SUCCESS method=tc__SimpleProductRegUser_InCC.simpleProduct()[pri:0, instance:com.RegUserWith_CreditCard.tc__SimpleProductRegUser_InCC@f2a1813] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.RegUserWith_CreditCard.tc__BundleProductRegUser_InCC@f2a1813]" started-at="2023-10-04T18:20:15 IST" name="tearDown" finished-at="2023-10-04T18:20:21 IST" duration-ms="6699" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.RegUserWith_CreditCard.tc__SimpleProductRegUser_InCC@f2a1813]" started-at="2023-10-12T15:09:12 IST" name="tearDown" finished-at="2023-10-12T15:09:19 IST" duration-ms="7357" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.RegUserWith_CreditCard.tc__BundleProductRegUser_InCC -->
+      </class> <!-- com.RegUserWith_CreditCard.tc__SimpleProductRegUser_InCC -->
       <class name="com.providio.login.tc__Login">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.providio.login.tc__Login@778197c0]" started-at="2023-10-04T18:17:32 IST" name="setUp" finished-at="2023-10-04T18:17:34 IST" duration-ms="2042" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.providio.login.tc__Login@778197c0]" started-at="2023-10-12T15:06:53 IST" name="setUp" finished-at="2023-10-12T15:06:55 IST" duration-ms="2063" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="loginTest()[pri:0, instance:com.providio.login.tc__Login@778197c0]" started-at="2023-10-04T18:17:34 IST" name="loginTest" finished-at="2023-10-04T18:18:11 IST" duration-ms="36640" status="PASS">
+        <test-method signature="loginTest()[pri:0, instance:com.providio.login.tc__Login@778197c0]" started-at="2023-10-12T15:06:55 IST" name="loginTest" finished-at="2023-10-12T15:07:28 IST" duration-ms="32784" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTest -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.login.tc__Login@778197c0]" started-at="2023-10-04T18:18:11 IST" name="afterMethod" finished-at="2023-10-04T18:18:11 IST" duration-ms="13" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.login.tc__Login@778197c0]" started-at="2023-10-12T15:07:28 IST" name="afterMethod" finished-at="2023-10-12T15:07:28 IST" duration-ms="9" status="PASS">
           <params>
             <param index="0">
               <value>

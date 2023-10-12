@@ -18,7 +18,7 @@ import org.openqa.selenium.WebElement;
 
 import com.providio.testcases.baseClass;
 
-public class tc__PaymentProccessByGC_CC_Paypal extends baseClass{
+public class PaymentProccessByGC_CC_Paypal extends baseClass{
 
 	public List<String> readDataFromExcel(String filePath, String sheetName) throws IOException {
 

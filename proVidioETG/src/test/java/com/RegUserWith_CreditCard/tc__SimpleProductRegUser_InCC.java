@@ -5,8 +5,8 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 import com.providio.Scenarios.SimpleProduct;
-import com.providio.paymentProccess.tc__CreditCardPaymentProcess;
-import com.providio.paymentProccess.tc__MiniCartChekoutButton;
+import com.providio.paymentProccess.CreditCardPaymentProcess;
+import com.providio.paymentProccess.MiniCartChekoutButton;
 import com.providio.testcases.baseClass;
 
 
@@ -24,11 +24,11 @@ public class tc__SimpleProductRegUser_InCC extends baseClass{
 	    sp.simpleProdcut();
         
         //checkoutProcess
-		tc__MiniCartChekoutButton cp = new tc__MiniCartChekoutButton();        
+		MiniCartChekoutButton cp = new MiniCartChekoutButton();        
         cp.checkoutprocess();
 
         //payment process
-	     tc__CreditCardPaymentProcess cc = new tc__CreditCardPaymentProcess();	     
+	     CreditCardPaymentProcess cc = new CreditCardPaymentProcess();	     
 	     cc.paymentByCreditCard();
 	        }
 

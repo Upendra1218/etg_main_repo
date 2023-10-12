@@ -8,8 +8,8 @@ import org.testng.annotations.Test;
 import com.providio.pageObjects.AddToBag_FromPlp;
 import com.providio.pageObjects.navigationProcess;
 import com.providio.pageObjects.navigationPage;
-import com.providio.paymentProccess.tc__CreditCardPaymentProcess;
-import com.providio.paymentProccess.tc__MinicartViewCartProcess;
+import com.providio.paymentProccess.CreditCardPaymentProcess;
+import com.providio.paymentProccess.MinicartViewCartProcess;
 
 public class Tc_OrderFromPlp_AddToBag extends baseClass{
 @Test
@@ -67,10 +67,10 @@ public class Tc_OrderFromPlp_AddToBag extends baseClass{
 	          logger.info("Product is not added to cart");
 	      }
 	      
-	      tc__MinicartViewCartProcess checkout = new  tc__MinicartViewCartProcess();
+	      MinicartViewCartProcess checkout = new  MinicartViewCartProcess();
 	      checkout.checkoutprocess();
 	      
-	      tc__CreditCardPaymentProcess cc = new tc__CreditCardPaymentProcess();
+	      CreditCardPaymentProcess cc = new CreditCardPaymentProcess();
 	      cc.paymentByCreditCard();
 	      
 	      

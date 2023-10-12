@@ -4,8 +4,8 @@ import org.testng.annotations.Test;
 
 import com.providio.Scenarios.Bundle_GcAndAllPromotions;
 import com.providio.launchingbrowser.launchBrowsering;
-import com.providio.paymentProccess.tc__MinicartViewCartProcessByPayPal;
-import com.providio.paymentProccess.tc__MiniCartChekoutButton;
+import com.providio.paymentProccess.MinicartViewCartProcessByPayPal;
+import com.providio.paymentProccess.MiniCartChekoutButton;
 import com.providio.testcases.baseClass;
 
 public class tc__Bundle_GcAndAllPromotions_Guest_InCheckoutPaypal extends baseClass{
@@ -22,11 +22,11 @@ public class tc__Bundle_GcAndAllPromotions_Guest_InCheckoutPaypal extends baseCl
 		bgs.bundelGcandallpromotions();
 		 
 		 //checkoutProcess
-        tc__MiniCartChekoutButton cp = new tc__MiniCartChekoutButton();         
+        MiniCartChekoutButton cp = new MiniCartChekoutButton();         
 		cp.checkoutprocess();
 	     
 	    //paypal process from checkout page
-		 tc__MinicartViewCartProcessByPayPal cpp = new tc__MinicartViewCartProcessByPayPal();
+		 MinicartViewCartProcessByPayPal cpp = new MinicartViewCartProcessByPayPal();
 		 cpp.checkoutprocessFromCheckout();
 	
 		 

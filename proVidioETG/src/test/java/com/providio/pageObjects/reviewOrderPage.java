@@ -19,33 +19,43 @@ WebDriver lDriver;
 	
 	@FindBy(xpath ="//button[contains(text(), 'Next: Review Order')]")
 	WebElement reviewOrderPage;
-    public void clickonReviewOrder(WebDriver driver) throws InterruptedException {	 
+    public void clickonReviewOrder(WebDriver driver) throws InterruptedException {	
+    	reviewOrderPage.click();
+    	
+    	Thread.sleep(7000);
     	JavascriptExecutor js = (JavascriptExecutor) driver;     
     	js.executeScript("arguments[0].click();",reviewOrderPage);
-    	Thread.sleep(2000);
-    	if(reviewOrderPage.isDisplayed()) {
-    	 reviewOrderPage.click();
-    	}
+    	//reviewOrderPage.click();
+    	Thread.sleep(5000);
+//    	if(reviewOrderPage.isDisplayed()) {
+//    		JavascriptExecutor js = (JavascriptExecutor) driver;     
+//        	js.executeScript("arguments[0].click();",reviewOrderPage);
+//    	 
+//    	}
     }
     //In checkout page if the it will check the button of revieworder and place order buttons
 	@FindBy(xpath ="//button[contains(@class,' place-order')]")
 	WebElement placetheorderwithJsExuter;
     public void clickonplaceorderwithJsExuter(WebDriver driver) throws InterruptedException {
-    	 if(driver.findElements(By.xpath("//button[contains(@class,'place-order')]")).size()!=0) {
-	    	try {
-	    	//((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", placetheorderwithJsExuter);
-	    	Thread.sleep(4000);
-	
-	    	JavascriptExecutor js = (JavascriptExecutor) driver;     
-	    	placetheorderwithJsExuter.click();
-	    
-	    
-	    	}catch(Exception e) {
-	    		Thread.sleep(4000);
-	    		JavascriptExecutor js = (JavascriptExecutor) driver; 
-	    		js.executeScript("arguments[0].click();", placetheorderwithJsExuter);
-	    	}
-	      }
+    	
+    	JavascriptExecutor js = (JavascriptExecutor) driver; 
+		js.executeScript("arguments[0].click();", placetheorderwithJsExuter);
+    	
+//    	 if(driver.findElements(By.xpath("//button[contains(@class,'place-order')]")).size()!=0) {
+//	    	try {
+//	    	//((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", placetheorderwithJsExuter);
+//	    	Thread.sleep(4000);
+//	
+//	    	//JavascriptExecutor js = (JavascriptExecutor) driver;     
+//	    	placetheorderwithJsExuter.click();
+//	    
+//	    
+//	    	}catch(Exception e) {
+//	    		Thread.sleep(4000);
+//	    		JavascriptExecutor js = (JavascriptExecutor) driver; 
+//	    		js.executeScript("arguments[0].click();", placetheorderwithJsExuter);
+//	    	}
+//	      }
     } 
  
 }

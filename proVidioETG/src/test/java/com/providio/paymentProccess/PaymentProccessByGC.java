@@ -2,17 +2,12 @@ package com.providio.paymentProccess;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.time.Duration;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
 import java.util.Set;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
-
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -22,15 +17,12 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
 import com.providio.Validations.Checkout_Validation;
 import com.providio.pageObjects.paymentpPage;
 import com.providio.pageObjects.reviewOrderPage;
 import com.providio.testcases.baseClass;
 
-public class tc__PaymentProccessByGC extends baseClass{
+public class PaymentProccessByGC extends baseClass{
 
 	public List<String> readDataFromExcel(String filePath, String sheetName) throws IOException {
 

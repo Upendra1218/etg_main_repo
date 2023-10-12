@@ -9,9 +9,13 @@ import com.providio.pageObjects.miniCartPage;
 import com.providio.testcases.baseClass;
 
 public class miniCartAndCartValidation extends baseClass {
+	
+	public static void removeFormMiniCart() {
+		
+	}
 
 	
-		public void validateMiniCartClick() throws InterruptedException {
+		public static void validateMiniCartClick() throws InterruptedException {
 	    	
 	    	test.info("Verify the mini-cart button is clicked");
 	    	
@@ -65,7 +69,7 @@ public class miniCartAndCartValidation extends baseClass {
 	      
 	    }
 
-	    public void validateViewCartClick() {
+	    public static void validateViewCartClick() {
 	    	test.info("Verify the view-cart button is clicked");
 	        WebElement viewcart = driver.findElement(By.xpath("//h4"));
 	        String actualTitleofviewcart = viewcart.getText();
@@ -80,7 +84,7 @@ public class miniCartAndCartValidation extends baseClass {
 	        }	        
 	    }
 
-	    public void reClickMiniCartButton() throws InterruptedException {
+	    public static void reClickMiniCartButton() throws InterruptedException {
 	    	
 	    	miniCartPage mc = new miniCartPage(driver);
 	        mc.clickcartbuttonjs(driver);

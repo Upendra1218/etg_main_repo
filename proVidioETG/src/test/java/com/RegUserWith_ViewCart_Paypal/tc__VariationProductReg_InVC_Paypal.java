@@ -4,12 +4,12 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-import com.providio.commonfunctionality.addtoCartValidation;
-import com.providio.commonfunctionality.attributesSelection;
+import com.providio.Validations.validationpopupMessages;
 import com.providio.commonfunctionality.validatingInstock;
 import com.providio.pageObjects.VariationProductFromExcel;
-import com.providio.paymentProccess.tc__MinicartViewCartProcessByPayPal;
+import com.providio.paymentProccess.MinicartViewCartProcessByPayPal;
 import com.providio.testcases.baseClass;
+import com.providio.utilities.attributesSelection;
 
 
 public class tc__VariationProductReg_InVC_Paypal extends baseClass{
@@ -35,10 +35,10 @@ public class tc__VariationProductReg_InVC_Paypal extends baseClass{
 
 	  		  
 	  		//validating the product is add to the cart
-	   	    addtoCartValidation.validatingProductisAddtoCart(driver);
+	   	    validationpopupMessages.validatingProductisAddtoCart(driver);
 		
 			//paypal checkout form view cart page
-             tc__MinicartViewCartProcessByPayPal paypal= new tc__MinicartViewCartProcessByPayPal();	         
+             MinicartViewCartProcessByPayPal paypal= new MinicartViewCartProcessByPayPal();	         
              paypal.checkoutprocessFromViewCart();   
 		 }else {
 		        Assert.fail("User not logged in");

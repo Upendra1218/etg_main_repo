@@ -18,9 +18,8 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import com.providio.commonfunctionality.addtoCartValidation;
+import com.providio.Validations.validationpopupMessages;
 import com.providio.commonfunctionality.allAttributesinOneFile;
-import com.providio.commonfunctionality.size;
 import com.providio.testcases.baseClass;
 
 
@@ -69,7 +68,7 @@ public class VariationProductFromExcel extends baseClass{
 	
 	public void performRandomOperations(WebDriver driver) throws InterruptedException {
 		
-		String filePath = "C:\\Users\\etgadmin\\git\\Test\\proVidioETG\\testDate\\VariationProductSkew.xlsx";
+		String filePath = "C:\\Users\\UpendraReddy\\git\\etg_main_repo\\proVidioETG\\testDate\\VariationProductSkew.xlsx";
 		String sheetName = "SkewId";
 
 		try {
@@ -122,8 +121,8 @@ public class VariationProductFromExcel extends baseClass{
 						    //Selecting the attributes
 							allAttributesinOneFile.selectTheAttributesInPdp(driver);
 							 
-							//validating the product is add to the cart
-						   	addtoCartValidation.validatingProductisAddtoCart(driver);
+//							//validating the product is add to the cart
+						   	validationpopupMessages.validatingProductisAddtoCart(driver);
 						}
 						else {
 							test.fail("Searched product and the product after search are not matching");

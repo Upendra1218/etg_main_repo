@@ -3,7 +3,7 @@ package com.GuestUserWith_Minicart_Paypal;
 import org.testng.annotations.Test;
 import com.providio.Scenarios.Bundle_GcAndAllPromotions;
 import com.providio.launchingbrowser.launchBrowsering;
-import com.providio.paymentProccess.tc__MinicartViewCartProcessByPayPal;
+import com.providio.paymentProccess.MinicartViewCartProcessByPayPal;
 import com.providio.testcases.baseClass;
 
 public class tc__Bundle_GcAndAllPromotions_Guest_InMC_Paypal extends baseClass{
@@ -20,7 +20,7 @@ public class tc__Bundle_GcAndAllPromotions_Guest_InMC_Paypal extends baseClass{
 		bgs.bundelGcandallpromotions();
 		
 	  //checkout from mini cart by paypal	        
-      tc__MinicartViewCartProcessByPayPal checkOutProcessByPayPal= new tc__MinicartViewCartProcessByPayPal();
+      MinicartViewCartProcessByPayPal checkOutProcessByPayPal= new MinicartViewCartProcessByPayPal();
       checkOutProcessByPayPal. checkoutprocessFromMiniCart();
 	
 		 

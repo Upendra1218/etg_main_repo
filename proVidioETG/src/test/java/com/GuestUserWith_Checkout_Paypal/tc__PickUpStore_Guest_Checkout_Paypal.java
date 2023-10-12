@@ -6,17 +6,12 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.providio.commonfunctionality.Gc__CC_Paypal;
 import com.providio.commonfunctionality.Mens_Pants_PickUpInStore;
-import com.providio.commonfunctionality.navigationProccess;
 import com.providio.pageObjects.homePage;
-import com.providio.pageObjects.navigationPage;
-import com.providio.pageObjects.productListingPage;
-import com.providio.paymentProccess.tc__MinicartViewCartProcess;
-import com.providio.paymentProccess.tc__MinicartViewCartProcessByPayPal;
+import com.providio.paymentProccess.MinicartViewCartProcess;
+import com.providio.paymentProccess.MinicartViewCartProcessByPayPal;
 import com.providio.testcases.baseClass;
 
 
@@ -50,11 +45,11 @@ public class  tc__PickUpStore_Guest_Checkout_Paypal extends baseClass {
 	    	     
 	    	
 		      //common checkoutProcess	         
-				 tc__MinicartViewCartProcess cp = new tc__MinicartViewCartProcess();         
+				 MinicartViewCartProcess cp = new MinicartViewCartProcess();         
 				 cp.checkoutprocess();
 				
 				 //paypal process from checkout page
-				 tc__MinicartViewCartProcessByPayPal cpp = new tc__MinicartViewCartProcessByPayPal();
+				 MinicartViewCartProcessByPayPal cpp = new MinicartViewCartProcessByPayPal();
 				 cpp.checkoutprocessFromCheckout();
 		    		 
 	    	 }else { 
@@ -63,11 +58,11 @@ public class  tc__PickUpStore_Guest_Checkout_Paypal extends baseClass {
 	    	     pickUpstore.mens_Pants_PickUpInStore(driver);
 	    	     
 			    // common checkoutProcess	         
-				 tc__MinicartViewCartProcess cp = new tc__MinicartViewCartProcess();         
+				 MinicartViewCartProcess cp = new MinicartViewCartProcess();         
 				 cp.checkoutprocess();
 					
 				 //paypal process from checkout page
-				 tc__MinicartViewCartProcessByPayPal cpp = new tc__MinicartViewCartProcessByPayPal();
+				 MinicartViewCartProcessByPayPal cpp = new MinicartViewCartProcessByPayPal();
 				 cpp.checkoutprocessFromCheckout();
 	    	 }
 		}

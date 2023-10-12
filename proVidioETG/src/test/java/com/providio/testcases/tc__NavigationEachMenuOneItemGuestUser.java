@@ -13,8 +13,8 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-import com.providio.paymentProccess.tc__CreditCardPaymentProcess;
-import com.providio.paymentProccess.tc__MinicartViewCartProcess;
+import com.providio.paymentProccess.CreditCardPaymentProcess;
+import com.providio.paymentProccess.MinicartViewCartProcess;
 
 
 public class tc__NavigationEachMenuOneItemGuestUser extends baseClass{
@@ -346,13 +346,13 @@ public class tc__NavigationEachMenuOneItemGuestUser extends baseClass{
 	        
 	        //checkoutProcess
 	        
-	        tc__MinicartViewCartProcess cp = new tc__MinicartViewCartProcess();
+	        MinicartViewCartProcess cp = new MinicartViewCartProcess();
             
             cp.checkoutprocess();
             
             //payment process
             
-            tc__CreditCardPaymentProcess cc = new tc__CreditCardPaymentProcess();
+            CreditCardPaymentProcess cc = new CreditCardPaymentProcess();
             
             cc.paymentByCreditCard();           
 

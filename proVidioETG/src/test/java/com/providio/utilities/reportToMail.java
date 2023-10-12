@@ -37,11 +37,11 @@ public class reportToMail {
 	    //Xog32763
 	    //smtp.office365.com
 	    
-	    String reportFilePath = "C:\\Users\\etgadmin\\git\\Test\\proVidioETG\\Reports\\ProvidioTestReport.html";
+	    String reportFilePath = "C:\\Users\\UpendraReddy\\git\\etg_main_repo\\proVidioETG\\Reports\\ProvidioTestReport.html";
         String subject1 = "Automation Test Report of Provido Project Report";
         String body1 = "Please find the attached Automation Test Report of Provido Project.";
 
-	    String reportScreenshot = "C:\\Users\\etgadmin\\git\\Test\\proVidioETG\\Reports\\ReportsScreenshot.png";
+	    String reportScreenshot = "C:\\Users\\UpendraReddy\\git\\etg_main_repo\\proVidioETG\\Reports\\ReportsScreenshot.png";
 	    String subject2 = "And Screenshot";
 	    //String body2 = "Please find the attached screenshot Automation Test Report of Provido Project";
 
@@ -89,7 +89,7 @@ public class reportToMail {
             BodyPart messageBodyPart1 = new MimeBodyPart();
             messageBodyPart1.setText(body1);
             
-	        BodyPart messageBodyPart2 = new MimeBodyPart();
+	        //BodyPart messageBodyPart2 = new MimeBodyPart();
 	       // messageBodyPart2.setText(body2);
             
          // Create the message part for the attachment
@@ -102,7 +102,7 @@ public class reportToMail {
 	        // Create a multipart message and set its parts
             Multipart multipart = new MimeMultipart();
             multipart.addBodyPart(messageBodyPart1);
-            multipart.addBodyPart(messageBodyPart2);
+            //multipart.addBodyPart(messageBodyPart2);
 		    multipart.addBodyPart(attachmentPart1);
 		    multipart.addBodyPart(attachmentPart2);
 

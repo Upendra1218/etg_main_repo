@@ -9,14 +9,9 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.providio.commonfunctionality.Gc__CC_Paypal;
 import com.providio.commonfunctionality.Mens_Pants_PickUpInStore;
-import com.providio.commonfunctionality.navigationProccess;
 import com.providio.pageObjects.homePage;
-import com.providio.pageObjects.navigationPage;
-import com.providio.pageObjects.productListingPage;
-import com.providio.paymentProccess.tc__MinicartViewCartProcess;
-import com.providio.paymentProccess.tc__MinicartViewCartProcessByPayPal;
+import com.providio.paymentProccess.MinicartViewCartProcessByPayPal;
 import com.providio.testcases.baseClass;
 
 
@@ -49,7 +44,7 @@ public class  tc__PickUpStore_Reg_InMC_Paypal extends baseClass {
 	    	     
 	    	
 	    	     //checkout from mini cart by paypal	        
-			      tc__MinicartViewCartProcessByPayPal checkOutProcessByPayPal= new tc__MinicartViewCartProcessByPayPal();
+			      MinicartViewCartProcessByPayPal checkOutProcessByPayPal= new MinicartViewCartProcessByPayPal();
 			      checkOutProcessByPayPal. checkoutprocessFromMiniCart();
 		    		 
 	    	 }else { 
@@ -58,7 +53,7 @@ public class  tc__PickUpStore_Reg_InMC_Paypal extends baseClass {
 	    	      pickUpstore.mens_Pants_PickUpInStore(driver);
 	    	     
 	    	     //checkout from mini cart by paypal	        
-			      tc__MinicartViewCartProcessByPayPal checkOutProcessByPayPal= new tc__MinicartViewCartProcessByPayPal();
+			      MinicartViewCartProcessByPayPal checkOutProcessByPayPal= new MinicartViewCartProcessByPayPal();
 			      checkOutProcessByPayPal. checkoutprocessFromMiniCart();
 				 
 	    	 }

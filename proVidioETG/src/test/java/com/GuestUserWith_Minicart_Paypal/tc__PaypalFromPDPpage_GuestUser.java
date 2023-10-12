@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 import com.providio.commonfunctionality.size;
 import com.providio.pageObjects.navigationPage;
 import com.providio.pageObjects.productListingPage;
-import com.providio.paymentProccess.tc__MinicartViewCartProcessByPayPal;
+import com.providio.paymentProccess.MinicartViewCartProcessByPayPal;
 import com.providio.testcases.baseClass;
 
 public class tc__PaypalFromPDPpage_GuestUser  extends baseClass{
@@ -44,7 +44,7 @@ public class tc__PaypalFromPDPpage_GuestUser  extends baseClass{
 	    				
 
     				//paypal checkout procces
-    					tc__MinicartViewCartProcessByPayPal paypal= new tc__MinicartViewCartProcessByPayPal();
+    					MinicartViewCartProcessByPayPal paypal= new MinicartViewCartProcessByPayPal();
     			        Thread.sleep(5000);
     			        paypal.paypalCheckoutFromPDP();
 		    		 }

@@ -1,22 +1,13 @@
 package com.GuestUserWith_Checkout_Paypal;
 
 
-import java.util.List;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 import com.providio.Scenarios.SimpleProduct;
-import com.providio.commonfunctionality.addtoCartValidation;
-import com.providio.commonfunctionality.allAttributesinOneFile;
-import com.providio.commonfunctionality.validatingInstock;
 import com.providio.launchingbrowser.launchBrowsering;
-import com.providio.pageObjects.SimpleProductFromExcel;
-import com.providio.paymentProccess.tc__MinicartViewCartProcess;
-import com.providio.paymentProccess.tc__MinicartViewCartProcessByPayPal;
-import com.providio.paymentProccess.tc__CreditCardPaymentProcess;
+import com.providio.paymentProccess.MinicartViewCartProcess;
+import com.providio.paymentProccess.MinicartViewCartProcessByPayPal;
 import com.providio.testcases.baseClass;
 
 
@@ -35,12 +26,12 @@ public class tc__SimpleProductForGuestUser_InPaypal extends baseClass{
 		    sp.simpleProdcut();
 			
 	        //checkoutProcess	        
-	        tc__MinicartViewCartProcess cp = new tc__MinicartViewCartProcess();	        
+	        MinicartViewCartProcess cp = new MinicartViewCartProcess();	        
 	        cp.checkoutprocess();
            
 	        
 		   //paypal process from checkout page
-			 tc__MinicartViewCartProcessByPayPal cpp = new tc__MinicartViewCartProcessByPayPal();
+			 MinicartViewCartProcessByPayPal cpp = new MinicartViewCartProcessByPayPal();
 			 cpp.checkoutprocessFromCheckout();
 
 	        

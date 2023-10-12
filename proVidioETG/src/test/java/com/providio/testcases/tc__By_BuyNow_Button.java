@@ -7,12 +7,10 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import com.providio.commonfunctionality.size;
-import com.providio.pageObjects.homePage;
 import com.providio.pageObjects.navigationPage;
-import com.providio.pageObjects.productDescriptionPage;
 import com.providio.pageObjects.productListingPage;
-import com.providio.paymentProccess.tc__CreditCardPaymentProcess;
-import com.providio.paymentProccess.tc__MinicartViewCartProcess;
+import com.providio.paymentProccess.CreditCardPaymentProcess;
+import com.providio.paymentProccess.MinicartViewCartProcess;
 
 public class tc__By_BuyNow_Button extends baseClass{
 	@Test
@@ -41,11 +39,11 @@ public class tc__By_BuyNow_Button extends baseClass{
 
 
      //checkoutProcess       
-    	    tc__MinicartViewCartProcess cp = new tc__MinicartViewCartProcess();            
+    	    MinicartViewCartProcess cp = new MinicartViewCartProcess();            
     	    cp.checkoutprocess();
         
      //payment process
-        tc__CreditCardPaymentProcess tc = new tc__CreditCardPaymentProcess();			              
+        CreditCardPaymentProcess tc = new CreditCardPaymentProcess();			              
         tc.paymentByCreditCard();
     	} else {
          	test.info("No buy now button for selected product");

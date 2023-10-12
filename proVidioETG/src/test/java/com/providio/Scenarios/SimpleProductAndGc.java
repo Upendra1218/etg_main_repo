@@ -11,7 +11,7 @@ public class SimpleProductAndGc extends baseClass{
 	    sp.simpleProdcut();
 		 
 		 //adding GC into cart
-	    giftCard gc = new giftCard();
+	    GiftCard gc = new GiftCard();
 	    gc.giftCards();
 
 	}

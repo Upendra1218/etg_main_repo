@@ -9,15 +9,12 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.github.javafaker.Faker;
-import com.providio.Validations.Checkout_Validation;
 import com.providio.testcases.baseClass;
 
 public class paymentpPage extends baseClass {
@@ -95,7 +92,7 @@ WebDriver lDriver;
     public void setcardcvv(WebDriver driver) throws InterruptedException {	    	
     	driver.switchTo().frame("braintree-hosted-field-cvv");
     	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",  entercvv);
-    	entercvv.sendKeys("789");
+    	entercvv.sendKeys("123");
     	driver.switchTo().defaultContent();
     }
     //Braintree exp
@@ -168,8 +165,9 @@ WebDriver lDriver;
   //CyberSource cvv
     @FindBy(xpath ="//button[contains(@class,'add-payment')]")
     WebElement AddpaymentBtn;
-    public void cyberAddpaymentBtn(WebDriver driver) throws InterruptedException {	  
-    	AddpaymentBtn.click();
+    public void cyberAddpaymentBtn(WebDriver driver) throws InterruptedException {	 
+    	js.executeScript("arguments[0].click();", AddpaymentBtn);
+    	//AddpaymentBtn.click();
         Thread.sleep(2000);
     }
 	
@@ -231,13 +229,23 @@ WebDriver lDriver;
     @FindBy(xpath="//div[text()='Credit Card']")
     WebElement creditCardBtn;
     public void creditCard(WebDriver driver) {
-    	JavascriptExecutor js = (JavascriptExecutor) driver;
+
 		js.executeScript("arguments[0].click();", creditCardBtn);
     	//creditCardBtn.click();
     }
     
     
     //Stripe credit card of xpaths, actionMethods and passing the card details
+    JavascriptExecutor js = (JavascriptExecutor) driver;
+    //add new card button for register 
+    @FindBy(xpath="//a[text()='Add a new card']")
+    WebElement addNewCardBtn;
+    public void newCardbtn(WebDriver driver) {
+    	JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click();", addNewCardBtn);
+    	//addNewCardBtn.click();
+    }
+    
     
     //stripe  CardNumber
     @FindBy(xpath="//input[@autocomplete='cc-number' and @inputmode='numeric']")
@@ -278,14 +286,31 @@ WebDriver lDriver;
     @FindBy(xpath="//input[@autocomplete='cc-csc' and @inputmode='numeric']")
     WebElement cvv;
     public void cvv(WebDriver driver) {
-    	newCardNumber.sendKeys("987");
+    	
+    	cvv.sendKeys("987");
     }
     //stripe postal code
     @FindBy(name="postal")
     WebElement postalCode;
     public void postalCode() {
-    	newCardNumber.sendKeys("765439877");
+    	postalCode.sendKeys("958475");
     	driver.switchTo().defaultContent();
+    }
+    
+    
+    //stripe save my card
+    @FindBy(xpath="//span[text()='Save Card to Account']")
+    WebElement stripeSaveCard;
+    public void stripeSaveCreditCard(WebDriver driver) {
+    	js.executeScript("arguments[0].click();", stripeSaveCard);	
+    	//stripeSaveCard.click();
+    }
+    
+    //use save cards for stripe payment method
+    @FindBy(xpath="//a[text()='Add a new card']")
+    WebElement useSaveCardsLink;
+    public void useSaveCardsLinksStripe(WebDriver driver) {
+    	useSaveCardsLink.click();
     }
     
     

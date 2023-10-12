@@ -3,7 +3,7 @@
 package com.RegUserWith_ViewCart_Paypal;
 
 import com.providio.Scenarios.SearchingProduct;
-import com.providio.paymentProccess.tc__MinicartViewCartProcessByPayPal;
+import com.providio.paymentProccess.MinicartViewCartProcessByPayPal;
 import com.providio.testcases.baseClass;
 
 import org.testng.Assert;
@@ -22,7 +22,7 @@ public class tc__BySearchingProduct_Reg_InVC_Paypal extends baseClass {
 			sp.searchingProduct();
 			
     	   //paypal checkout form view cart page
-          tc__MinicartViewCartProcessByPayPal paypal= new tc__MinicartViewCartProcessByPayPal();	         
+          MinicartViewCartProcessByPayPal paypal= new MinicartViewCartProcessByPayPal();	         
           paypal.checkoutprocessFromViewCart(); 
 	}  else {
         Assert.fail("User not logged in");

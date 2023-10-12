@@ -1,13 +1,9 @@
 package com.RegUserWith_Checkout_Paypal;
 
-import java.util.List;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.providio.commonfunctionality.addtoCartValidation;
+import com.providio.Validations.validationpopupMessages;
 import com.providio.commonfunctionality.validatingInstock;
 import com.providio.pageObjects.BundleProductFromEXcel;
 import com.providio.pageObjects.GiftCertificate;
@@ -30,7 +26,7 @@ public class tc__ShippingAndBillingAddressDiffer__Reg_CheckoutPaypal extends bas
 			  validatingInstock.inStockValidation();
 			  
 			//validating the product is add to the cart
-	 	    addtoCartValidation.validatingProductisAddtoCart(driver);
+	 	    validationpopupMessages.validatingProductisAddtoCart(driver);
 			  
 			 
 			 //adding GC into cart
@@ -51,7 +47,7 @@ public class tc__ShippingAndBillingAddressDiffer__Reg_CheckoutPaypal extends bas
 			  validatingInstock.inStockValidation();
 			  
 			//validating the product is add to the cart
-		    addtoCartValidation.validatingProductisAddtoCart(driver);
+		    validationpopupMessages.validatingProductisAddtoCart(driver);
 		    
 		}else {
 		   	 Assert.fail("User not logged in");

@@ -7,14 +7,14 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import com.providio.Validations.QuantityValidation;
+import com.providio.Validations.validationpopupMessages;
 import com.providio.Validations.miniCartAndCartValidation;
-import com.providio.commonfunctionality.addtoCartValidation;
 import com.providio.commonfunctionality.size;
 import com.providio.pageObjects.miniCartPage;
 import com.providio.pageObjects.navigationPage;
 import com.providio.pageObjects.productListingPage;
 import com.providio.pageObjects.viewCartPage;
-import com.providio.paymentProccess.tc__MinicartViewCartProcessByPayPal;
+import com.providio.paymentProccess.MinicartViewCartProcessByPayPal;
 import com.providio.testcases.baseClass;
 
 public class tc__PaypalFromLoginPageGuestUser extends baseClass {
@@ -43,7 +43,7 @@ public class tc__PaypalFromLoginPageGuestUser extends baseClass {
 		    		 }
 	    		 
 	    		//validating the product is add to the cart
-	    	 	addtoCartValidation.validatingProductisAddtoCart(driver);
+	    	 	validationpopupMessages.validatingProductisAddtoCart(driver);
 	    		 
 		       Thread.sleep(4000);
 		        List <WebElement> minicartcounts = driver.findElements(By.xpath("//span[contains(@class,'minicart')]"));	       
@@ -88,7 +88,7 @@ public class tc__PaypalFromLoginPageGuestUser extends baseClass {
 		 		
 		 		            //paypalcheckout from login page
 		 		            
-		 		           tc__MinicartViewCartProcessByPayPal cop = new tc__MinicartViewCartProcessByPayPal(); 
+		 		           MinicartViewCartProcessByPayPal cop = new MinicartViewCartProcessByPayPal(); 
 		 		           cop.paypalFromLoginPage();
 		 		        }
 		 	       }

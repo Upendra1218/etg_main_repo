@@ -3,18 +3,10 @@
 package com.RegUserWith_CreditCard;
 
 import com.providio.Scenarios.SearchingProduct;
-import com.providio.commonfunctionality.addtoCartValidation;
-import com.providio.commonfunctionality.size;
-import com.providio.pageObjects.homePage;
-import com.providio.pageObjects.productDescriptionPage;
-import com.providio.paymentProccess.tc__MinicartViewCartProcess;
-import com.providio.paymentProccess.tc__CreditCardPaymentProcess;
+import com.providio.paymentProccess.MinicartViewCartProcess;
+import com.providio.paymentProccess.CreditCardPaymentProcess;
 import com.providio.testcases.baseClass;
 
-import java.util.List;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -32,11 +24,11 @@ public class tc__BySearchingProduct_RegUser_InCC extends baseClass {
 			sp.searchingProduct();
 		        
 	       //checkoutProcess	        
-            tc__MinicartViewCartProcess cp = new tc__MinicartViewCartProcess();            
+            MinicartViewCartProcess cp = new MinicartViewCartProcess();            
             cp.checkoutprocess();
             
             //payment by credit card
-		     tc__CreditCardPaymentProcess cc = new tc__CreditCardPaymentProcess();	     
+		     CreditCardPaymentProcess cc = new CreditCardPaymentProcess();	     
 		     cc.paymentByCreditCard();
 		} else {
 	        Assert.fail("User not logged in");

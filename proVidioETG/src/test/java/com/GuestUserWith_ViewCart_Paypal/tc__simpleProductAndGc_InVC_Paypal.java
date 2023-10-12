@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 import com.providio.Scenarios.SimpleProductAndGc;
 import com.providio.launchingbrowser.launchBrowsering;
-import com.providio.paymentProccess.tc__MinicartViewCartProcessByPayPal;
+import com.providio.paymentProccess.MinicartViewCartProcessByPayPal;
 import com.providio.testcases.baseClass;
 
 public class tc__simpleProductAndGc_InVC_Paypal extends baseClass {
@@ -22,7 +22,7 @@ public class tc__simpleProductAndGc_InVC_Paypal extends baseClass {
 		spGc.simpleProductAndGc();
 		
 	     //paypal checkout form view cart page
-	      tc__MinicartViewCartProcessByPayPal paypal= new tc__MinicartViewCartProcessByPayPal();	         
+	      MinicartViewCartProcessByPayPal paypal= new MinicartViewCartProcessByPayPal();	         
 	      paypal.checkoutprocessFromViewCart();
 	   
 	}

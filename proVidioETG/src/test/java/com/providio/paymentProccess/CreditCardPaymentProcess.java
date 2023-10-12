@@ -2,18 +2,19 @@
 package com.providio.paymentProccess;
 
 import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import com.providio.Validations.Checkout_Validation;
-import com.providio.Validations.preValidationCheck;
+import com.providio.Validations.postValidationAfterTheClick;
 import com.providio.pageObjects.paymentpPage;
 import com.providio.pageObjects.reviewOrderPage;
 import com.providio.paymentmethods.allPaymentMethods;
 import com.providio.testcases.baseClass;
 
 // Define a test class named "tc__CreditCardPaymentProcess"
-public class tc__CreditCardPaymentProcess extends baseClass{
+public class CreditCardPaymentProcess extends baseClass{
 	
 	// Define a method named "paymentByCreditCard"
 	public void paymentByCreditCard() throws InterruptedException {
@@ -25,7 +26,7 @@ public class tc__CreditCardPaymentProcess extends baseClass{
 		if(minicartcount.size()==0) {
 			
 			// Validate the payment page
-			preValidationCheck.validatePaymentButtonClk();
+			postValidationAfterTheClick.validatePaymentButtonClk();
 	       
 			// Detect payment methods
 			// Brain Tree
@@ -69,9 +70,13 @@ public class tc__CreditCardPaymentProcess extends baseClass{
 	    		WebElement reviewOrder= driver.findElement(By.xpath("//button[contains(text(), 'Next: Review Order')]"));	
 	    		
 	    		if(reviewOrder.isDisplayed()) {
+	    			//click on the review order button
 		    		rop.clickonReviewOrder(driver);
 		    		logger.info("Clicked on review order button");
-		    		Thread.sleep(2000);
+		    		Thread.sleep(5000);
+		    		
+		    		//click on the place order button
+		    		rop.clickonplaceorderwithJsExuter(driver);
 		    		
 	    		}
 		    }

@@ -1,9 +1,6 @@
 package com.providio.pageObjects;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -13,9 +10,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
+import com.providio.Validations.PdpValidation;
 import com.providio.testcases.baseClass;
-
-import freemarker.log.Logger;
 
 public class productDescriptionPage extends baseClass{
 
@@ -37,6 +33,24 @@ public class productDescriptionPage extends baseClass{
         Thread.sleep(2000);
     }
 
+    
+	public void validateBreadCrumbs() throws InterruptedException {
+		test.info("validate the Bread cramps to plp");
+		
+		productListingPage plp = new productListingPage(driver);
+		plp.selectRandomProduct();
+        WebElement breadCrampOnPDP = driver.findElement(By.xpath("(//div[@class ='container d-none d-md-block']//li[@class ='breadcrumb-item']//a)[2]"));
+        Thread.sleep(2000);
+        breadCrampOnPDP.click();
+        Thread.sleep(4000);
+        test.pass("The plp page load successfully");
+        logger.info("The plp page load successfully");
+        plp.selectRandomProduct();
+      
+        PdpValidation.QuantityofallpagesPlus(driver);
+        PdpValidation.Quantityofallpagesminus(driver);
+        
+	}
     // WebElement for navigating through breadcrumbs
     @FindBy(xpath = "(//ol[@class='breadcrumb mb-0']//a[contains(text(),'Womens')])[1]")
     WebElement allBreadCrumbs;

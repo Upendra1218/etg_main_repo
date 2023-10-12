@@ -7,14 +7,13 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 
 import com.providio.Validations.Checkout_Validation;
-import com.providio.pageObjects.checkOutPage;
 import com.providio.pageObjects.miniCartPage;
 import com.providio.pageObjects.paymentpPage;
 import com.providio.pageObjects.reviewOrderPage;
 import com.providio.pageObjects.viewCartPage;
 import com.providio.testcases.baseClass;
 
-public class tc__MinicartViewCartProcessByPayPal extends baseClass{
+public class MinicartViewCartProcessByPayPal extends baseClass{
 		
 	 Checkout_Validation checkout= new Checkout_Validation();
 	 
@@ -169,14 +168,14 @@ public class tc__MinicartViewCartProcessByPayPal extends baseClass{
 			    	//System.out.println(brainPaypalAcc.size());
 		    	 
 		    	 	List<WebElement> brainPaypalAcc = driver.findElements(By.cssSelector("img[title='PayPal Credit']"));
-			    	List<WebElement> parentDivOfPaypal= driver.findElements(By.xpath("//div[@aria-label='PayPal Checkout']"));
+			    	//List<WebElement> parentDivOfPaypal= driver.findElements(By.xpath("//div[@aria-label='PayPal Checkout']"));
 			    	List<WebElement> salesforcePaypal= driver.findElements(By.xpath("(//div[contains(@class, 'salesforce-paymentrequest-element')])[1]"));
 			    	JavascriptExecutor js = (JavascriptExecutor) driver;	    		  
 		    		js.executeScript("window.scrollBy(0,500)", "");
 	
 		    	 if(brainPaypalAcc.size()>0) {	    		
 		    		test.info("Brain tree payment integration is activated");
-		    		WebElement brainPaypalAcc1 = driver.findElement(By.cssSelector("img[title='PayPal Credit']"));
+		    		//WebElement brainPaypalAcc1 = driver.findElement(By.cssSelector("img[title='PayPal Credit']"));
 		    		//((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",brainPaypalAcc1);
 		    		paymentpPage pp =new paymentpPage(driver);	   
 		    		Thread.sleep(2000);
@@ -208,7 +207,7 @@ public class tc__MinicartViewCartProcessByPayPal extends baseClass{
 				    		}
 				    		//placeorder
 				    		WebElement placeOrder= driver.findElement(By.cssSelector("button.place-order"));	
-				    		List<WebElement> placeOrderList= driver.findElements(By.cssSelector("button.place-order"));
+				    		//List<WebElement> placeOrderList= driver.findElements(By.cssSelector("button.place-order"));
 				    		if (placeOrder.isDisplayed()) { 
 				    			 js.executeScript("window.scrollBy(0,350)", "");
 				    			 Thread.sleep(3000);
@@ -223,7 +222,7 @@ public class tc__MinicartViewCartProcessByPayPal extends baseClass{
 		    	}else if(salesforcePaypal.size()>0) {	 
 		    	
 		    		test.info("salesoforce payment integration is activated");
-		    		WebElement salesforcePaypal1= driver.findElement(By.xpath("(//div[contains(@class, 'salesforce-paymentrequest-element')])[1]"));
+		    		//WebElement salesforcePaypal1= driver.findElement(By.xpath("(//div[contains(@class, 'salesforce-paymentrequest-element')])[1]"));
 		    		//((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", salesforcePaypal1);
 				    paymentpPage pp = new paymentpPage(driver);		   	         
 				    pp.salesforcePaypalCheckout(driver);	

@@ -1,23 +1,12 @@
 package com.RegUserWith_GcAndCC;
 
-import java.time.Duration;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 import com.providio.Scenarios.SimpleProduct;
 import com.providio.commonfunctionality.Gc__CC_Paypal;
-import com.providio.commonfunctionality.addtoCartValidation;
-import com.providio.commonfunctionality.validatingInstock;
-import com.providio.launchingbrowser.launchBrowsering;
-import com.providio.pageObjects.SimpleProductFromExcel;
-import com.providio.paymentProccess.tc__MinicartViewCartProcess;
-import com.providio.paymentProccess.tc__CreditCardPaymentProcess;
+import com.providio.paymentProccess.MinicartViewCartProcess;
 import com.providio.testcases.baseClass;
 
 
@@ -35,7 +24,7 @@ public class tc__SimpleProductRegUser_InGcAndCC extends baseClass{
 	    sp.simpleProdcut();
         
         //checkoutProcess
-        tc__MinicartViewCartProcess cp = new tc__MinicartViewCartProcess();        
+        MinicartViewCartProcess cp = new MinicartViewCartProcess();        
         cp.checkoutprocess();
 
         //semi gc and cc 

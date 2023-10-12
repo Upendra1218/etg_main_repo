@@ -1,6 +1,6 @@
 package com.providio.Scenarios;
 
-import com.providio.commonfunctionality.addtoCartValidation;
+import com.providio.Validations.validationpopupMessages;
 import com.providio.commonfunctionality.validatingInstock;
 import com.providio.pageObjects.BundleProductFromEXcel;
 import com.providio.testcases.baseClass;
@@ -18,7 +18,7 @@ public class BundleProduct extends baseClass{
     	validatingInstock.inStockValidation();
     	
     	//validating the product is add to the cart
-    	addtoCartValidation.validatingProductisAddtoCart(driver);
+    	validationpopupMessages.validatingProductisAddtoCart(driver);
 	
 	}
 

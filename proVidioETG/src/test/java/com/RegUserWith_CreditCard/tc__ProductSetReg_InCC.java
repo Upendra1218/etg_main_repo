@@ -1,23 +1,12 @@
 package com.RegUserWith_CreditCard;
 
-import java.time.Duration;
-import java.util.List;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-import com.providio.commonfunctionality.addtoCartValidation;
-import com.providio.commonfunctionality.validatingInstock;
-import com.providio.pageObjects.ProductSetFromExcel;
-  
-import com.providio.paymentProccess.tc__MinicartViewCartProcess;
-import com.providio.paymentProccess.tc__CreditCardPaymentProcess;
+import com.providio.Scenarios.ProductSet;
+import com.providio.paymentProccess.MinicartViewCartProcess;
+import com.providio.paymentProccess.CreditCardPaymentProcess;
 import com.providio.testcases.baseClass;
 
 
@@ -29,29 +18,17 @@ public class tc__ProductSetReg_InCC extends baseClass{
 	public void productSet() throws InterruptedException {
 		 
 		 if(isLoggedIn) {
-			//searching the product set from excel sheet
-				ProductSetFromExcel fromExcel= new ProductSetFromExcel();
-				fromExcel.performRandomOperations(driver);	
-				logger.info("Searched for a productset");
-				
-				
-				//selecting size for product
-				//                SizeSelectionForProductSet set =new SizeSelectionForProductSet();
-				//  set.sizeSelection(driver);
-				logger.info("Selected size and added to cart");
-				
-				//validating the product is instock and adding to the cart
-				  validatingInstock.inStockValidation();
-				  
-				//validating the product is add to the cart
-		 	    addtoCartValidation.validatingProductisAddtoCart(driver);
-		 	    
+			 
+				//product set
+				ProductSet ps = new ProductSet();
+				ps.productSet();
+				 	
 			    //checkoutProcess		        
-		        tc__MinicartViewCartProcess cp = new tc__MinicartViewCartProcess();	         
+		        MinicartViewCartProcess cp = new MinicartViewCartProcess();	         
 		        cp.checkoutprocess();
 		        
 		        //payment process             
-			     tc__CreditCardPaymentProcess cc = new tc__CreditCardPaymentProcess();		     
+			     CreditCardPaymentProcess cc = new CreditCardPaymentProcess();		     
 			     cc.paymentByCreditCard();
 		        
 

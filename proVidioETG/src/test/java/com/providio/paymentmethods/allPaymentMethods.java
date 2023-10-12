@@ -53,15 +53,16 @@ public class allPaymentMethods extends baseClass {
 	}
 	
 	//stripe payment method
-	public void stripe() {
+	public void stripe() throws InterruptedException {
 		
 		if(continueasAGuest.size()>0) {
 	 		   //guest user payment
 				pm.stripePayment();
 
 	        }else {
+	        	
 	        	//brain tree select the new card and save the card
-	        	pm.stripePayment();
+	        	pm.stripePaymentReguser();
 	        }
 		
 	}

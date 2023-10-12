@@ -16,7 +16,7 @@ public class Bundle_GcAndAllPromotions extends baseClass{
 	    bp.bundleproduct();
 
 		 //adding GC into cart
-	    giftCard gc = new giftCard();
+	    GiftCard gc = new GiftCard();
 	    gc.giftCards();
 		 
 		//simple product

@@ -59,38 +59,6 @@ public class preValidationCheck extends baseClass{
 		pdp.productSepecificationsValidation(driver);
 	}
 	
-	//validate the payment page
-		public static void validatePaymentButtonClk() {
-			
-			//validate the payment page
-		    WebElement paymentPage = driver.findElement(By.xpath("//label[contains(text(), 'Payment Method')]"));
-		    if( paymentPage.isDisplayed()) {
-			    String ActualTitleofpaymentPage = paymentPage.getText();
-			    String ExpectedTitlepaymentPage = "Payment Method";
-			    logger.info(paymentPage.getText());
-			    
-			    if (ActualTitleofpaymentPage.equals(ExpectedTitlepaymentPage)) {
-			    	test.info("Verify that shipping address added");
-			    	 test.pass("Successfully added the shipping address");
-			    	 test.info("Verify the payment button is clicked");
-			        test.pass("Successfully clicked on the Payment button");
-			        logger.info("Successfully clicked on the Payment button");
-			    } else {
-			        test.fail( "The page Title does not match expected " + ExpectedTitlepaymentPage + " " + "  but found" + " " + ActualTitleofpaymentPage + " ");
-			        logger.info("Click failed");
-			    }
-		    }
-		    
-		//  //soft assertions payment page
-		//  
-		//  softAssert.assertEquals(ActualTitleofpaymentPage, ExpectedTitlepaymentPage, "Page title does not match expected value");
-		//  
-		//  //Hard assertions payment page
-		//  
-		//  Assert.assertEquals(ActualTitleofpaymentPage, ExpectedTitlepaymentPage, "Page title does not match expected value");
-		
-		   
-			
-		}
+	
 	
 }

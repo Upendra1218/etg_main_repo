@@ -3,7 +3,7 @@ package com.providio.Scenarios;
 import com.providio.pageObjects.GiftCertificate;
 import com.providio.testcases.baseClass;
 
-public class giftCard extends baseClass{
+public class GiftCard extends baseClass{
 	
 	public void giftCards() throws InterruptedException {
 		 

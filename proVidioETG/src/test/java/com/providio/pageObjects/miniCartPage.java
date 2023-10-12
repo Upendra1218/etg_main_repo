@@ -1,5 +1,7 @@
 package com.providio.pageObjects;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -7,7 +9,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class miniCartPage {
+import com.providio.testcases.baseClass;
+
+public class miniCartPage extends baseClass{
 
     WebDriver lDriver;
 
@@ -95,4 +99,28 @@ public class miniCartPage {
     public void clickOnGooglePayButton() {
         googlePayButton.click();
     }
+    
+    
+    public void removeformMiniCart() throws InterruptedException {
+    	List<WebElement> RemoveBtnsInMiniCart = driver.findElements(By.xpath("//div[@class='card-body']//button[contains(@class,'remove-btn')]"));
+    	test.info("Validate remove the product form the mini cart");
+    	for(int i =1;i<=RemoveBtnsInMiniCart.size();i++) {
+    		
+    		if(RemoveBtnsInMiniCart.size()==1) {
+        		
+        		WebElement RemoveBtnInMiniCart = driver.findElement(By.xpath("(//div[@class='card-body']//button[contains(@class,'remove-btn')])["+i+"]"));
+        		Thread.sleep(2000);
+        		RemoveBtnInMiniCart.click();
+        		test.pass("product is removed from the cart");
+        		logger.info("product is removed from the cart");
+        	}
+        	else {
+        		test.fail("product is removed not from the cart");
+        		logger.info("product is removed not from the cart");
+        	}
+    	}
+    	
+    	
+    }
 }
+

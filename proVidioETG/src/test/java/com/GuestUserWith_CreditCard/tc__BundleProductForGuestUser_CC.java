@@ -4,8 +4,8 @@ import org.testng.asserts.SoftAssert;
 
 import com.providio.Scenarios.BundleProduct;
 import com.providio.launchingbrowser.launchBrowsering;
-import com.providio.paymentProccess.tc__CreditCardPaymentProcess;
-import com.providio.paymentProccess.tc__MiniCartChekoutButton;
+import com.providio.paymentProccess.CreditCardPaymentProcess;
+import com.providio.paymentProccess.MiniCartChekoutButton;
 import com.providio.testcases.baseClass;
 
 public class tc__BundleProductForGuestUser_CC  extends baseClass{
@@ -24,11 +24,11 @@ public class tc__BundleProductForGuestUser_CC  extends baseClass{
 		    bp.bundleproduct();
 				
 	         //checkoutProcess		        
-	        tc__MiniCartChekoutButton cp = new tc__MiniCartChekoutButton();         
+	        MiniCartChekoutButton cp = new MiniCartChekoutButton();         
 			cp.checkoutprocess();
       
 		 //payment process
-          tc__CreditCardPaymentProcess tc = new tc__CreditCardPaymentProcess();			              
+          CreditCardPaymentProcess tc = new CreditCardPaymentProcess();			              
           tc.paymentByCreditCard();
               
 		}

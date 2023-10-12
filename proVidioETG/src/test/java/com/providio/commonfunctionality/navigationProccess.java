@@ -5,6 +5,7 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
+import com.providio.Validations.validationpopupMessages;
 import com.providio.pageObjects.navigationPage;
 import com.providio.pageObjects.productListingPage;
 import com.providio.testcases.baseClass;
@@ -48,7 +49,7 @@ public class navigationProccess extends baseClass {
 			          s.selectSize(driver);
 		    		 }
 	   	 //validating the product is add to the cart
-	  	    addtoCartValidation.validatingProductisAddtoCart(driver);
+	  	    validationpopupMessages.validatingProductisAddtoCart(driver);
 	    }			
 	}
 }
