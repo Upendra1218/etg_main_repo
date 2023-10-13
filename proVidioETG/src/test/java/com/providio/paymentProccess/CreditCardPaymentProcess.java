@@ -71,7 +71,8 @@ public class CreditCardPaymentProcess extends baseClass{
 	    		
 	    		if(reviewOrder.isDisplayed()) {
 	    			//click on the review order button
-		    		rop.clickonReviewOrder(driver);
+	    			Thread.sleep(5000);
+	    			reviewOrder.click();
 		    		logger.info("Clicked on review order button");
 		    		Thread.sleep(5000);
 		    		

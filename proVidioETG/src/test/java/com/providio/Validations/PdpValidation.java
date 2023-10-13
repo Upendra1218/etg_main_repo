@@ -63,6 +63,22 @@ public class PdpValidation extends baseClass{
     	}
     }
     
+	 // Plus Quantity for all pages (e.g., multiple products on PLP)
+    public static void QuantityofallpagesPlusinviewcart(WebDriver driver) throws InterruptedException {
+        List<WebElement> noofPlusElementsPresent = driver.findElements(By.xpath("//span[@class ='qty-plus']"));
+        if (noofPlusElementsPresent.size() > 0) {
+     
+                WebElement eachPlusElement = driver.findElement(By.xpath("(//span[@class ='qty-plus'])[" + noofPlusElementsPresent.size() + "]"));
+                JavascriptExecutor js = (JavascriptExecutor) driver;
+                js.executeScript("arguments[0].click();", eachPlusElement);
+                Thread.sleep(2000);
+                js.executeScript("arguments[0].click();", eachPlusElement);
+                Thread.sleep(2000);
+                logger.info("quantity increased");
+   
+        }
+    }
+    
     
     
 

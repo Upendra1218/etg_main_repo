@@ -87,5 +87,30 @@ public class validationpopupMessages extends baseClass{
         
          }
    }
+   
+   public static void validatingProductisAddtoWishList(WebDriver driver) {
+	   test.info("Validating product is add to the cart");
+	   
+	    Wait<WebDriver> wait = waitForTheElement.createFluentWait(driver);
+        // Wait for the success alert to be visible
+        WebElement addTowishList = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='alert alert-success add-to-basket-alert text-center']")));
+        // Get the text of the alert
+        String actualAddToCart = addTowishList.getText();
+        // Expected alert text
+        String expectedAddToCart = "Product has been added to wishlist.";
+        if (actualAddToCart.equals(expectedAddToCart)) {
+            // Success message is displayed
+        	test.pass("Product added to wishlist");
+            logger.info("Product is  added to wishlist");
+            // Perform actions or assertions here for the success case
+        }else {
+            // Success message is not as expected
+        	test.fail("Product is not added to wishlist");
+            logger.info("Product is not added to wishlist");
+            // Perform actions or assertions here for the failure case
+         
+          }
+          
+   }
 
 }

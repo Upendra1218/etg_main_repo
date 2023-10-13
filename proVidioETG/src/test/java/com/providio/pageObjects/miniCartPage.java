@@ -107,7 +107,6 @@ public class miniCartPage extends baseClass{
     	for(int i =1;i<=RemoveBtnsInMiniCart.size();i++) {
     		
     		if(RemoveBtnsInMiniCart.size()==1) {
-        		
         		WebElement RemoveBtnInMiniCart = driver.findElement(By.xpath("(//div[@class='card-body']//button[contains(@class,'remove-btn')])["+i+"]"));
         		Thread.sleep(2000);
         		RemoveBtnInMiniCart.click();

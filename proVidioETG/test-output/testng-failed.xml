@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.RegUserWith_CreditCard.tc__BundleProductRegUser_InCC">
+      <class name="com.providio.testcases.tc__viewCartvalidation">
         <methods>
           <include name="setUpforReport"/>
-          <include name="bundleProduct"/>
-          <include name="afterMethod"/>
+          <include name="viewCartvalidation"/>
           <include name="setUp"/>
+          <include name="afterMethod"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.RegUserWith_CreditCard.tc__BundleProductRegUser_InCC -->
+      </class> <!-- com.providio.testcases.tc__viewCartvalidation -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

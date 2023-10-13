@@ -32,7 +32,7 @@ public class MinicartViewCartProcess extends baseClass {
                 // Click on the cart button in the minicart
                 mc.clickcartbutton(driver);
                 Thread.sleep(1000);
-                mc.removeformMiniCart();
+                //mc.removeformMiniCart();
 
                 // Validate the minicart after clicking
                 miniCartAndCartValidation.validateMiniCartClick();

@@ -20,6 +20,7 @@ WebDriver lDriver;
 	@FindBy(xpath ="//button[contains(text(), 'Next: Review Order')]")
 	WebElement reviewOrderPage;
     public void clickonReviewOrder(WebDriver driver) throws InterruptedException {	
+    	Thread.sleep(7000);
     	reviewOrderPage.click();
     	
     	Thread.sleep(7000);
