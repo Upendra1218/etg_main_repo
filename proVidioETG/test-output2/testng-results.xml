@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="2" total="4" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-10-15T19:44:27 IST" name="Default suite" finished-at="2023-10-15T19:46:27 IST" duration-ms="119925">
+    <groups>
+    </groups>
+    <test started-at="2023-10-15T19:44:27 IST" name="Default test" finished-at="2023-10-15T19:46:27 IST" duration-ms="119925">
+      <class name="com.providio.testcases.tc__viewCartvalidation">
+        <test-method is-config="true" signature="setUpforReport()[pri:0, instance:com.providio.testcases.tc__viewCartvalidation@2db4ad1]" started-at="2023-10-15T19:44:25 IST" name="setUpforReport" finished-at="2023-10-15T19:44:27 IST" duration-ms="1815" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpforReport -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.providio.testcases.tc__viewCartvalidation@2db4ad1]" started-at="2023-10-15T19:45:09 IST" name="setUp" finished-at="2023-10-15T19:45:11 IST" duration-ms="2003" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="viewCartvalidation()[pri:0, instance:com.providio.testcases.tc__viewCartvalidation@2db4ad1]" started-at="2023-10-15T19:45:11 IST" name="viewCartvalidation" finished-at="2023-10-15T19:46:27 IST" depends-on-methods="com.providio.login.tc__Login.loginTest" duration-ms="75504" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- viewCartvalidation -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.testcases.tc__viewCartvalidation@2db4ad1]" started-at="2023-10-15T19:46:27 IST" name="afterMethod" finished-at="2023-10-15T19:46:27 IST" duration-ms="9" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=viewCartvalidation status=SUCCESS method=tc__viewCartvalidation.viewCartvalidation()[pri:0, instance:com.providio.testcases.tc__viewCartvalidation@2db4ad1] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.providio.testcases.tc__viewCartvalidation@2db4ad1]" started-at="2023-10-15T19:46:27 IST" name="tearDown" finished-at="2023-10-15T19:46:35 IST" duration-ms="8544" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.providio.testcases.tc__viewCartvalidation -->
+      <class name="com.providio.login.tc__Login">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.providio.login.tc__Login@edbc2bf]" started-at="2023-10-15T19:44:27 IST" name="setUp" finished-at="2023-10-15T19:44:29 IST" duration-ms="2041" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="loginTest()[pri:0, instance:com.providio.login.tc__Login@edbc2bf]" started-at="2023-10-15T19:44:29 IST" name="loginTest" finished-at="2023-10-15T19:45:09 IST" duration-ms="40331" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.login.tc__Login@edbc2bf]" started-at="2023-10-15T19:45:09 IST" name="afterMethod" finished-at="2023-10-15T19:45:09 IST" duration-ms="8" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=loginTest status=SUCCESS method=tc__Login.loginTest()[pri:0, instance:com.providio.login.tc__Login@edbc2bf] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- com.providio.login.tc__Login -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

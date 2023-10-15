@@ -5922,3 +5922,117 @@ Ending 9/ 2029
 2023-10-13 16:58:21,776 [main] INFO Providio - Entered password
 2023-10-13 16:58:33,897 [main] INFO Providio - Clicked on the Submit button
 2023-10-13 16:58:39,007 [main] INFO Providio - User logged in successfully
+2023-10-15 19:42:24,223 [main] INFO Providio - Entered into URL
+2023-10-15 19:42:36,996 [main] INFO Providio - Clicked on Sign In
+2023-10-15 19:42:39,178 [main] INFO Providio - Entered email
+2023-10-15 19:42:41,308 [main] INFO Providio - Entered password
+2023-10-15 19:42:53,392 [main] INFO Providio - Clicked on the Submit button
+2023-10-15 19:42:58,492 [main] INFO Providio - User logged in successfully
+2023-10-15 19:43:17,476 [main] INFO Providio - Clicked the view cart button in the minicart
+2023-10-15 19:43:24,634 [main] INFO Providio - quantity increased
+2023-10-15 19:43:24,652 [main] INFO Providio - 1
+2023-10-15 19:43:40,779 [main] INFO Providio - Test case failed and returned into homepage
+2023-10-15 19:44:34,479 [main] INFO Providio - Entered into URL
+2023-10-15 19:44:48,074 [main] INFO Providio - Clicked on Sign In
+2023-10-15 19:44:50,226 [main] INFO Providio - Entered email
+2023-10-15 19:44:52,362 [main] INFO Providio - Entered password
+2023-10-15 19:45:04,445 [main] INFO Providio - Clicked on the Submit button
+2023-10-15 19:45:09,506 [main] INFO Providio - User logged in successfully
+2023-10-15 19:45:29,396 [main] INFO Providio - Clicked the view cart button in the minicart
+2023-10-15 19:45:36,481 [main] INFO Providio - quantity increased
+2023-10-15 19:45:40,530 [main] INFO Providio - quantity increased
+2023-10-15 19:45:44,573 [main] INFO Providio - quantity increased
+2023-10-15 19:45:48,617 [main] INFO Providio - quantity increased
+2023-10-15 19:45:48,635 [main] INFO Providio - 3
+2023-10-15 19:45:55,870 [main] INFO Providio - 1
+2023-10-15 19:46:19,264 [main] INFO Providio - Clicked the view cart button in the minicart
+2023-10-15 20:07:40,088 [main] INFO Providio - Entered into url
+2023-10-15 20:07:40,091 [main] INFO Providio - Placing the order as guest user
+2023-10-15 20:07:40,183 [main] INFO Providio - Menus are displayed on the page.
+2023-10-15 20:07:42,238 [main] INFO Providio - Logo is displayed on the page.
+2023-10-15 20:07:44,268 [main] INFO Providio - Search input field is enabled.
+2023-10-15 20:07:46,305 [main] INFO Providio - MiniCart is displayed on the page.
+2023-10-15 20:07:48,337 [main] INFO Providio - Wishlist is displayed on the page.
+2023-10-15 20:07:50,369 [main] INFO Providio - Profile (Sign In) is displayed on the page.
+2023-10-15 20:07:52,401 [main] INFO Providio - Footer is displayed on the page.
+2023-10-15 20:08:18,499 [main] INFO Providio - Click Success New Arrivals of  ELECTRONICS
+2023-10-15 20:08:31,166 [main] INFO Providio - The plp page load successfully
+2023-10-15 20:08:37,552 [main] INFO Providio - quantity increased
+2023-10-15 20:08:41,612 [main] INFO Providio - quantity decreased
+2023-10-15 20:08:44,842 [main] INFO Providio - 0
+2023-10-15 20:08:44,854 [main] INFO Providio - 1
+2023-10-15 20:08:54,038 [main] INFO Providio - add to buttonenabled
+2023-10-15 20:09:33,019 [main] INFO Providio - Test case failed and returned into homepage
+2023-10-15 20:09:41,258 [main] INFO Providio - Entered into url
+2023-10-15 20:09:41,258 [main] INFO Providio - Placing the order as guest user
+2023-10-15 20:09:52,976 [main] INFO Providio - Test case failed and returned into homepage
+2023-10-15 20:10:00,941 [main] INFO Providio - Entered into url
+2023-10-15 20:10:00,941 [main] INFO Providio - Placing the order as guest user
+2023-10-15 20:10:01,070 [main] INFO Providio - Menus are displayed on the page.
+2023-10-15 20:10:03,101 [main] INFO Providio - Logo is displayed on the page.
+2023-10-15 20:10:05,130 [main] INFO Providio - Search input field is enabled.
+2023-10-15 20:10:07,162 [main] INFO Providio - MiniCart is displayed on the page.
+2023-10-15 20:10:09,192 [main] INFO Providio - Wishlist is displayed on the page.
+2023-10-15 20:10:11,221 [main] INFO Providio - Profile (Sign In) is displayed on the page.
+2023-10-15 20:10:13,248 [main] INFO Providio - Footer is displayed on the page.
+2023-10-15 20:10:13,313 [main] INFO Providio - Searched a product
+2023-10-15 20:10:13,356 [main] INFO Providio - out of stock
+2023-10-15 20:10:52,900 [main] INFO Providio - Test case failed and returned into homepage
+2023-10-15 20:11:00,522 [main] INFO Providio - Entered into url
+2023-10-15 20:11:00,522 [main] INFO Providio - Placing the order as guest user
+2023-10-15 20:11:00,570 [main] INFO Providio - Searched a product
+2023-10-15 20:11:00,605 [main] INFO Providio - out of stock
+2023-10-15 20:11:39,968 [main] INFO Providio - Test case failed and returned into homepage
+2023-10-15 20:12:01,848 [main] INFO Providio - 0
+2023-10-15 20:12:31,254 [main] INFO Providio - 0
+2023-10-15 20:12:31,268 [main] INFO Providio - 0
+2023-10-15 20:12:31,283 [main] INFO Providio - 0
+2023-10-15 20:12:31,307 [main] INFO Providio - click Success Electronics of  GAMING
+2023-10-15 20:12:36,684 [main] INFO Providio - 0
+2023-10-15 20:12:45,974 [main] INFO Providio - Product is  added to cart
+2023-10-15 20:12:56,220 [main] INFO Providio - Your shopping cart
+2023-10-15 20:12:56,220 [main] INFO Providio - Successfully clicked on the mini cart button
+2023-10-15 20:12:56,289 [main] INFO Providio - true
+2023-10-15 20:12:56,315 [main] INFO Providio - true
+2023-10-15 20:12:56,315 [main] INFO Providio - Successfully displayed the viewcart, checkout, paypal buttons and products
+2023-10-15 20:13:07,369 [main] INFO Providio - Clicked the view cart button in the minicart
+2023-10-15 20:13:07,404 [main] INFO Providio - Order Summary
+2023-10-15 20:13:07,405 [main] INFO Providio - Successfully clicked on the view cart button
+2023-10-15 20:13:16,416 [main] INFO Providio - 1
+2023-10-15 20:13:16,479 [main] INFO Providio - Guest checkout
+2023-10-15 20:13:16,590 [main] INFO Providio - Guest mail again
+2023-10-15 20:13:16,663 [main] INFO Providio - Guest continue as guest
+2023-10-15 20:13:21,863 [main] INFO Providio - Entered fname
+2023-10-15 20:13:21,988 [main] INFO Providio - Entered lname
+2023-10-15 20:13:27,250 [main] INFO Providio - Entered phone number
+2023-10-15 20:13:42,334 [main] INFO Providio - Clicked on the payment button
+2023-10-15 20:13:47,446 [main] INFO Providio - Payment Method
+2023-10-15 20:13:47,447 [main] INFO Providio - Successfully clicked on the Payment button
+2023-10-15 20:13:57,172 [main] INFO Providio - Clicked on review order button
+2023-10-15 20:14:17,293 [main] INFO Providio - Thank you for your order.
+2023-10-15 20:14:17,294 [main] INFO Providio - Successfully Order is Placed
+2023-10-15 20:14:22,326 [main] INFO Providio - Successfully Order is Placed and the Order number is 80030501
+2023-10-15 20:14:22,373 [main] INFO Providio - Successfully Order is Placed and the Order number is Credit Visa
+************5556
+Ending 1/2033
+2023-10-15 20:14:37,997 [main] INFO Providio - Entered into url
+2023-10-15 20:14:37,997 [main] INFO Providio - Placing the order as guest user
+2023-10-15 20:14:49,090 [main] INFO Providio - Test case failed and returned into homepage
+2023-10-15 20:14:57,626 [main] INFO Providio - Entered into url
+2023-10-15 20:14:57,627 [main] INFO Providio - Placing the order as guest user
+2023-10-15 20:14:57,671 [main] INFO Providio - Menus are displayed on the page.
+2023-10-15 20:14:59,698 [main] INFO Providio - Logo is displayed on the page.
+2023-10-15 20:15:01,722 [main] INFO Providio - Search input field is enabled.
+2023-10-15 20:15:03,753 [main] INFO Providio - MiniCart is displayed on the page.
+2023-10-15 20:15:05,787 [main] INFO Providio - Wishlist is displayed on the page.
+2023-10-15 20:15:07,814 [main] INFO Providio - Profile (Sign In) is displayed on the page.
+2023-10-15 20:15:09,840 [main] INFO Providio - Footer is displayed on the page.
+2023-10-15 20:15:09,867 [main] INFO Providio - Searched a product
+2023-10-15 20:15:09,907 [main] INFO Providio - out of stock
+2023-10-15 20:15:50,139 [main] INFO Providio - Test case failed and returned into homepage
+2023-10-15 20:15:58,456 [main] INFO Providio - Entered into url
+2023-10-15 20:15:58,456 [main] INFO Providio - Placing the order as guest user
+2023-10-15 20:15:58,555 [main] INFO Providio - Searched for a productset
+2023-10-15 20:16:09,089 [main] INFO Providio - Relauching the browsesr
+2023-10-15 20:16:11,121 [main] INFO Providio - Relauching the browsesr
+2023-10-15 20:16:13,151 [main] INFO Providio - Relauching the browsesr
